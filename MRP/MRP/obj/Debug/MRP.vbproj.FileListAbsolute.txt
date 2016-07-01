@@ -1,0 +1,54 @@
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\bin\Debug\MRP.exe.config
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\bin\Debug\MRP.exe
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\bin\Debug\MRP.pdb
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\bin\Debug\MRP.xml
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frAcercaDeMRP.resources
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frLogin.resources
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frLoginEmpresa.resources
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frMenuPrincipal.resources
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.Resources.resources
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.ssSplashPresentacion.resources
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.vbproj.GenerateResource.Cache
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.exe
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.xml
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.pdb
+c:\users\anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frBuscar.resources
+C:\Users\Anthony\Documents\Visual Studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frConfiguracion.resources
+C:\Users\Anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frEmpresa.resources
+C:\Users\Anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frMoneda.resources
+C:\Users\Anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frPais.resources
+C:\Users\Anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frUsuario.resources
+C:\Users\Anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.ucNavegador.resources
+C:\Users\Anthony\documents\visual studio 2015\Projects\MRP\MRP\obj\Debug\MRP.frFondo.resources
+C:\Users\Anthony\Documents\Visual Studio 2015\Projects\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
+J:\Seminario\Semana 2\MRP\MRP\bin\Debug\MRP.exe.config
+J:\Seminario\Semana 2\MRP\MRP\obj\Debug\MRP.exe
+J:\Seminario\Semana 2\MRP\MRP\obj\Debug\MRP.xml
+J:\Seminario\Semana 2\MRP\MRP\obj\Debug\MRP.pdb
+C:\Users\Anthony\Desktop\MRP\MRP\bin\Debug\MRP.exe.config
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.exe
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.xml
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.pdb
+C:\Users\Anthony\Desktop\MRP\MRP\bin\Debug\MRP.exe
+C:\Users\Anthony\Desktop\MRP\MRP\bin\Debug\MRP.pdb
+C:\Users\Anthony\Desktop\MRP\MRP\bin\Debug\MRP.xml
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frBuscar.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frAcercaDeMRP.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frConfiguracion.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frEmpresa.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frFondo.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frLogin.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frLoginEmpresa.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frMenuPrincipal.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frMoneda.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frPais.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.frUsuario.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.Resources.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.ssSplashPresentacion.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.ucNavegador.resources
+C:\Users\Anthony\Desktop\MRP\MRP\obj\Debug\MRP.vbproj.GenerateResource.Cache
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.exe.config
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.exe
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.xml
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.pdb

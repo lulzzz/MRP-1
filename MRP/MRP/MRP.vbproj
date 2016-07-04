@@ -93,6 +93,12 @@
     <Compile Include="frConfiguracion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frEmpleado.Designer.vb">
+      <DependentUpon>frEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frEmpresa.Designer.vb">
       <DependentUpon>frEmpresa.vb</DependentUpon>
     </Compile>

@@ -74,3 +74,7 @@ C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frRecetario.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frTarea.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frTareaTipo.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.exe.config
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.exe
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.xml
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.pdb

@@ -41,13 +41,13 @@ Partial Class frBuscar
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.RowHeadersVisible = False
         Me.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDatos.Size = New System.Drawing.Size(747, 415)
+        Me.dgvDatos.Size = New System.Drawing.Size(734, 461)
         Me.dgvDatos.TabIndex = 0
         '
         'frBuscar
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.ClientSize = New System.Drawing.Size(747, 415)
+        Me.ClientSize = New System.Drawing.Size(734, 461)
         Me.Controls.Add(Me.dgvDatos)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

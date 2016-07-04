@@ -21,6 +21,7 @@
         End Try
     End Sub
 
+#Region "Receptores"
     Private Sub frMenuPrincipal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         Try
             If tsUsuario.Text <> String.Empty Then Application.Exit()
@@ -35,6 +36,23 @@
             frFondo.Height = ClientSize.Height - (msMenuPrincipal.Height + ssBarraEstado.Height + 4)
         End If
     End Sub
+
+    Private Sub ValidacionFormulario(ByVal NombreFormulario As String, ByRef frm As Form)
+        Try
+            Dim frmValidacion As New Form
+            frmValidacion = Application.OpenForms.OfType(Of Form)().Where(Function(pre) pre.Name = NombreFormulario).SingleOrDefault()
+            If IsNothing(frmValidacion) Then
+                frm.MdiParent = Me
+                frm.Show()
+            Else
+                frm.Dispose()
+                frmValidacion.Activate()
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+#End Region
 
 #Region "Archivo"
     Private Sub miCambiarEmpresa_Click(sender As Object, e As EventArgs) Handles miCambiarEmpresa.Click
@@ -76,11 +94,58 @@
 #End Region
 
 #Region "Catálogos"
+    Private Sub miBodegas_Click(sender As Object, e As EventArgs) Handles miBodegas.Click
 
+    End Sub
+
+    Private Sub miClasificacionInventarios_Click(sender As Object, e As EventArgs) Handles miClasificacionInventarios.Click
+
+    End Sub
+
+    Private Sub miInventarios_Click(sender As Object, e As EventArgs) Handles miInventarios.Click
+
+    End Sub
+
+    Private Sub miMedidas_Click(sender As Object, e As EventArgs) Handles miMedidas.Click
+
+    End Sub
+
+    Private Sub miRecetario_Click(sender As Object, e As EventArgs) Handles miRecetario.Click
+        Dim frRecetario As New frRecetario
+        ValidacionFormulario("frRecetario", frRecetario)
+    End Sub
+
+    Private Sub miStatus_Click(sender As Object, e As EventArgs) Handles miStatus.Click
+
+    End Sub
+
+    Private Sub miTareas_Click(sender As Object, e As EventArgs) Handles miTareas.Click
+        Dim frTarea As New frTarea
+        ValidacionFormulario("frTarea", frTarea)
+    End Sub
+
+    Private Sub miTiposMovimientos_Click(sender As Object, e As EventArgs) Handles miTiposMovimientos.Click
+
+    End Sub
+
+    Private Sub miTiposTareas_Click(sender As Object, e As EventArgs) Handles miTiposTareas.Click
+        Dim frTareaTipo As New frTareaTipo
+        ValidacionFormulario("frTareaTipo", frTareaTipo)
+    End Sub
 #End Region
 
 #Region "Procesos"
+    Private Sub miMovimientos_Click(sender As Object, e As EventArgs) Handles miMovimientos.Click
 
+    End Sub
+
+    Private Sub miOrdenesProduccion_Click(sender As Object, e As EventArgs) Handles miOrdenesProduccion.Click
+
+    End Sub
+
+    Private Sub miSolicitudes_Click(sender As Object, e As EventArgs) Handles miSolicitudes.Click
+
+    End Sub
 #End Region
 
 #Region "Reportes"
@@ -89,21 +154,23 @@
 
 #Region "Opciones"
     Private Sub miEmpresas_Click(sender As Object, e As EventArgs) Handles miEmpresas.Click
-
+        Dim frEmpresa As New frEmpresa
+        ValidacionFormulario("frEmpresa", frEmpresa)
     End Sub
 
     Private Sub miMonedas_Click(sender As Object, e As EventArgs) Handles miMonedas.Click
         Dim frMoneda As New frMoneda
-        frMoneda.MdiParent = Me
-        frMoneda.Show()
+        ValidacionFormulario("frMoneda", frMoneda)
     End Sub
 
     Private Sub miPaises_Click(sender As Object, e As EventArgs) Handles miPaises.Click
-
+        Dim frPais As New frPais
+        ValidacionFormulario("frPais", frPais)
     End Sub
 
     Private Sub miUsuarios_Click(sender As Object, e As EventArgs) Handles miUsuarios.Click
-
+        Dim frUsuario As New frUsuario
+        ValidacionFormulario("frUsuario", frUsuario)
     End Sub
 #End Region
 
@@ -116,7 +183,5 @@
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
-
 #End Region
 End Class

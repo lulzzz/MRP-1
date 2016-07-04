@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frMenuPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@ Partial Class frMenuPrincipal
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.msMenuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.tsArchivo = New System.Windows.Forms.ToolStripMenuItem()
@@ -30,13 +30,28 @@ Partial Class frMenuPrincipal
         Me.miCerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.miSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsCatálogos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miBodegas = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miClasificacionInventarios = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miInventarios = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miMedidas = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miRecetario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miStatus = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miTareas = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miTiposMovimientos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miTiposTareas = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsSeparador2 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsProcesos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miMovimientos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miOrdenesProduccion = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miSolicitudes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsSeparador3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsReportes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsSeparador4 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsOpciones = New System.Windows.Forms.ToolStripMenuItem()
         Me.miEmpresas = New System.Windows.Forms.ToolStripMenuItem()
         Me.miMonedas = New System.Windows.Forms.ToolStripMenuItem()
         Me.miPaises = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsSeparador2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsSeparador5 = New System.Windows.Forms.ToolStripSeparator()
         Me.miUsuarios = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsAyuda = New System.Windows.Forms.ToolStripMenuItem()
         Me.miAcercaDeMRP = New System.Windows.Forms.ToolStripMenuItem()
@@ -56,9 +71,10 @@ Partial Class frMenuPrincipal
         Me.msMenuPrincipal.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.msMenuPrincipal.GripMargin = New System.Windows.Forms.Padding(2)
         Me.msMenuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsArchivo, Me.tsCatálogos, Me.tsProcesos, Me.tsReportes, Me.tsOpciones, Me.tsAyuda})
+        Me.msMenuPrincipal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
         Me.msMenuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.msMenuPrincipal.Name = "msMenuPrincipal"
-        Me.msMenuPrincipal.Size = New System.Drawing.Size(784, 24)
+        Me.msMenuPrincipal.Size = New System.Drawing.Size(784, 23)
         Me.msMenuPrincipal.TabIndex = 5
         Me.msMenuPrincipal.Text = "MenuStrip"
         '
@@ -67,7 +83,7 @@ Partial Class frMenuPrincipal
         Me.tsArchivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miCambiarEmpresa, Me.tsSeparador1, Me.miCerrarSesion, Me.miSalir})
         Me.tsArchivo.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.tsArchivo.Name = "tsArchivo"
-        Me.tsArchivo.Size = New System.Drawing.Size(60, 20)
+        Me.tsArchivo.Size = New System.Drawing.Size(60, 19)
         Me.tsArchivo.Text = "&Archivo"
         '
         'miCambiarEmpresa
@@ -95,27 +111,117 @@ Partial Class frMenuPrincipal
         '
         'tsCatálogos
         '
+        Me.tsCatálogos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miBodegas, Me.miClasificacionInventarios, Me.miInventarios, Me.miMedidas, Me.miRecetario, Me.miStatus, Me.miTareas, Me.miTiposMovimientos, Me.miTiposTareas, Me.tsSeparador2})
         Me.tsCatálogos.Name = "tsCatálogos"
-        Me.tsCatálogos.Size = New System.Drawing.Size(72, 20)
+        Me.tsCatálogos.Size = New System.Drawing.Size(72, 19)
         Me.tsCatálogos.Text = "&Catálogos"
+        '
+        'miBodegas
+        '
+        Me.miBodegas.Name = "miBodegas"
+        Me.miBodegas.Size = New System.Drawing.Size(218, 22)
+        Me.miBodegas.Text = "&Bodegas"
+        '
+        'miClasificacionInventarios
+        '
+        Me.miClasificacionInventarios.Name = "miClasificacionInventarios"
+        Me.miClasificacionInventarios.Size = New System.Drawing.Size(218, 22)
+        Me.miClasificacionInventarios.Text = "&Clasificación de Inventarios"
+        '
+        'miInventarios
+        '
+        Me.miInventarios.Name = "miInventarios"
+        Me.miInventarios.Size = New System.Drawing.Size(218, 22)
+        Me.miInventarios.Text = "&Inventarios"
+        '
+        'miMedidas
+        '
+        Me.miMedidas.Name = "miMedidas"
+        Me.miMedidas.Size = New System.Drawing.Size(218, 22)
+        Me.miMedidas.Text = "&Medidas"
+        '
+        'miRecetario
+        '
+        Me.miRecetario.Name = "miRecetario"
+        Me.miRecetario.Size = New System.Drawing.Size(218, 22)
+        Me.miRecetario.Text = "&Recetario"
+        '
+        'miStatus
+        '
+        Me.miStatus.Name = "miStatus"
+        Me.miStatus.Size = New System.Drawing.Size(218, 22)
+        Me.miStatus.Text = "&Status"
+        '
+        'miTareas
+        '
+        Me.miTareas.Name = "miTareas"
+        Me.miTareas.Size = New System.Drawing.Size(218, 22)
+        Me.miTareas.Text = "&Tareas"
+        '
+        'miTiposMovimientos
+        '
+        Me.miTiposMovimientos.Name = "miTiposMovimientos"
+        Me.miTiposMovimientos.Size = New System.Drawing.Size(218, 22)
+        Me.miTiposMovimientos.Text = "Tipos de Movimientos"
+        '
+        'miTiposTareas
+        '
+        Me.miTiposTareas.Name = "miTiposTareas"
+        Me.miTiposTareas.Size = New System.Drawing.Size(218, 22)
+        Me.miTiposTareas.Text = "Tipos de Tareas"
+        '
+        'tsSeparador2
+        '
+        Me.tsSeparador2.Name = "tsSeparador2"
+        Me.tsSeparador2.Size = New System.Drawing.Size(215, 6)
         '
         'tsProcesos
         '
+        Me.tsProcesos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miMovimientos, Me.miOrdenesProduccion, Me.miSolicitudes, Me.tsSeparador3})
         Me.tsProcesos.Name = "tsProcesos"
-        Me.tsProcesos.Size = New System.Drawing.Size(66, 20)
+        Me.tsProcesos.Size = New System.Drawing.Size(66, 19)
         Me.tsProcesos.Text = "&Procesos"
+        '
+        'miMovimientos
+        '
+        Me.miMovimientos.Name = "miMovimientos"
+        Me.miMovimientos.Size = New System.Drawing.Size(198, 22)
+        Me.miMovimientos.Text = "&Movimientos"
+        '
+        'miOrdenesProduccion
+        '
+        Me.miOrdenesProduccion.Name = "miOrdenesProduccion"
+        Me.miOrdenesProduccion.Size = New System.Drawing.Size(198, 22)
+        Me.miOrdenesProduccion.Text = "&Órdenes de Producción"
+        '
+        'miSolicitudes
+        '
+        Me.miSolicitudes.Name = "miSolicitudes"
+        Me.miSolicitudes.Size = New System.Drawing.Size(198, 22)
+        Me.miSolicitudes.Text = "&Solicitudes"
+        '
+        'tsSeparador3
+        '
+        Me.tsSeparador3.Name = "tsSeparador3"
+        Me.tsSeparador3.Size = New System.Drawing.Size(195, 6)
         '
         'tsReportes
         '
+        Me.tsReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsSeparador4})
         Me.tsReportes.Name = "tsReportes"
-        Me.tsReportes.Size = New System.Drawing.Size(65, 20)
+        Me.tsReportes.Size = New System.Drawing.Size(65, 19)
         Me.tsReportes.Text = "&Reportes"
+        '
+        'tsSeparador4
+        '
+        Me.tsSeparador4.Name = "tsSeparador4"
+        Me.tsSeparador4.Size = New System.Drawing.Size(57, 6)
         '
         'tsOpciones
         '
-        Me.tsOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpresas, Me.miMonedas, Me.miPaises, Me.tsSeparador2, Me.miUsuarios})
+        Me.tsOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpresas, Me.miMonedas, Me.miPaises, Me.tsSeparador5, Me.miUsuarios})
         Me.tsOpciones.Name = "tsOpciones"
-        Me.tsOpciones.Size = New System.Drawing.Size(69, 20)
+        Me.tsOpciones.Size = New System.Drawing.Size(69, 19)
         Me.tsOpciones.Text = "&Opciones"
         '
         'miEmpresas
@@ -136,10 +242,10 @@ Partial Class frMenuPrincipal
         Me.miPaises.Size = New System.Drawing.Size(124, 22)
         Me.miPaises.Text = "&Países"
         '
-        'tsSeparador2
+        'tsSeparador5
         '
-        Me.tsSeparador2.Name = "tsSeparador2"
-        Me.tsSeparador2.Size = New System.Drawing.Size(121, 6)
+        Me.tsSeparador5.Name = "tsSeparador5"
+        Me.tsSeparador5.Size = New System.Drawing.Size(121, 6)
         '
         'miUsuarios
         '
@@ -151,7 +257,7 @@ Partial Class frMenuPrincipal
         '
         Me.tsAyuda.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miAcercaDeMRP})
         Me.tsAyuda.Name = "tsAyuda"
-        Me.tsAyuda.Size = New System.Drawing.Size(53, 20)
+        Me.tsAyuda.Size = New System.Drawing.Size(53, 19)
         Me.tsAyuda.Text = "Ay&uda"
         '
         'miAcercaDeMRP
@@ -260,6 +366,21 @@ Partial Class frMenuPrincipal
     Friend WithEvents miEmpresas As ToolStripMenuItem
     Friend WithEvents miMonedas As ToolStripMenuItem
     Friend WithEvents miPaises As ToolStripMenuItem
-    Friend WithEvents tsSeparador2 As ToolStripSeparator
+    Friend WithEvents tsSeparador5 As ToolStripSeparator
     Friend WithEvents miUsuarios As ToolStripMenuItem
+    Friend WithEvents miTiposMovimientos As ToolStripMenuItem
+    Friend WithEvents miBodegas As ToolStripMenuItem
+    Friend WithEvents miStatus As ToolStripMenuItem
+    Friend WithEvents miClasificacionInventarios As ToolStripMenuItem
+    Friend WithEvents miInventarios As ToolStripMenuItem
+    Friend WithEvents miMedidas As ToolStripMenuItem
+    Friend WithEvents miTareas As ToolStripMenuItem
+    Friend WithEvents miRecetario As ToolStripMenuItem
+    Friend WithEvents miTiposTareas As ToolStripMenuItem
+    Friend WithEvents miSolicitudes As ToolStripMenuItem
+    Friend WithEvents miOrdenesProduccion As ToolStripMenuItem
+    Friend WithEvents tsSeparador2 As ToolStripSeparator
+    Friend WithEvents miMovimientos As ToolStripMenuItem
+    Friend WithEvents tsSeparador3 As ToolStripSeparator
+    Friend WithEvents tsSeparador4 As ToolStripSeparator
 End Class

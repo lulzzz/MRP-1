@@ -135,6 +135,24 @@
     <Compile Include="frPais.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frRecetario.Designer.vb">
+      <DependentUpon>frRecetario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frRecetario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frTarea.Designer.vb">
+      <DependentUpon>frTarea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frTarea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frTareaTipo.Designer.vb">
+      <DependentUpon>frTareaTipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frTareaTipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frUsuario.Designer.vb">
       <DependentUpon>frUsuario.vb</DependentUpon>
     </Compile>
@@ -199,6 +217,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frPais.resx">
       <DependentUpon>frPais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frRecetario.resx">
+      <DependentUpon>frRecetario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frTarea.resx">
+      <DependentUpon>frTarea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frTareaTipo.resx">
+      <DependentUpon>frTareaTipo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frUsuario.resx">
       <DependentUpon>frUsuario.vb</DependentUpon>

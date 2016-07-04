@@ -28,15 +28,15 @@ Partial Class frMoneda
         Me.lbDescripcion = New System.Windows.Forms.Label()
         Me.lbSimbolo = New System.Windows.Forms.Label()
         Me.tbSimbolo = New System.Windows.Forms.TextBox()
-        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.tbEstado = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbEstado1 = New System.Windows.Forms.TextBox()
+        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.SuspendLayout()
         '
         'tbCodigo
         '
-        Me.tbCodigo.Location = New System.Drawing.Point(125, 60)
+        Me.tbCodigo.Location = New System.Drawing.Point(125, 70)
         Me.tbCodigo.Name = "tbCodigo"
         Me.tbCodigo.ReadOnly = True
         Me.tbCodigo.Size = New System.Drawing.Size(150, 20)
@@ -44,15 +44,16 @@ Partial Class frMoneda
         '
         'tbDescripcion
         '
-        Me.tbDescripcion.Location = New System.Drawing.Point(125, 86)
+        Me.tbDescripcion.Location = New System.Drawing.Point(125, 96)
+        Me.tbDescripcion.MaxLength = 100
         Me.tbDescripcion.Name = "tbDescripcion"
-        Me.tbDescripcion.Size = New System.Drawing.Size(150, 20)
+        Me.tbDescripcion.Size = New System.Drawing.Size(550, 20)
         Me.tbDescripcion.TabIndex = 2
         '
         'lbCodigo
         '
         Me.lbCodigo.AutoSize = True
-        Me.lbCodigo.Location = New System.Drawing.Point(12, 63)
+        Me.lbCodigo.Location = New System.Drawing.Point(12, 73)
         Me.lbCodigo.Name = "lbCodigo"
         Me.lbCodigo.Size = New System.Drawing.Size(43, 13)
         Me.lbCodigo.TabIndex = 2
@@ -61,7 +62,7 @@ Partial Class frMoneda
         'lbDescripcion
         '
         Me.lbDescripcion.AutoSize = True
-        Me.lbDescripcion.Location = New System.Drawing.Point(12, 89)
+        Me.lbDescripcion.Location = New System.Drawing.Point(12, 99)
         Me.lbDescripcion.Name = "lbDescripcion"
         Me.lbDescripcion.Size = New System.Drawing.Size(66, 13)
         Me.lbDescripcion.TabIndex = 3
@@ -70,7 +71,7 @@ Partial Class frMoneda
         'lbSimbolo
         '
         Me.lbSimbolo.AutoSize = True
-        Me.lbSimbolo.Location = New System.Drawing.Point(353, 89)
+        Me.lbSimbolo.Location = New System.Drawing.Point(12, 125)
         Me.lbSimbolo.Name = "lbSimbolo"
         Me.lbSimbolo.Size = New System.Drawing.Size(49, 13)
         Me.lbSimbolo.TabIndex = 5
@@ -78,10 +79,36 @@ Partial Class frMoneda
         '
         'tbSimbolo
         '
-        Me.tbSimbolo.Location = New System.Drawing.Point(466, 86)
+        Me.tbSimbolo.Location = New System.Drawing.Point(125, 122)
+        Me.tbSimbolo.MaxLength = 5
         Me.tbSimbolo.Name = "tbSimbolo"
         Me.tbSimbolo.Size = New System.Drawing.Size(150, 20)
         Me.tbSimbolo.TabIndex = 3
+        '
+        'tbEstado
+        '
+        Me.tbEstado.Location = New System.Drawing.Point(499, 70)
+        Me.tbEstado.Name = "tbEstado"
+        Me.tbEstado.Size = New System.Drawing.Size(20, 20)
+        Me.tbEstado.TabIndex = 1
+        Me.tbEstado.Visible = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(412, 73)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Estado:"
+        '
+        'tbEstado1
+        '
+        Me.tbEstado1.Location = New System.Drawing.Point(525, 70)
+        Me.tbEstado1.Name = "tbEstado1"
+        Me.tbEstado1.ReadOnly = True
+        Me.tbEstado1.Size = New System.Drawing.Size(150, 20)
+        Me.tbEstado1.TabIndex = 1
         '
         'UcNavegador1
         '
@@ -91,40 +118,15 @@ Partial Class frMoneda
         Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UcNavegador1.Location = New System.Drawing.Point(0, 0)
         Me.UcNavegador1.Name = "UcNavegador1"
-        Me.UcNavegador1.Size = New System.Drawing.Size(629, 41)
+        Me.UcNavegador1.Size = New System.Drawing.Size(689, 41)
         Me.UcNavegador1.TabIndex = 6
-        '
-        'tbEstado
-        '
-        Me.tbEstado.Location = New System.Drawing.Point(440, 60)
-        Me.tbEstado.Name = "tbEstado"
-        Me.tbEstado.Size = New System.Drawing.Size(20, 20)
-        Me.tbEstado.TabIndex = 1
-        Me.tbEstado.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(353, 63)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Estado:"
-        '
-        'tbEstado1
-        '
-        Me.tbEstado1.Location = New System.Drawing.Point(466, 60)
-        Me.tbEstado1.Name = "tbEstado1"
-        Me.tbEstado1.ReadOnly = True
-        Me.tbEstado1.Size = New System.Drawing.Size(150, 20)
-        Me.tbEstado1.TabIndex = 1
         '
         'frMoneda
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(629, 121)
+        Me.ClientSize = New System.Drawing.Size(689, 156)
         Me.Controls.Add(Me.tbEstado1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tbEstado)
@@ -135,11 +137,9 @@ Partial Class frMoneda
         Me.Controls.Add(Me.lbCodigo)
         Me.Controls.Add(Me.tbDescripcion)
         Me.Controls.Add(Me.tbCodigo)
-        Me.MaximizeBox = False
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MinimizeBox = False
         Me.Name = "frMoneda"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Monedas"
         Me.ResumeLayout(False)

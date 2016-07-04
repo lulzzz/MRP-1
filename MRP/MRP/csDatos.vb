@@ -16,6 +16,9 @@ Public Class csDatos
     Private Shared prIdUsuario As Integer
     Private Shared prUsuario As String
     Private Shared prNombreUsuario As String
+    Private Shared cnConexion As SqlConnection
+    Private Shared cmComando As SqlCommand
+    Private Shared ctTransaccion As SqlTransaction
 
 #Region "Entorno"
     Public Shared Property IdEmpresa As Integer
@@ -65,62 +68,67 @@ Public Class csDatos
 #End Region
 
 #Region "IteraccionDB"
-    Public Shared Function EjecutarQuery(ByVal Query As String) As Boolean
+    Public Shared Sub IniciarTransaccion()
         Try
-            Using connection As New SqlConnection(stConexion)
-                connection.Open()
-                Dim command As SqlCommand = connection.CreateCommand()
-                Dim transaction As SqlTransaction
-                transaction = connection.BeginTransaction(IsolationLevel.ReadCommitted)
-                command.Transaction = transaction
-                Try
-                    command.CommandText = Query
-                    command.ExecuteNonQuery()
-                    transaction.Commit()
-                    connection.Close()
-                    Return True
-                Catch ex As Exception
-                    transaction.Rollback()
-                    Return False
-                Finally
-                    If Not IsNothing(transaction) Then transaction.Dispose()
-                    If Not IsNothing(command) Then command.Dispose()
-                    If Not IsNothing(connection) Then connection.Dispose()
-                End Try
-            End Using
+            cnConexion = New SqlConnection(stConexion)
+            cnConexion.Open()
+            cmComando = cnConexion.CreateCommand()
+            ctTransaccion = cnConexion.BeginTransaction(IsolationLevel.ReadCommitted)
+            cmComando.Transaction = ctTransaccion
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return False
         End Try
-    End Function
+    End Sub
 
-    Public Shared Function EjecutarQuery(ByVal Queries As ArrayList) As Boolean
-        Dim Query As String = String.Empty
+    Public Shared Sub FinalizarTransaccion(ByVal Exito As Boolean)
         Try
-            Using connection As New SqlConnection(stConexion)
-                connection.Open()
-                Dim command As SqlCommand = connection.CreateCommand()
-                Dim transaction As SqlTransaction
-                transaction = connection.BeginTransaction(IsolationLevel.ReadCommitted)
-                command.Transaction = transaction
+            If Exito Then
+                ctTransaccion.Commit()
+            Else
+                ctTransaccion.Rollback()
+            End If
+            cnConexion.Close()
+            If Not IsNothing(ctTransaccion) Then ctTransaccion.Dispose()
+            If Not IsNothing(cmComando) Then cmComando.Dispose()
+            If Not IsNothing(cnConexion) Then cnConexion.Dispose()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Public Shared Function EjecutarQuery(ByVal Query As String, Optional ByVal Transaccion As Boolean = True) As Boolean
+        Try
+            If Transaccion Then
+                Using connection As New SqlConnection(stConexion)
+                    connection.Open()
+                    Dim command As SqlCommand = connection.CreateCommand()
+                    Dim transaction As SqlTransaction
+                    transaction = connection.BeginTransaction(IsolationLevel.ReadCommitted)
+                    command.Transaction = transaction
+                    Try
+                        command.CommandText = Query
+                        command.ExecuteNonQuery()
+                        transaction.Commit()
+                        connection.Close()
+                        Return True
+                    Catch ex As Exception
+                        transaction.Rollback()
+                        Return False
+                    Finally
+                        If Not IsNothing(transaction) Then transaction.Dispose()
+                        If Not IsNothing(command) Then command.Dispose()
+                        If Not IsNothing(connection) Then connection.Dispose()
+                    End Try
+                End Using
+            Else
                 Try
-                    command.CommandText = Query
-                    For i As Integer = 0 To Queries.Count - 1
-                        Query += Queries(i).ToString + " "
-                    Next
-                    command.ExecuteNonQuery()
-                    transaction.Commit()
-                    connection.Close()
+                    cmComando.CommandText = Query
+                    cmComando.ExecuteNonQuery()
                     Return True
                 Catch ex As Exception
-                    transaction.Rollback()
                     Return False
-                Finally
-                    If Not IsNothing(transaction) Then transaction.Dispose()
-                    If Not IsNothing(command) Then command.Dispose()
-                    If Not IsNothing(connection) Then connection.Dispose()
                 End Try
-            End Using
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False

@@ -132,6 +132,36 @@
         Dim frTareaTipo As New frTareaTipo
         ValidacionFormulario("frTareaTipo", frTareaTipo)
     End Sub
+
+    Private Sub miDepartamento_Click(sender As Object, e As EventArgs) Handles miDepartamento.Click
+        Dim frDepartamento As New frDepartamento
+        ValidacionFormulario("frDepartamento", frDepartamento)
+    End Sub
+
+    Private Sub miEmpleado_Click(sender As Object, e As EventArgs) Handles miEmpleado.Click
+        Dim frEmpleado As New frEmpleado
+        ValidacionFormulario("frEmpleado", frEmpleado)
+    End Sub
+
+    Private Sub miEmpleadoNomina_Click(sender As Object, e As EventArgs) Handles miEmpleadoNomina.Click
+        Dim frEmpleadoNomina As New frEmpleadoNomina
+        ValidacionFormulario("frEmpleadoNomina", frEmpleadoNomina)
+    End Sub
+
+    Private Sub miNomina_Click(sender As Object, e As EventArgs) Handles miNomina.Click
+        Dim frNomina As New frNomina
+        ValidacionFormulario("frNomina", frNomina)
+    End Sub
+
+    Private Sub miNominaPeriodo_Click(sender As Object, e As EventArgs) Handles miNominaPeriodo.Click
+        Dim frNominaPeriodo As New frNominaPeriodo
+        ValidacionFormulario("frNominaPeriodo", frNominaPeriodo)
+    End Sub
+
+    Private Sub miPuesto_Click(sender As Object, e As EventArgs) Handles miPuesto.Click
+        Dim frPuesto As New frPuesto
+        ValidacionFormulario("frPuesto", frPuesto)
+    End Sub
 #End Region
 
 #Region "Procesos"

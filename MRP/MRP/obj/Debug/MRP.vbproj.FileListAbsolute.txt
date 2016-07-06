@@ -73,7 +73,6 @@ C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbproj.GenerateResource.
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frRecetario.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frTarea.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frTareaTipo.resources
-C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.exe.config
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.exe
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.xml
@@ -100,3 +99,9 @@ C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.ssSplashPresentacion.resou
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.ucNavegador.resources
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbproj.GenerateResource.Cache
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleadoNomina.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frDepartamento.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleado.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleadoNomina.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNomina.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNominaPeriodo.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frPuesto.resources

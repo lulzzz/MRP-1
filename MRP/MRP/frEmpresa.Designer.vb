@@ -22,7 +22,6 @@ Partial Class frEmpresa
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.tbEstado1 = New System.Windows.Forms.TextBox()
         Me.lbEstado = New System.Windows.Forms.Label()
         Me.tbEstado = New System.Windows.Forms.TextBox()
@@ -46,18 +45,8 @@ Partial Class frEmpresa
         Me.tbIdentificacionTributaria = New System.Windows.Forms.TextBox()
         Me.tbPais = New System.Windows.Forms.TextBox()
         Me.tbMoneda = New System.Windows.Forms.TextBox()
+        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.SuspendLayout()
-        '
-        'UcNavegador1
-        '
-        Me.UcNavegador1.AutoSize = True
-        Me.UcNavegador1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 0)
-        Me.UcNavegador1.Name = "UcNavegador1"
-        Me.UcNavegador1.Size = New System.Drawing.Size(689, 41)
-        Me.UcNavegador1.TabIndex = 8
         '
         'tbEstado1
         '
@@ -245,6 +234,7 @@ Partial Class frEmpresa
         Me.tbPais.Name = "tbPais"
         Me.tbPais.Size = New System.Drawing.Size(20, 20)
         Me.tbPais.TabIndex = 38
+        Me.tbPais.Visible = False
         '
         'tbMoneda
         '
@@ -252,6 +242,18 @@ Partial Class frEmpresa
         Me.tbMoneda.Name = "tbMoneda"
         Me.tbMoneda.Size = New System.Drawing.Size(20, 20)
         Me.tbMoneda.TabIndex = 39
+        Me.tbMoneda.Visible = False
+        '
+        'UcNavegador1
+        '
+        Me.UcNavegador1.AutoSize = True
+        Me.UcNavegador1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 0)
+        Me.UcNavegador1.Name = "UcNavegador1"
+        Me.UcNavegador1.Size = New System.Drawing.Size(689, 41)
+        Me.UcNavegador1.TabIndex = 100
         '
         'frEmpresa
         '

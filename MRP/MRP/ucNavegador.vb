@@ -28,7 +28,12 @@
 
     Private Sub RecargarNavegador()
         Try
-            csDatos.ConsultarQuery(DatosSalida, "SELECT * FROM " + NombreTabla)
+            Dim Query As String
+            Query = "SELECT * FROM " + NombreTabla
+            If NombreTabla <> "tbl_mrp_empresa" AndAlso csNegocio.ValidarTablaEmpresa(NombreTabla) Then
+                Query += " WHERE id_empresa=" + csDatos.IdEmpresa.ToString
+            End If
+            csDatos.ConsultarQuery(DatosSalida, Query)
             MostrarDatos()
             RestriccionesBotones(True)
         Catch ex As Exception

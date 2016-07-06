@@ -23,6 +23,20 @@ Partial Class frRecetario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.UcNavegador1 = New MRP.ucNavegador()
+        Me.tbEmpresa = New System.Windows.Forms.TextBox()
+        Me.lbInventario = New System.Windows.Forms.Label()
+        Me.cbInventario = New System.Windows.Forms.ComboBox()
+        Me.lbDescripcion = New System.Windows.Forms.Label()
+        Me.tbDescripcion = New System.Windows.Forms.TextBox()
+        Me.tbInventario = New System.Windows.Forms.TextBox()
+        Me.tbEstado1 = New System.Windows.Forms.TextBox()
+        Me.lbEstado = New System.Windows.Forms.Label()
+        Me.tbEstado = New System.Windows.Forms.TextBox()
+        Me.lbCodigo = New System.Windows.Forms.Label()
+        Me.tbCodigo = New System.Windows.Forms.TextBox()
+        Me.dpFechaCreacion = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.tbFechaCreacion = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'UcNavegador1
@@ -34,14 +48,150 @@ Partial Class frRecetario
         Me.UcNavegador1.Location = New System.Drawing.Point(0, 0)
         Me.UcNavegador1.Name = "UcNavegador1"
         Me.UcNavegador1.Size = New System.Drawing.Size(689, 41)
-        Me.UcNavegador1.TabIndex = 7
+        Me.UcNavegador1.TabIndex = 100
+        '
+        'tbEmpresa
+        '
+        Me.tbEmpresa.Location = New System.Drawing.Point(281, 70)
+        Me.tbEmpresa.MaxLength = 100
+        Me.tbEmpresa.Name = "tbEmpresa"
+        Me.tbEmpresa.Size = New System.Drawing.Size(20, 20)
+        Me.tbEmpresa.TabIndex = 51
+        Me.tbEmpresa.Visible = False
+        '
+        'lbInventario
+        '
+        Me.lbInventario.AutoSize = True
+        Me.lbInventario.Location = New System.Drawing.Point(12, 99)
+        Me.lbInventario.Name = "lbInventario"
+        Me.lbInventario.Size = New System.Drawing.Size(57, 13)
+        Me.lbInventario.TabIndex = 50
+        Me.lbInventario.Text = "Inventario:"
+        '
+        'cbInventario
+        '
+        Me.cbInventario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbInventario.FormattingEnabled = True
+        Me.cbInventario.Location = New System.Drawing.Point(125, 96)
+        Me.cbInventario.Name = "cbInventario"
+        Me.cbInventario.Size = New System.Drawing.Size(550, 21)
+        Me.cbInventario.TabIndex = 2
+        '
+        'lbDescripcion
+        '
+        Me.lbDescripcion.AutoSize = True
+        Me.lbDescripcion.Location = New System.Drawing.Point(12, 126)
+        Me.lbDescripcion.Name = "lbDescripcion"
+        Me.lbDescripcion.Size = New System.Drawing.Size(66, 13)
+        Me.lbDescripcion.TabIndex = 49
+        Me.lbDescripcion.Text = "Descripción:"
+        '
+        'tbDescripcion
+        '
+        Me.tbDescripcion.Location = New System.Drawing.Point(125, 123)
+        Me.tbDescripcion.MaxLength = 256
+        Me.tbDescripcion.Name = "tbDescripcion"
+        Me.tbDescripcion.Size = New System.Drawing.Size(550, 20)
+        Me.tbDescripcion.TabIndex = 3
+        '
+        'tbInventario
+        '
+        Me.tbInventario.Location = New System.Drawing.Point(99, 96)
+        Me.tbInventario.MaxLength = 100
+        Me.tbInventario.Name = "tbInventario"
+        Me.tbInventario.Size = New System.Drawing.Size(20, 20)
+        Me.tbInventario.TabIndex = 48
+        Me.tbInventario.Visible = False
+        '
+        'tbEstado1
+        '
+        Me.tbEstado1.Location = New System.Drawing.Point(525, 70)
+        Me.tbEstado1.Name = "tbEstado1"
+        Me.tbEstado1.ReadOnly = True
+        Me.tbEstado1.Size = New System.Drawing.Size(150, 20)
+        Me.tbEstado1.TabIndex = 1
+        '
+        'lbEstado
+        '
+        Me.lbEstado.AutoSize = True
+        Me.lbEstado.Location = New System.Drawing.Point(412, 73)
+        Me.lbEstado.Name = "lbEstado"
+        Me.lbEstado.Size = New System.Drawing.Size(43, 13)
+        Me.lbEstado.TabIndex = 47
+        Me.lbEstado.Text = "Estado:"
+        '
+        'tbEstado
+        '
+        Me.tbEstado.Location = New System.Drawing.Point(499, 70)
+        Me.tbEstado.Name = "tbEstado"
+        Me.tbEstado.Size = New System.Drawing.Size(20, 20)
+        Me.tbEstado.TabIndex = 44
+        Me.tbEstado.Visible = False
+        '
+        'lbCodigo
+        '
+        Me.lbCodigo.AutoSize = True
+        Me.lbCodigo.Location = New System.Drawing.Point(12, 73)
+        Me.lbCodigo.Name = "lbCodigo"
+        Me.lbCodigo.Size = New System.Drawing.Size(43, 13)
+        Me.lbCodigo.TabIndex = 45
+        Me.lbCodigo.Text = "Código:"
+        '
+        'tbCodigo
+        '
+        Me.tbCodigo.Location = New System.Drawing.Point(125, 70)
+        Me.tbCodigo.Name = "tbCodigo"
+        Me.tbCodigo.ReadOnly = True
+        Me.tbCodigo.Size = New System.Drawing.Size(150, 20)
+        Me.tbCodigo.TabIndex = 0
+        '
+        'dpFechaCreacion
+        '
+        Me.dpFechaCreacion.CustomFormat = "dd/MM/yyyy"
+        Me.dpFechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dpFechaCreacion.Location = New System.Drawing.Point(125, 149)
+        Me.dpFechaCreacion.Name = "dpFechaCreacion"
+        Me.dpFechaCreacion.Size = New System.Drawing.Size(150, 20)
+        Me.dpFechaCreacion.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 152)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(99, 13)
+        Me.Label1.TabIndex = 53
+        Me.Label1.Text = "Fecha de creación:"
+        '
+        'tbFechaCreacion
+        '
+        Me.tbFechaCreacion.Location = New System.Drawing.Point(281, 149)
+        Me.tbFechaCreacion.MaxLength = 100
+        Me.tbFechaCreacion.Name = "tbFechaCreacion"
+        Me.tbFechaCreacion.Size = New System.Drawing.Size(20, 20)
+        Me.tbFechaCreacion.TabIndex = 54
+        Me.tbFechaCreacion.Visible = False
         '
         'frRecetario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(689, 156)
+        Me.ClientSize = New System.Drawing.Size(689, 181)
+        Me.Controls.Add(Me.tbFechaCreacion)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.dpFechaCreacion)
+        Me.Controls.Add(Me.tbEmpresa)
+        Me.Controls.Add(Me.lbInventario)
+        Me.Controls.Add(Me.cbInventario)
+        Me.Controls.Add(Me.lbDescripcion)
+        Me.Controls.Add(Me.tbDescripcion)
+        Me.Controls.Add(Me.tbInventario)
+        Me.Controls.Add(Me.tbEstado1)
+        Me.Controls.Add(Me.lbEstado)
+        Me.Controls.Add(Me.tbEstado)
+        Me.Controls.Add(Me.lbCodigo)
+        Me.Controls.Add(Me.tbCodigo)
         Me.Controls.Add(Me.UcNavegador1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MinimizeBox = False
@@ -54,4 +204,18 @@ Partial Class frRecetario
     End Sub
 
     Friend WithEvents UcNavegador1 As ucNavegador
+    Friend WithEvents tbEmpresa As TextBox
+    Friend WithEvents lbInventario As Label
+    Friend WithEvents cbInventario As ComboBox
+    Friend WithEvents lbDescripcion As Label
+    Friend WithEvents tbDescripcion As TextBox
+    Friend WithEvents tbInventario As TextBox
+    Friend WithEvents tbEstado1 As TextBox
+    Friend WithEvents lbEstado As Label
+    Friend WithEvents tbEstado As TextBox
+    Friend WithEvents lbCodigo As Label
+    Friend WithEvents tbCodigo As TextBox
+    Friend WithEvents dpFechaCreacion As DateTimePicker
+    Friend WithEvents Label1 As Label
+    Friend WithEvents tbFechaCreacion As TextBox
 End Class

@@ -123,6 +123,12 @@
     <Compile Include="frFondo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frGasto.Designer.vb">
+      <DependentUpon>frGasto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frGasto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frLogin.Designer.vb">
       <DependentUpon>frLogin.vb</DependentUpon>
     </Compile>
@@ -163,6 +169,12 @@
       <DependentUpon>frPais.vb</DependentUpon>
     </Compile>
     <Compile Include="frPais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frProcesoProduccion.Designer.vb">
+      <DependentUpon>frProcesoProduccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frProcesoProduccion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frPuesto.Designer.vb">
@@ -248,6 +260,9 @@
     <EmbeddedResource Include="frFondo.resx">
       <DependentUpon>frFondo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frGasto.resx">
+      <DependentUpon>frGasto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frLogin.resx">
       <DependentUpon>frLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frPais.resx">
       <DependentUpon>frPais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frProcesoProduccion.resx">
+      <DependentUpon>frProcesoProduccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frPuesto.resx">
       <DependentUpon>frPuesto.vb</DependentUpon>

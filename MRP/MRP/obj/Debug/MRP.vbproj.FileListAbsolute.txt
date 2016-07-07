@@ -147,3 +147,7 @@ C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNomina.resources
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNominaPeriodo.resources
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frProcesoProduccion.resources
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frPuesto.resources
+C:\Users\Anthony\Source\ReposKevin\MRP\MRP\MRP\bin\Debug\MRP.exe.config
+C:\Users\Anthony\Source\ReposKevin\MRP\MRP\MRP\obj\Debug\MRP.exe
+C:\Users\Anthony\Source\ReposKevin\MRP\MRP\MRP\obj\Debug\MRP.xml
+C:\Users\Anthony\Source\ReposKevin\MRP\MRP\MRP\obj\Debug\MRP.pdb

@@ -102,7 +102,7 @@ Partial Class frAcercaDeMRP
         Me.lbVersion.Name = "lbVersion"
         Me.lbVersion.Size = New System.Drawing.Size(257, 17)
         Me.lbVersion.TabIndex = 0
-        Me.lbVersion.Text = "Versión 1.0.0"
+        Me.lbVersion.Text = "Versión 2.0.0"
         Me.lbVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbCopyright

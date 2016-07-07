@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="frBodega.Designer.vb">
+      <DependentUpon>frBodega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frBodega.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frBuscar.Designer.vb">
       <DependentUpon>frBuscar.vb</DependentUpon>
     </Compile>
@@ -129,6 +135,18 @@
     <Compile Include="frGasto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frInventario.Designer.vb">
+      <DependentUpon>frInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frInventarioClasificacion.Designer.vb">
+      <DependentUpon>frInventarioClasificacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frInventarioClasificacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frLogin.Designer.vb">
       <DependentUpon>frLogin.vb</DependentUpon>
     </Compile>
@@ -141,6 +159,12 @@
     <Compile Include="frLoginEmpresa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frMedida.Designer.vb">
+      <DependentUpon>frMedida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frMedida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frMenuPrincipal.Designer.vb">
       <DependentUpon>frMenuPrincipal.vb</DependentUpon>
     </Compile>
@@ -151,6 +175,12 @@
       <DependentUpon>frMoneda.vb</DependentUpon>
     </Compile>
     <Compile Include="frMoneda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frMovimientoTipo.Designer.vb">
+      <DependentUpon>frMovimientoTipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frMovimientoTipo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frNomina.Designer.vb">
@@ -187,6 +217,12 @@
       <DependentUpon>frRecetario.vb</DependentUpon>
     </Compile>
     <Compile Include="frRecetario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frStatus.Designer.vb">
+      <DependentUpon>frStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frStatus.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frTarea.Designer.vb">
@@ -236,6 +272,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frBodega.resx">
+      <DependentUpon>frBodega.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frBuscar.resx">
       <DependentUpon>frBuscar.vb</DependentUpon>
     </EmbeddedResource>
@@ -263,17 +302,29 @@
     <EmbeddedResource Include="frGasto.resx">
       <DependentUpon>frGasto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frInventario.resx">
+      <DependentUpon>frInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frInventarioClasificacion.resx">
+      <DependentUpon>frInventarioClasificacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frLogin.resx">
       <DependentUpon>frLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frLoginEmpresa.resx">
       <DependentUpon>frLoginEmpresa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frMedida.resx">
+      <DependentUpon>frMedida.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frMenuPrincipal.resx">
       <DependentUpon>frMenuPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frMoneda.resx">
       <DependentUpon>frMoneda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frMovimientoTipo.resx">
+      <DependentUpon>frMovimientoTipo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frNomina.resx">
       <DependentUpon>frNomina.vb</DependentUpon>
@@ -292,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frRecetario.resx">
       <DependentUpon>frRecetario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frStatus.resx">
+      <DependentUpon>frStatus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frTarea.resx">
       <DependentUpon>frTarea.vb</DependentUpon>

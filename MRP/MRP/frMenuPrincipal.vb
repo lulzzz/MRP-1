@@ -95,19 +95,23 @@
 
 #Region "Catálogos"
     Private Sub miBodegas_Click(sender As Object, e As EventArgs) Handles miBodegas.Click
-
+        Dim frBodega As New frBodega
+        ValidacionFormulario("frBodega", frBodega)
     End Sub
 
     Private Sub miClasificacionInventarios_Click(sender As Object, e As EventArgs) Handles miClasificacionInventarios.Click
-
+        Dim frInventarioClasificacion As New frInventarioClasificacion
+        ValidacionFormulario("frInventarioClasificación", frInventarioClasificacion)
     End Sub
 
     Private Sub miInventarios_Click(sender As Object, e As EventArgs) Handles miInventarios.Click
-
+        Dim frInventario As New frInventario
+        ValidacionFormulario("frInventario", frInventario)
     End Sub
 
     Private Sub miMedidas_Click(sender As Object, e As EventArgs) Handles miMedidas.Click
-
+        Dim frMedida As New frMedida
+        ValidacionFormulario("frMedida", frMedida)
     End Sub
 
     Private Sub miRecetario_Click(sender As Object, e As EventArgs) Handles miRecetario.Click
@@ -116,7 +120,8 @@
     End Sub
 
     Private Sub miStatus_Click(sender As Object, e As EventArgs) Handles miStatus.Click
-
+        Dim frStatus As New frStatus
+        ValidacionFormulario("frStatus", frStatus)
     End Sub
 
     Private Sub miTareas_Click(sender As Object, e As EventArgs) Handles miTareas.Click
@@ -125,7 +130,8 @@
     End Sub
 
     Private Sub miTiposMovimientos_Click(sender As Object, e As EventArgs) Handles miTiposMovimientos.Click
-
+        Dim frMovimientoTipo As New frMovimientoTipo
+        ValidacionFormulario("frMovimientoTipo", frMovimientoTipo)
     End Sub
 
     Private Sub miTiposTareas_Click(sender As Object, e As EventArgs) Handles miTiposTareas.Click

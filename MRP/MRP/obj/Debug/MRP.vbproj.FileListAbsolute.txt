@@ -139,3 +139,11 @@ C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.ucNavegador.reso
 C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbproj.GenerateResource.Cache
 C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGasto.resources
 C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frProcesoProduccion.resources
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frDepartamento.resources
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleado.resources
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGasto.resources
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNomina.resources
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNominaPeriodo.resources
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frProcesoProduccion.resources
+C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frPuesto.resources

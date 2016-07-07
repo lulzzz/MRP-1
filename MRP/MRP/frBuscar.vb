@@ -10,7 +10,6 @@
             csDatos.ConsultarQuery(dtDatos, Me.QueryBuscar)
             dgvDatos.DataSource = Me.dtDatos
             dgvDatos.Refresh()
-            dgvDatos.Columns(0).Visible = False
             dgvDatos.Refresh()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)

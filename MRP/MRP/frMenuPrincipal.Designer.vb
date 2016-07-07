@@ -43,6 +43,7 @@ Partial Class frMenuPrincipal
         Me.miDepartamento = New System.Windows.Forms.ToolStripMenuItem()
         Me.miEmpleado = New System.Windows.Forms.ToolStripMenuItem()
         Me.miEmpleadoNomina = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miGastos = New System.Windows.Forms.ToolStripMenuItem()
         Me.miNomina = New System.Windows.Forms.ToolStripMenuItem()
         Me.miNominaPeriodo = New System.Windows.Forms.ToolStripMenuItem()
         Me.miPuesto = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,6 +52,7 @@ Partial Class frMenuPrincipal
         Me.miOrdenesProduccion = New System.Windows.Forms.ToolStripMenuItem()
         Me.miSolicitudes = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsSeparador3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.miProcesoProduccion = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsReportes = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsSeparador4 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsOpciones = New System.Windows.Forms.ToolStripMenuItem()
@@ -68,8 +70,6 @@ Partial Class frMenuPrincipal
         Me.tsUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.slInicioSesion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tsInicioSesion = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.miGastos = New System.Windows.Forms.ToolStripMenuItem()
-        Me.miProcesoProduccion = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMenuPrincipal.SuspendLayout()
         Me.ssBarraEstado.SuspendLayout()
         Me.SuspendLayout()
@@ -201,6 +201,12 @@ Partial Class frMenuPrincipal
         Me.miEmpleadoNomina.Size = New System.Drawing.Size(218, 22)
         Me.miEmpleadoNomina.Text = "Emp&leado Nómina"
         '
+        'miGastos
+        '
+        Me.miGastos.Name = "miGastos"
+        Me.miGastos.Size = New System.Drawing.Size(218, 22)
+        Me.miGastos.Text = "&Gastos"
+        '
         'miNomina
         '
         Me.miNomina.Name = "miNomina"
@@ -211,13 +217,13 @@ Partial Class frMenuPrincipal
         '
         Me.miNominaPeriodo.Name = "miNominaPeriodo"
         Me.miNominaPeriodo.Size = New System.Drawing.Size(218, 22)
-        Me.miNominaPeriodo.Text = "N&omina Periodo"
+        Me.miNominaPeriodo.Text = "Periodos de Nóminas"
         '
         'miPuesto
         '
         Me.miPuesto.Name = "miPuesto"
         Me.miPuesto.Size = New System.Drawing.Size(218, 22)
-        Me.miPuesto.Text = "&Puesto"
+        Me.miPuesto.Text = "&Puestos"
         '
         'tsProcesos
         '
@@ -248,6 +254,12 @@ Partial Class frMenuPrincipal
         '
         Me.tsSeparador3.Name = "tsSeparador3"
         Me.tsSeparador3.Size = New System.Drawing.Size(198, 6)
+        '
+        'miProcesoProduccion
+        '
+        Me.miProcesoProduccion.Name = "miProcesoProduccion"
+        Me.miProcesoProduccion.Size = New System.Drawing.Size(201, 22)
+        Me.miProcesoProduccion.Text = "&Procesos de Producción"
         '
         'tsReportes
         '
@@ -365,18 +377,6 @@ Partial Class frMenuPrincipal
         Me.tsInicioSesion.Spring = True
         Me.tsInicioSesion.Text = "InicioSesion"
         Me.tsInicioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'miGastos
-        '
-        Me.miGastos.Name = "miGastos"
-        Me.miGastos.Size = New System.Drawing.Size(218, 22)
-        Me.miGastos.Text = "&Gastos"
-        '
-        'miProcesoProduccion
-        '
-        Me.miProcesoProduccion.Name = "miProcesoProduccion"
-        Me.miProcesoProduccion.Size = New System.Drawing.Size(201, 22)
-        Me.miProcesoProduccion.Text = "&Procesos de Producción"
         '
         'frMenuPrincipal
         '

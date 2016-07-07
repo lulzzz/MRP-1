@@ -159,9 +159,19 @@ Public Class csDatos
         End Try
     End Function
 
-    Public Shared Function ObtenerCamposTabla(ByRef dt As DataTable, ByVal Tabla As String) As Boolean
+    Public Shared Function ObtenerCamposTabla(ByRef dt As DataTable, ByVal NombreTabla As String) As Boolean
         Try
-            Return csDatos.ConsultarQuery(dt, "SELECT COLUMN_NAME Campo FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_CATALOG = '" + stDB + "' AND TABLE_NAME = '" + Tabla + "'")
+            Return csDatos.ConsultarQuery(dt, "SELECT COLUMN_NAME Campo FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_CATALOG = '" + stDB + "' AND TABLE_NAME = '" + NombreTabla + "'")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
+
+    Public Shared Function ValidarTablaEmpresa(ByVal NombreTabla As String) As Boolean
+        Try
+            Dim dt As New DataTable
+            Return csDatos.ConsultarQuery(dt, "SELECT COLUMN_NAME Campo FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_CATALOG = '" + stDB + "' AND TABLE_NAME = '" + NombreTabla + "' AND COLUMN_NAME='id_empresa'")
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
@@ -214,8 +224,8 @@ Public Class csDatos
         NombreUsuario = String.Empty
         IdEmpresa = 0
         Empresa = String.Empty
-        If ConsultarQuery(dt, "Select id_usuario IdUsuario, usr_usuario Usuario, usr_nombre NombreUsuario FROM tbl_mrp_usuario WHERE id_estado=1 And usr_usuario='" + User + "' AND usr_contrasena='" + CifrarCadena(Password) + "'") Then
-                IdUsuario = CInt(dt.Rows(0)("IdUsuario"))
+        If ConsultarQuery(dt, "DECLARE @user VARCHAR(100), @pass VARCHAR(100) SET @user='" + User + "' SET @pass='" + CifrarCadena(Password) + "' SELECT id_usuario IdUsuario, usr_usuario Usuario, usr_nombre NombreUsuario FROM tbl_mrp_usuario WHERE id_estado=1 And usr_usuario=@user AND usr_contrasena=@pass") Then
+            IdUsuario = CInt(dt.Rows(0)("IdUsuario"))
             Usuario = CStr(dt.Rows(0)("Usuario"))
             NombreUsuario = CStr(dt.Rows(0)("NombreUsuario"))
         End If

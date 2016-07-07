@@ -73,7 +73,6 @@ C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbproj.GenerateResource.
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frRecetario.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frTarea.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frTareaTipo.resources
-C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.exe.config
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.exe
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.xml
@@ -100,3 +99,43 @@ C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.ssSplashPresentacion.resou
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.ucNavegador.resources
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbproj.GenerateResource.Cache
 C:\Users\marlo\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleadoNomina.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frDepartamento.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleado.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleadoNomina.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNomina.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNominaPeriodo.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frPuesto.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.exe.config
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.exe
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.xml
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.pdb
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.exe
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.pdb
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.xml
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frBuscar.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frAcercaDeMRP.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frConfiguracion.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frDepartamento.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleado.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpleadoNomina.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frEmpresa.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frFondo.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frLogin.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frLoginEmpresa.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frMenuPrincipal.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frMoneda.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNomina.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frNominaPeriodo.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frPais.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frPuesto.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frRecetario.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frTarea.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frTareaTipo.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frUsuario.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.Resources.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.ssSplashPresentacion.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.ucNavegador.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbproj.GenerateResource.Cache
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGasto.resources
+C:\Users\Pablo Zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frProcesoProduccion.resources

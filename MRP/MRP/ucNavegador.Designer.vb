@@ -43,7 +43,7 @@ Partial Class ucNavegador
         Me.btNuevo.Location = New System.Drawing.Point(3, 3)
         Me.btNuevo.Name = "btNuevo"
         Me.btNuevo.Size = New System.Drawing.Size(35, 35)
-        Me.btNuevo.TabIndex = 0
+        Me.btNuevo.TabIndex = 101
         Me.ToolTip1.SetToolTip(Me.btNuevo, "Nuevo")
         Me.btNuevo.UseVisualStyleBackColor = True
         '
@@ -56,7 +56,7 @@ Partial Class ucNavegador
         Me.btGuardar.Location = New System.Drawing.Point(40, 3)
         Me.btGuardar.Name = "btGuardar"
         Me.btGuardar.Size = New System.Drawing.Size(35, 35)
-        Me.btGuardar.TabIndex = 1
+        Me.btGuardar.TabIndex = 102
         Me.ToolTip1.SetToolTip(Me.btGuardar, "Guardar")
         Me.btGuardar.UseVisualStyleBackColor = False
         '
@@ -69,7 +69,7 @@ Partial Class ucNavegador
         Me.btEliminar.Location = New System.Drawing.Point(77, 3)
         Me.btEliminar.Name = "btEliminar"
         Me.btEliminar.Size = New System.Drawing.Size(35, 35)
-        Me.btEliminar.TabIndex = 2
+        Me.btEliminar.TabIndex = 103
         Me.ToolTip1.SetToolTip(Me.btEliminar, "Eliminar")
         Me.btEliminar.UseVisualStyleBackColor = False
         '
@@ -82,7 +82,7 @@ Partial Class ucNavegador
         Me.btPrimero.Location = New System.Drawing.Point(114, 3)
         Me.btPrimero.Name = "btPrimero"
         Me.btPrimero.Size = New System.Drawing.Size(35, 35)
-        Me.btPrimero.TabIndex = 3
+        Me.btPrimero.TabIndex = 104
         Me.ToolTip1.SetToolTip(Me.btPrimero, "Primero")
         Me.btPrimero.UseVisualStyleBackColor = False
         '
@@ -95,7 +95,7 @@ Partial Class ucNavegador
         Me.btAnterior.Location = New System.Drawing.Point(151, 3)
         Me.btAnterior.Name = "btAnterior"
         Me.btAnterior.Size = New System.Drawing.Size(35, 35)
-        Me.btAnterior.TabIndex = 4
+        Me.btAnterior.TabIndex = 105
         Me.ToolTip1.SetToolTip(Me.btAnterior, "Anterior")
         Me.btAnterior.UseVisualStyleBackColor = False
         '
@@ -108,7 +108,7 @@ Partial Class ucNavegador
         Me.btSiguiente.Location = New System.Drawing.Point(188, 3)
         Me.btSiguiente.Name = "btSiguiente"
         Me.btSiguiente.Size = New System.Drawing.Size(35, 35)
-        Me.btSiguiente.TabIndex = 5
+        Me.btSiguiente.TabIndex = 106
         Me.ToolTip1.SetToolTip(Me.btSiguiente, "Siguiente")
         Me.btSiguiente.UseVisualStyleBackColor = False
         '
@@ -121,7 +121,7 @@ Partial Class ucNavegador
         Me.btUltimo.Location = New System.Drawing.Point(225, 3)
         Me.btUltimo.Name = "btUltimo"
         Me.btUltimo.Size = New System.Drawing.Size(35, 35)
-        Me.btUltimo.TabIndex = 6
+        Me.btUltimo.TabIndex = 107
         Me.ToolTip1.SetToolTip(Me.btUltimo, "Último")
         Me.btUltimo.UseVisualStyleBackColor = False
         '
@@ -134,7 +134,7 @@ Partial Class ucNavegador
         Me.btBuscar.Location = New System.Drawing.Point(262, 3)
         Me.btBuscar.Name = "btBuscar"
         Me.btBuscar.Size = New System.Drawing.Size(35, 35)
-        Me.btBuscar.TabIndex = 7
+        Me.btBuscar.TabIndex = 108
         Me.ToolTip1.SetToolTip(Me.btBuscar, "Buscar")
         Me.btBuscar.UseVisualStyleBackColor = False
         '

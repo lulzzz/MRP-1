@@ -23,6 +23,19 @@ Partial Class frTarea
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.UcNavegador1 = New MRP.ucNavegador()
+        Me.tbEstado1 = New System.Windows.Forms.TextBox()
+        Me.lbEstado = New System.Windows.Forms.Label()
+        Me.tbEstado = New System.Windows.Forms.TextBox()
+        Me.lbNombre = New System.Windows.Forms.Label()
+        Me.lbCodigo = New System.Windows.Forms.Label()
+        Me.tbNombre = New System.Windows.Forms.TextBox()
+        Me.tbCodigo = New System.Windows.Forms.TextBox()
+        Me.tbTareaTipo = New System.Windows.Forms.TextBox()
+        Me.lbDescripcion = New System.Windows.Forms.Label()
+        Me.tbDescripcion = New System.Windows.Forms.TextBox()
+        Me.cbTareaTipo = New System.Windows.Forms.ComboBox()
+        Me.lbTareaTipo = New System.Windows.Forms.Label()
+        Me.tbEmpresa = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'UcNavegador1
@@ -34,14 +47,139 @@ Partial Class frTarea
         Me.UcNavegador1.Location = New System.Drawing.Point(0, 0)
         Me.UcNavegador1.Name = "UcNavegador1"
         Me.UcNavegador1.Size = New System.Drawing.Size(689, 41)
-        Me.UcNavegador1.TabIndex = 7
+        Me.UcNavegador1.TabIndex = 100
+        '
+        'tbEstado1
+        '
+        Me.tbEstado1.Location = New System.Drawing.Point(525, 70)
+        Me.tbEstado1.Name = "tbEstado1"
+        Me.tbEstado1.ReadOnly = True
+        Me.tbEstado1.Size = New System.Drawing.Size(150, 20)
+        Me.tbEstado1.TabIndex = 1
+        '
+        'lbEstado
+        '
+        Me.lbEstado.AutoSize = True
+        Me.lbEstado.Location = New System.Drawing.Point(412, 73)
+        Me.lbEstado.Name = "lbEstado"
+        Me.lbEstado.Size = New System.Drawing.Size(43, 13)
+        Me.lbEstado.TabIndex = 32
+        Me.lbEstado.Text = "Estado:"
+        '
+        'tbEstado
+        '
+        Me.tbEstado.Location = New System.Drawing.Point(499, 70)
+        Me.tbEstado.Name = "tbEstado"
+        Me.tbEstado.Size = New System.Drawing.Size(20, 20)
+        Me.tbEstado.TabIndex = 29
+        Me.tbEstado.Visible = False
+        '
+        'lbNombre
+        '
+        Me.lbNombre.AutoSize = True
+        Me.lbNombre.Location = New System.Drawing.Point(12, 126)
+        Me.lbNombre.Name = "lbNombre"
+        Me.lbNombre.Size = New System.Drawing.Size(47, 13)
+        Me.lbNombre.TabIndex = 31
+        Me.lbNombre.Text = "Nombre:"
+        '
+        'lbCodigo
+        '
+        Me.lbCodigo.AutoSize = True
+        Me.lbCodigo.Location = New System.Drawing.Point(12, 73)
+        Me.lbCodigo.Name = "lbCodigo"
+        Me.lbCodigo.Size = New System.Drawing.Size(43, 13)
+        Me.lbCodigo.TabIndex = 30
+        Me.lbCodigo.Text = "Código:"
+        '
+        'tbNombre
+        '
+        Me.tbNombre.Location = New System.Drawing.Point(125, 123)
+        Me.tbNombre.MaxLength = 100
+        Me.tbNombre.Name = "tbNombre"
+        Me.tbNombre.Size = New System.Drawing.Size(550, 20)
+        Me.tbNombre.TabIndex = 3
+        '
+        'tbCodigo
+        '
+        Me.tbCodigo.Location = New System.Drawing.Point(125, 70)
+        Me.tbCodigo.Name = "tbCodigo"
+        Me.tbCodigo.ReadOnly = True
+        Me.tbCodigo.Size = New System.Drawing.Size(150, 20)
+        Me.tbCodigo.TabIndex = 0
+        '
+        'tbTareaTipo
+        '
+        Me.tbTareaTipo.Location = New System.Drawing.Point(99, 96)
+        Me.tbTareaTipo.MaxLength = 100
+        Me.tbTareaTipo.Name = "tbTareaTipo"
+        Me.tbTareaTipo.Size = New System.Drawing.Size(20, 20)
+        Me.tbTareaTipo.TabIndex = 33
+        Me.tbTareaTipo.Visible = False
+        '
+        'lbDescripcion
+        '
+        Me.lbDescripcion.AutoSize = True
+        Me.lbDescripcion.Location = New System.Drawing.Point(12, 152)
+        Me.lbDescripcion.Name = "lbDescripcion"
+        Me.lbDescripcion.Size = New System.Drawing.Size(66, 13)
+        Me.lbDescripcion.TabIndex = 35
+        Me.lbDescripcion.Text = "Descripción:"
+        '
+        'tbDescripcion
+        '
+        Me.tbDescripcion.Location = New System.Drawing.Point(125, 149)
+        Me.tbDescripcion.MaxLength = 256
+        Me.tbDescripcion.Name = "tbDescripcion"
+        Me.tbDescripcion.Size = New System.Drawing.Size(550, 20)
+        Me.tbDescripcion.TabIndex = 4
+        '
+        'cbTareaTipo
+        '
+        Me.cbTareaTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTareaTipo.FormattingEnabled = True
+        Me.cbTareaTipo.Location = New System.Drawing.Point(125, 96)
+        Me.cbTareaTipo.Name = "cbTareaTipo"
+        Me.cbTareaTipo.Size = New System.Drawing.Size(550, 21)
+        Me.cbTareaTipo.TabIndex = 2
+        '
+        'lbTareaTipo
+        '
+        Me.lbTareaTipo.AutoSize = True
+        Me.lbTareaTipo.Location = New System.Drawing.Point(12, 99)
+        Me.lbTareaTipo.Name = "lbTareaTipo"
+        Me.lbTareaTipo.Size = New System.Drawing.Size(77, 13)
+        Me.lbTareaTipo.TabIndex = 37
+        Me.lbTareaTipo.Text = "Tipo de Tarea:"
+        '
+        'tbEmpresa
+        '
+        Me.tbEmpresa.Location = New System.Drawing.Point(281, 70)
+        Me.tbEmpresa.MaxLength = 100
+        Me.tbEmpresa.Name = "tbEmpresa"
+        Me.tbEmpresa.Size = New System.Drawing.Size(20, 20)
+        Me.tbEmpresa.TabIndex = 38
+        Me.tbEmpresa.Visible = False
         '
         'frTarea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(689, 156)
+        Me.ClientSize = New System.Drawing.Size(689, 181)
+        Me.Controls.Add(Me.tbEmpresa)
+        Me.Controls.Add(Me.lbTareaTipo)
+        Me.Controls.Add(Me.cbTareaTipo)
+        Me.Controls.Add(Me.lbDescripcion)
+        Me.Controls.Add(Me.tbDescripcion)
+        Me.Controls.Add(Me.tbTareaTipo)
+        Me.Controls.Add(Me.tbEstado1)
+        Me.Controls.Add(Me.lbEstado)
+        Me.Controls.Add(Me.tbEstado)
+        Me.Controls.Add(Me.lbNombre)
+        Me.Controls.Add(Me.lbCodigo)
+        Me.Controls.Add(Me.tbNombre)
+        Me.Controls.Add(Me.tbCodigo)
         Me.Controls.Add(Me.UcNavegador1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MinimizeBox = False
@@ -54,4 +192,17 @@ Partial Class frTarea
     End Sub
 
     Friend WithEvents UcNavegador1 As ucNavegador
+    Friend WithEvents tbEstado1 As TextBox
+    Friend WithEvents lbEstado As Label
+    Friend WithEvents tbEstado As TextBox
+    Friend WithEvents lbNombre As Label
+    Friend WithEvents lbCodigo As Label
+    Friend WithEvents tbNombre As TextBox
+    Friend WithEvents tbCodigo As TextBox
+    Friend WithEvents tbTareaTipo As TextBox
+    Friend WithEvents lbDescripcion As Label
+    Friend WithEvents tbDescripcion As TextBox
+    Friend WithEvents cbTareaTipo As ComboBox
+    Friend WithEvents lbTareaTipo As Label
+    Friend WithEvents tbEmpresa As TextBox
 End Class

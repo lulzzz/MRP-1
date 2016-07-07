@@ -1,7 +1,7 @@
 ﻿Public Class csNegocio
     Private Shared Campos As New DataTable
 
-#Region "Validaciones"
+#Region "Validaciones y Funciones"
     Public Shared Function ValidarControlesMaestros(ByVal Controles As ArrayList) As Boolean
         Dim Vacio As Boolean = False
         Try
@@ -17,6 +17,40 @@
             MessageBox.Show("Existen campos vacíos", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
         Return Not Vacio
+    End Function
+
+    Public Shared Function CargarCombobox(ByRef cb As ComboBox, ByRef dt As DataTable, ByVal Query As String) As Boolean
+        Try
+            If csDatos.ConsultarQuery(dt, Query) Then
+                cb.DataSource = dt
+                cb.ValueMember = "Value"
+                cb.DisplayMember = "Display"
+                cb.Refresh()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return dt.Rows.Count > 0
+    End Function
+
+    Public Shared Function ObtenerIndexCombobox(ByRef cb As ComboBox, ByVal llave As String) As Integer
+        Try
+            Dim dr() As DataRow
+            dr = CType(cb.DataSource, DataTable).Select("Value=" + llave)
+            Return CType(cb.DataSource, DataTable).Rows.IndexOf(dr(0))
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return -1
+        End Try
+    End Function
+
+    Public Shared Function ValidarTablaEmpresa(ByVal NombreTabla As String) As Boolean
+        Try
+            Return csDatos.ValidarTablaEmpresa(NombreTabla)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
     End Function
 #End Region
 

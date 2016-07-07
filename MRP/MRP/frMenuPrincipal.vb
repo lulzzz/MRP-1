@@ -148,6 +148,11 @@
         ValidacionFormulario("frEmpleadoNomina", frEmpleadoNomina)
     End Sub
 
+    Private Sub miGastos_Click(sender As Object, e As EventArgs) Handles miGastos.Click
+        Dim frGasto As New frGasto
+        ValidacionFormulario("frGasto", frGasto)
+    End Sub
+
     Private Sub miNomina_Click(sender As Object, e As EventArgs) Handles miNomina.Click
         Dim frNomina As New frNomina
         ValidacionFormulario("frNomina", frNomina)
@@ -175,6 +180,11 @@
 
     Private Sub miSolicitudes_Click(sender As Object, e As EventArgs) Handles miSolicitudes.Click
 
+    End Sub
+
+    Private Sub miProcesoProduccion_Click(sender As Object, e As EventArgs) Handles miProcesoProduccion.Click
+        Dim frProcesoProduccion As New frProcesoProduccion
+        ValidacionFormulario("frProcesoProduccion", frProcesoProduccion)
     End Sub
 #End Region
 

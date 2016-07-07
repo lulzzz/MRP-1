@@ -135,6 +135,18 @@
     <Compile Include="frGasto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frGastoPeriodo.Designer.vb">
+      <DependentUpon>frGastoPeriodo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frGastoPeriodo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frGastoTipo.Designer.vb">
+      <DependentUpon>frGastoTipo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frGastoTipo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frInventario.Designer.vb">
       <DependentUpon>frInventario.vb</DependentUpon>
     </Compile>
@@ -301,6 +313,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frGasto.resx">
       <DependentUpon>frGasto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frGastoPeriodo.resx">
+      <DependentUpon>frGastoPeriodo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frGastoTipo.resx">
+      <DependentUpon>frGastoTipo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frInventario.resx">
       <DependentUpon>frInventario.vb</DependentUpon>

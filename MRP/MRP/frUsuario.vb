@@ -1,4 +1,12 @@
 ﻿Public Class frUsuario
+#Region "Documentación"
+    '----------------------------------------------------------------------------------------------------
+    'FECHA:         01/07/2016 
+    'DESARROLLADOR: Anthony Molineros
+    'DESCRIPCIÓN:   Catálogo de usuarios
+    '----------------------------------------------------------------------------------------------------
+#End Region
+
     Dim ControlesMaestros As New ArrayList
     Dim ControlesDetalles As New ArrayList
     Dim dtEmpresas As New DataTable
@@ -24,14 +32,6 @@
     End Sub
 
 #Region "Navegador"
-    Private Sub Navegador1_preNuevo(sender As Object, e As EventArgs) Handles UcNavegador1.preNuevo
-        Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
     Private Sub Navegador1_posNuevo(sender As Object, e As EventArgs) Handles UcNavegador1.posNuevo
         Try
             ActiveControl = tbNombre
@@ -40,6 +40,7 @@
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
     Private Sub Navegador1_preGuardar(sender As Object, e As EventArgs) Handles UcNavegador1.preGuardar
         Try
             If tbCodigo.Text = String.Empty Then tbContrasena.Text = csDatos.CifrarCadena(tbContrasena.Text)
@@ -49,25 +50,9 @@
         End Try
     End Sub
 
-    Private Sub Navegador1_posGuardar(sender As Object, e As EventArgs) Handles UcNavegador1.posGuardar
+    Private Sub Navegador1_preCerrar(sender As Object, e As EventArgs) Handles UcNavegador1.preCerrar
         Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Navegador1_preEliminar(sender As Object, e As EventArgs) Handles UcNavegador1.preEliminar
-        Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Navegador1_posEliminar(sender As Object, e As EventArgs) Handles UcNavegador1.posEliminar
-        Try
-
+            Me.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

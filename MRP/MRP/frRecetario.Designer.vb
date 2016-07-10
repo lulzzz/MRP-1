@@ -22,7 +22,6 @@ Partial Class frRecetario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.tbEmpresa = New System.Windows.Forms.TextBox()
         Me.lbInventario = New System.Windows.Forms.Label()
         Me.cbInventario = New System.Windows.Forms.ComboBox()
@@ -37,18 +36,11 @@ Partial Class frRecetario
         Me.dpFechaCreacion = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbFechaCreacion = New System.Windows.Forms.TextBox()
+        Me.pnlPanelTitulo = New System.Windows.Forms.Panel()
+        Me.lbTitulo = New System.Windows.Forms.Label()
+        Me.UcNavegador1 = New MRP.ucNavegador()
+        Me.pnlPanelTitulo.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'UcNavegador1
-        '
-        Me.UcNavegador1.AutoSize = True
-        Me.UcNavegador1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 0)
-        Me.UcNavegador1.Name = "UcNavegador1"
-        Me.UcNavegador1.Size = New System.Drawing.Size(689, 41)
-        Me.UcNavegador1.TabIndex = 100
         '
         'tbEmpresa
         '
@@ -110,6 +102,7 @@ Partial Class frRecetario
         Me.tbEstado1.ReadOnly = True
         Me.tbEstado1.Size = New System.Drawing.Size(150, 20)
         Me.tbEstado1.TabIndex = 1
+        Me.tbEstado1.TabStop = False
         '
         'lbEstado
         '
@@ -144,6 +137,7 @@ Partial Class frRecetario
         Me.tbCodigo.ReadOnly = True
         Me.tbCodigo.Size = New System.Drawing.Size(150, 20)
         Me.tbCodigo.TabIndex = 0
+        Me.tbCodigo.TabStop = False
         '
         'dpFechaCreacion
         '
@@ -172,12 +166,47 @@ Partial Class frRecetario
         Me.tbFechaCreacion.TabIndex = 54
         Me.tbFechaCreacion.Visible = False
         '
+        'pnlPanelTitulo
+        '
+        Me.pnlPanelTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlPanelTitulo.Controls.Add(Me.lbTitulo)
+        Me.pnlPanelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlPanelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlPanelTitulo.Name = "pnlPanelTitulo"
+        Me.pnlPanelTitulo.Size = New System.Drawing.Size(689, 50)
+        Me.pnlPanelTitulo.TabIndex = 102
+        '
+        'lbTitulo
+        '
+        Me.lbTitulo.AutoSize = True
+        Me.lbTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTitulo.Location = New System.Drawing.Point(12, 9)
+        Me.lbTitulo.Name = "lbTitulo"
+        Me.lbTitulo.Size = New System.Drawing.Size(140, 31)
+        Me.lbTitulo.TabIndex = 41
+        Me.lbTitulo.Text = "Recetario"
+        '
+        'UcNavegador1
+        '
+        Me.UcNavegador1.AutoSize = True
+        Me.UcNavegador1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 187)
+        Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
+        Me.UcNavegador1.Name = "UcNavegador1"
+        Me.UcNavegador1.Size = New System.Drawing.Size(689, 58)
+        Me.UcNavegador1.TabIndex = 103
+        '
         'frRecetario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(689, 181)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(689, 245)
+        Me.Controls.Add(Me.UcNavegador1)
+        Me.Controls.Add(Me.pnlPanelTitulo)
         Me.Controls.Add(Me.tbFechaCreacion)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dpFechaCreacion)
@@ -192,18 +221,17 @@ Partial Class frRecetario
         Me.Controls.Add(Me.tbEstado)
         Me.Controls.Add(Me.lbCodigo)
         Me.Controls.Add(Me.tbCodigo)
-        Me.Controls.Add(Me.UcNavegador1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MinimizeBox = False
         Me.Name = "frRecetario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Recetario"
+        Me.pnlPanelTitulo.ResumeLayout(False)
+        Me.pnlPanelTitulo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents UcNavegador1 As ucNavegador
     Friend WithEvents tbEmpresa As TextBox
     Friend WithEvents lbInventario As Label
     Friend WithEvents cbInventario As ComboBox
@@ -218,4 +246,7 @@ Partial Class frRecetario
     Friend WithEvents dpFechaCreacion As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents tbFechaCreacion As TextBox
+    Friend WithEvents pnlPanelTitulo As Panel
+    Friend WithEvents lbTitulo As Label
+    Friend WithEvents UcNavegador1 As ucNavegador
 End Class

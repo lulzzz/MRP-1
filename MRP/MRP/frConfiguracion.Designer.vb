@@ -34,6 +34,8 @@ Partial Class frConfiguracion
         Me.btCancelar = New System.Windows.Forms.Button()
         Me.btAceptar = New System.Windows.Forms.Button()
         Me.btTest = New System.Windows.Forms.Button()
+        Me.pnlPanelOpciones = New System.Windows.Forms.Panel()
+        Me.pnlPanelOpciones.SuspendLayout()
         Me.SuspendLayout()
         '
         'tbServer
@@ -103,9 +105,9 @@ Partial Class frConfiguracion
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(12, 14)
+        Me.Label5.Location = New System.Drawing.Point(17, 14)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(391, 36)
+        Me.Label5.Size = New System.Drawing.Size(386, 36)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Bienvenido al formulario de configuración, por favor complete todos los campos pa" &
     "ra establecer conexión con el servidor de base de datos SQL Server."
@@ -115,7 +117,7 @@ Partial Class frConfiguracion
         Me.btCancelar.BackColor = System.Drawing.SystemColors.Control
         Me.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btCancelar.Location = New System.Drawing.Point(313, 187)
+        Me.btCancelar.Location = New System.Drawing.Point(313, 13)
         Me.btCancelar.Name = "btCancelar"
         Me.btCancelar.Size = New System.Drawing.Size(94, 23)
         Me.btCancelar.TabIndex = 6
@@ -126,7 +128,7 @@ Partial Class frConfiguracion
         '
         Me.btAceptar.BackColor = System.Drawing.SystemColors.Control
         Me.btAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btAceptar.Location = New System.Drawing.Point(210, 187)
+        Me.btAceptar.Location = New System.Drawing.Point(210, 13)
         Me.btAceptar.Name = "btAceptar"
         Me.btAceptar.Size = New System.Drawing.Size(94, 23)
         Me.btAceptar.TabIndex = 5
@@ -137,22 +139,32 @@ Partial Class frConfiguracion
         '
         Me.btTest.BackColor = System.Drawing.SystemColors.Control
         Me.btTest.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btTest.Location = New System.Drawing.Point(17, 187)
+        Me.btTest.Location = New System.Drawing.Point(17, 13)
         Me.btTest.Name = "btTest"
         Me.btTest.Size = New System.Drawing.Size(61, 23)
         Me.btTest.TabIndex = 4
         Me.btTest.Text = "&Test"
         Me.btTest.UseVisualStyleBackColor = False
         '
+        'pnlPanelOpciones
+        '
+        Me.pnlPanelOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.pnlPanelOpciones.Controls.Add(Me.btCancelar)
+        Me.pnlPanelOpciones.Controls.Add(Me.btTest)
+        Me.pnlPanelOpciones.Controls.Add(Me.btAceptar)
+        Me.pnlPanelOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnlPanelOpciones.Location = New System.Drawing.Point(0, 174)
+        Me.pnlPanelOpciones.Name = "pnlPanelOpciones"
+        Me.pnlPanelOpciones.Size = New System.Drawing.Size(419, 48)
+        Me.pnlPanelOpciones.TabIndex = 101
+        '
         'frConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(419, 222)
-        Me.Controls.Add(Me.btTest)
-        Me.Controls.Add(Me.btCancelar)
-        Me.Controls.Add(Me.btAceptar)
+        Me.Controls.Add(Me.pnlPanelOpciones)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -162,12 +174,13 @@ Partial Class frConfiguracion
         Me.Controls.Add(Me.tbUser)
         Me.Controls.Add(Me.tbDataBase)
         Me.Controls.Add(Me.tbServer)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frConfiguracion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MRP - Configuración"
+        Me.pnlPanelOpciones.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -185,4 +198,5 @@ Partial Class frConfiguracion
     Friend WithEvents btCancelar As Button
     Friend WithEvents btAceptar As Button
     Friend WithEvents btTest As Button
+    Friend WithEvents pnlPanelOpciones As Panel
 End Class

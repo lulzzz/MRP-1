@@ -14,8 +14,8 @@ Partial Class ssSplashPresentacion
         End Try
     End Sub
     Friend WithEvents lbTitulo As System.Windows.Forms.Label
-    Friend WithEvents Version As System.Windows.Forms.Label
-    Friend WithEvents Copyright As System.Windows.Forms.Label
+    Friend WithEvents lbVersion As System.Windows.Forms.Label
+    Friend WithEvents lbCopyright As System.Windows.Forms.Label
     Friend WithEvents lpPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents lpPanel2 As System.Windows.Forms.TableLayoutPanel
 
@@ -30,8 +30,8 @@ Partial Class ssSplashPresentacion
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ssSplashPresentacion))
         Me.lpPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.lpPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Version = New System.Windows.Forms.Label()
-        Me.Copyright = New System.Windows.Forms.Label()
+        Me.lbVersion = New System.Windows.Forms.Label()
+        Me.lbCopyright = New System.Windows.Forms.Label()
         Me.lbTitulo = New System.Windows.Forms.Label()
         Me.lpPanel1.SuspendLayout()
         Me.lpPanel2.SuspendLayout()
@@ -61,8 +61,8 @@ Partial Class ssSplashPresentacion
         Me.lpPanel2.ColumnCount = 1
         Me.lpPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247.0!))
         Me.lpPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142.0!))
-        Me.lpPanel2.Controls.Add(Me.Version, 0, 0)
-        Me.lpPanel2.Controls.Add(Me.Copyright, 0, 1)
+        Me.lpPanel2.Controls.Add(Me.lbVersion, 0, 0)
+        Me.lpPanel2.Controls.Add(Me.lbCopyright, 0, 1)
         Me.lpPanel2.Location = New System.Drawing.Point(246, 221)
         Me.lpPanel2.Name = "lpPanel2"
         Me.lpPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.0!))
@@ -70,27 +70,27 @@ Partial Class ssSplashPresentacion
         Me.lpPanel2.Size = New System.Drawing.Size(247, 79)
         Me.lpPanel2.TabIndex = 1
         '
-        'Version
+        'lbVersion
         '
-        Me.Version.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Version.BackColor = System.Drawing.Color.Transparent
-        Me.Version.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Version.Location = New System.Drawing.Point(3, 9)
-        Me.Version.Name = "Version"
-        Me.Version.Size = New System.Drawing.Size(241, 20)
-        Me.Version.TabIndex = 1
-        Me.Version.Text = "Versión 1.0.0"
+        Me.lbVersion.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbVersion.BackColor = System.Drawing.Color.Transparent
+        Me.lbVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbVersion.Location = New System.Drawing.Point(3, 9)
+        Me.lbVersion.Name = "lbVersion"
+        Me.lbVersion.Size = New System.Drawing.Size(241, 20)
+        Me.lbVersion.TabIndex = 1
+        Me.lbVersion.Text = "Versión 0.0.0"
         '
-        'Copyright
+        'lbCopyright
         '
-        Me.Copyright.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Copyright.BackColor = System.Drawing.Color.Transparent
-        Me.Copyright.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Copyright.Location = New System.Drawing.Point(3, 39)
-        Me.Copyright.Name = "Copyright"
-        Me.Copyright.Size = New System.Drawing.Size(241, 40)
-        Me.Copyright.TabIndex = 2
-        Me.Copyright.Text = "EBRICenter, Inc."
+        Me.lbCopyright.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lbCopyright.BackColor = System.Drawing.Color.Transparent
+        Me.lbCopyright.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCopyright.Location = New System.Drawing.Point(3, 39)
+        Me.lbCopyright.Name = "lbCopyright"
+        Me.lbCopyright.Size = New System.Drawing.Size(241, 40)
+        Me.lbCopyright.TabIndex = 2
+        Me.lbCopyright.Text = "EBRICenter, Inc."
         '
         'lbTitulo
         '

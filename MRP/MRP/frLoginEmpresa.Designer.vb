@@ -33,7 +33,9 @@ Partial Class frLoginEmpresa
         Me.btAceptar = New System.Windows.Forms.Button()
         Me.btCancelar = New System.Windows.Forms.Button()
         Me.cbEmpresa = New System.Windows.Forms.ComboBox()
+        Me.pnlPanelOpciones = New System.Windows.Forms.Panel()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlPanelOpciones.SuspendLayout()
         Me.SuspendLayout()
         '
         'pbLogo
@@ -47,7 +49,7 @@ Partial Class frLoginEmpresa
         '
         'lbEmpresa
         '
-        Me.lbEmpresa.Location = New System.Drawing.Point(177, 52)
+        Me.lbEmpresa.Location = New System.Drawing.Point(177, 67)
         Me.lbEmpresa.Name = "lbEmpresa"
         Me.lbEmpresa.Size = New System.Drawing.Size(220, 23)
         Me.lbEmpresa.TabIndex = 0
@@ -58,7 +60,7 @@ Partial Class frLoginEmpresa
         '
         Me.btAceptar.BackColor = System.Drawing.SystemColors.Control
         Me.btAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btAceptar.Location = New System.Drawing.Point(200, 156)
+        Me.btAceptar.Location = New System.Drawing.Point(200, 13)
         Me.btAceptar.Name = "btAceptar"
         Me.btAceptar.Size = New System.Drawing.Size(94, 23)
         Me.btAceptar.TabIndex = 2
@@ -70,7 +72,7 @@ Partial Class frLoginEmpresa
         Me.btCancelar.BackColor = System.Drawing.SystemColors.Control
         Me.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btCancelar.Location = New System.Drawing.Point(303, 156)
+        Me.btCancelar.Location = New System.Drawing.Point(303, 13)
         Me.btCancelar.Name = "btCancelar"
         Me.btCancelar.Size = New System.Drawing.Size(94, 23)
         Me.btCancelar.TabIndex = 3
@@ -81,25 +83,35 @@ Partial Class frLoginEmpresa
         '
         Me.cbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEmpresa.FormattingEnabled = True
-        Me.cbEmpresa.Location = New System.Drawing.Point(177, 78)
+        Me.cbEmpresa.Location = New System.Drawing.Point(177, 93)
         Me.cbEmpresa.Name = "cbEmpresa"
         Me.cbEmpresa.Size = New System.Drawing.Size(220, 21)
         Me.cbEmpresa.TabIndex = 1
+        '
+        'pnlPanelOpciones
+        '
+        Me.pnlPanelOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.pnlPanelOpciones.Controls.Add(Me.btCancelar)
+        Me.pnlPanelOpciones.Controls.Add(Me.btAceptar)
+        Me.pnlPanelOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnlPanelOpciones.Location = New System.Drawing.Point(0, 187)
+        Me.pnlPanelOpciones.Name = "pnlPanelOpciones"
+        Me.pnlPanelOpciones.Size = New System.Drawing.Size(409, 48)
+        Me.pnlPanelOpciones.TabIndex = 100
         '
         'frLoginEmpresa
         '
         Me.AcceptButton = Me.btAceptar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.CancelButton = Me.btCancelar
-        Me.ClientSize = New System.Drawing.Size(409, 191)
+        Me.ClientSize = New System.Drawing.Size(409, 235)
+        Me.Controls.Add(Me.pnlPanelOpciones)
         Me.Controls.Add(Me.cbEmpresa)
-        Me.Controls.Add(Me.btCancelar)
-        Me.Controls.Add(Me.btAceptar)
         Me.Controls.Add(Me.lbEmpresa)
         Me.Controls.Add(Me.pbLogo)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frLoginEmpresa"
@@ -107,9 +119,11 @@ Partial Class frLoginEmpresa
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MRP - Login"
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlPanelOpciones.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents cbEmpresa As ComboBox
+    Friend WithEvents pnlPanelOpciones As Panel
 End Class

@@ -39,7 +39,9 @@ Partial Class frLogin
         Me.btAceptar = New System.Windows.Forms.Button()
         Me.btCancelar = New System.Windows.Forms.Button()
         Me.btConfiguracion = New System.Windows.Forms.Button()
+        Me.pnlPanelOpciones = New System.Windows.Forms.Panel()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlPanelOpciones.SuspendLayout()
         Me.SuspendLayout()
         '
         'LogoPictureBox
@@ -53,7 +55,7 @@ Partial Class frLogin
         '
         'lbUsuario
         '
-        Me.lbUsuario.Location = New System.Drawing.Point(177, 37)
+        Me.lbUsuario.Location = New System.Drawing.Point(177, 43)
         Me.lbUsuario.Name = "lbUsuario"
         Me.lbUsuario.Size = New System.Drawing.Size(220, 23)
         Me.lbUsuario.TabIndex = 5
@@ -62,7 +64,7 @@ Partial Class frLogin
         '
         'lbContrasena
         '
-        Me.lbContrasena.Location = New System.Drawing.Point(177, 94)
+        Me.lbContrasena.Location = New System.Drawing.Point(177, 100)
         Me.lbContrasena.Name = "lbContrasena"
         Me.lbContrasena.Size = New System.Drawing.Size(220, 23)
         Me.lbContrasena.TabIndex = 6
@@ -71,14 +73,14 @@ Partial Class frLogin
         '
         'tbUsuario
         '
-        Me.tbUsuario.Location = New System.Drawing.Point(177, 63)
+        Me.tbUsuario.Location = New System.Drawing.Point(177, 69)
         Me.tbUsuario.Name = "tbUsuario"
         Me.tbUsuario.Size = New System.Drawing.Size(220, 20)
         Me.tbUsuario.TabIndex = 0
         '
         'tbContrasena
         '
-        Me.tbContrasena.Location = New System.Drawing.Point(177, 120)
+        Me.tbContrasena.Location = New System.Drawing.Point(177, 126)
         Me.tbContrasena.Name = "tbContrasena"
         Me.tbContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbContrasena.Size = New System.Drawing.Size(220, 20)
@@ -88,7 +90,7 @@ Partial Class frLogin
         '
         Me.btAceptar.BackColor = System.Drawing.SystemColors.Control
         Me.btAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btAceptar.Location = New System.Drawing.Point(200, 156)
+        Me.btAceptar.Location = New System.Drawing.Point(200, 13)
         Me.btAceptar.Name = "btAceptar"
         Me.btAceptar.Size = New System.Drawing.Size(94, 23)
         Me.btAceptar.TabIndex = 2
@@ -100,7 +102,7 @@ Partial Class frLogin
         Me.btCancelar.BackColor = System.Drawing.SystemColors.Control
         Me.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btCancelar.Location = New System.Drawing.Point(303, 156)
+        Me.btCancelar.Location = New System.Drawing.Point(303, 13)
         Me.btCancelar.Name = "btCancelar"
         Me.btCancelar.Size = New System.Drawing.Size(94, 23)
         Me.btCancelar.TabIndex = 3
@@ -109,33 +111,45 @@ Partial Class frLogin
         '
         'btConfiguracion
         '
-        Me.btConfiguracion.BackColor = System.Drawing.SystemColors.Control
-        Me.btConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btConfiguracion.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btConfiguracion.FlatAppearance.BorderSize = 0
+        Me.btConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btConfiguracion.Image = CType(resources.GetObject("btConfiguracion.Image"), System.Drawing.Image)
-        Me.btConfiguracion.Location = New System.Drawing.Point(361, 12)
+        Me.btConfiguracion.Location = New System.Drawing.Point(6, 6)
         Me.btConfiguracion.Name = "btConfiguracion"
-        Me.btConfiguracion.Size = New System.Drawing.Size(36, 36)
+        Me.btConfiguracion.Size = New System.Drawing.Size(35, 35)
         Me.btConfiguracion.TabIndex = 4
-        Me.btConfiguracion.Text = "C"
+        Me.btConfiguracion.TabStop = False
         Me.btConfiguracion.UseVisualStyleBackColor = False
+        '
+        'pnlPanelOpciones
+        '
+        Me.pnlPanelOpciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.pnlPanelOpciones.Controls.Add(Me.btAceptar)
+        Me.pnlPanelOpciones.Controls.Add(Me.btConfiguracion)
+        Me.pnlPanelOpciones.Controls.Add(Me.btCancelar)
+        Me.pnlPanelOpciones.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnlPanelOpciones.Location = New System.Drawing.Point(0, 187)
+        Me.pnlPanelOpciones.Name = "pnlPanelOpciones"
+        Me.pnlPanelOpciones.Size = New System.Drawing.Size(409, 48)
+        Me.pnlPanelOpciones.TabIndex = 100
         '
         'frLogin
         '
         Me.AcceptButton = Me.btAceptar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.CancelButton = Me.btCancelar
-        Me.ClientSize = New System.Drawing.Size(409, 191)
-        Me.Controls.Add(Me.btConfiguracion)
-        Me.Controls.Add(Me.btCancelar)
-        Me.Controls.Add(Me.btAceptar)
+        Me.ClientSize = New System.Drawing.Size(409, 235)
+        Me.Controls.Add(Me.pnlPanelOpciones)
         Me.Controls.Add(Me.tbContrasena)
         Me.Controls.Add(Me.tbUsuario)
         Me.Controls.Add(Me.lbContrasena)
         Me.Controls.Add(Me.lbUsuario)
         Me.Controls.Add(Me.LogoPictureBox)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frLogin"
@@ -143,10 +157,12 @@ Partial Class frLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MRP - Login"
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlPanelOpciones.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents btConfiguracion As Button
+    Friend WithEvents pnlPanelOpciones As Panel
 End Class

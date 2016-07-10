@@ -186,3 +186,14 @@ C:\Users\Anthony\Source\ReposKevin\MRP\MRP\MRP\obj\Debug\MRP.vbproj.GenerateReso
 C:\Users\Anthony\Source\ReposKevin\MRP\MRP\MRP\bin\Debug\MRP.exe
 C:\Users\Anthony\Source\ReposKevin\MRP\MRP\MRP\bin\Debug\MRP.pdb
 C:\Users\Anthony\Source\ReposKevin\MRP\MRP\MRP\bin\Debug\MRP.xml
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frBodega.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGasto.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGastoPeriodo.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGastoTipo.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventario.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventarioClasificacion.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frMedida.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frMovimientoTipo.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frProcesoProduccion.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frStatus.resources
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache

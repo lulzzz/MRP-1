@@ -44,6 +44,8 @@
     End Sub
 
     Private Sub btConfiguracion_Click(sender As Object, e As EventArgs) Handles btConfiguracion.Click
+        ActiveControl = tbUsuario
+        ActiveControl.Focus()
         Dim frConfiguracion As New frConfiguracion
         frConfiguracion.ShowDialog()
     End Sub

@@ -18,12 +18,6 @@
         End Try
     End Sub
 
-    Private Sub frLoginEmpresa_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If csDatos.IdEmpresa = 0 Then
-            Application.Exit()
-        End If
-    End Sub
-
     Private Sub btAceptar_Click(sender As Object, e As EventArgs) Handles btAceptar.Click
         Try
             If cbEmpresa.SelectedIndex >= 0 Then

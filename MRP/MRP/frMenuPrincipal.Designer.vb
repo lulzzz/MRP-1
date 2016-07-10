@@ -76,7 +76,7 @@ Partial Class frMenuPrincipal
         '
         'msMenuPrincipal
         '
-        Me.msMenuPrincipal.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.msMenuPrincipal.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.msMenuPrincipal.GripMargin = New System.Windows.Forms.Padding(2)
         Me.msMenuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsArchivo, Me.tsCatálogos, Me.tsProcesos, Me.tsReportes, Me.tsOpciones, Me.tsAyuda})
         Me.msMenuPrincipal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
@@ -324,7 +324,7 @@ Partial Class frMenuPrincipal
         '
         'ssBarraEstado
         '
-        Me.ssBarraEstado.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.ssBarraEstado.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ssBarraEstado.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.slEmpresa, Me.tsEmpresa, Me.slUsuario, Me.tsUsuario, Me.slInicioSesion, Me.tsInicioSesion})
         Me.ssBarraEstado.Location = New System.Drawing.Point(0, 539)
         Me.ssBarraEstado.Name = "ssBarraEstado"

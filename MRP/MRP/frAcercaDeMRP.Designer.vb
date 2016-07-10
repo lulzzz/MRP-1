@@ -102,7 +102,7 @@ Partial Class frAcercaDeMRP
         Me.lbVersion.Name = "lbVersion"
         Me.lbVersion.Size = New System.Drawing.Size(257, 17)
         Me.lbVersion.TabIndex = 0
-        Me.lbVersion.Text = "Versión 2.0.0"
+        Me.lbVersion.Text = "Versión 0.0.0"
         Me.lbVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbCopyright
@@ -142,7 +142,8 @@ Partial Class frAcercaDeMRP
         Me.tbDescripcion.Size = New System.Drawing.Size(257, 123)
         Me.tbDescripcion.TabIndex = 0
         Me.tbDescripcion.TabStop = False
-        Me.tbDescripcion.Text = "Descripción:"
+        Me.tbDescripcion.Text = "Desarrolladores:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Anthony Molineros" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Keving Gutiérrez" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Marlon Aldana" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Pablo Zap" &
+    "paroli"
         '
         'btAceptar
         '
@@ -161,11 +162,11 @@ Partial Class frAcercaDeMRP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.CancelButton = Me.btAceptar
         Me.ClientSize = New System.Drawing.Size(414, 276)
         Me.Controls.Add(Me.lpPanelGeneral)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frAcercaDeMRP"

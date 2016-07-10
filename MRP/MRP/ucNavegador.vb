@@ -2,6 +2,7 @@
     Public Event preNuevo As EventHandler
     Public Event preGuardar As EventHandler
     Public Event preEliminar As EventHandler
+    Public Event preCerrar As EventHandler
     Public Event posNuevo As EventHandler
     Public Event posGuardar As EventHandler
     Public Event posEliminar As EventHandler
@@ -57,6 +58,8 @@
                     RaiseEvent preEliminar(Me, e)
                 Case "PosEliminar"
                     RaiseEvent posEliminar(Me, e)
+                Case "PreCerrar"
+                    RaiseEvent preCerrar(Me, e)
             End Select
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -245,6 +248,14 @@
             Contador = DatosSalida.Rows.Count - 1
             MostrarDatos()
             RestriccionesBotones(True)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Try
+            LanzarEvento("PreCerrar")
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

@@ -101,7 +101,7 @@
 
     Private Sub miClasificacionInventarios_Click(sender As Object, e As EventArgs) Handles miClasificacionInventarios.Click
         Dim frInventarioClasificacion As New frInventarioClasificacion
-        ValidacionFormulario("frInventarioClasificación", frInventarioClasificacion)
+        ValidacionFormulario("frInventarioClasificacion", frInventarioClasificacion)
     End Sub
 
     Private Sub miInventarios_Click(sender As Object, e As EventArgs) Handles miInventarios.Click

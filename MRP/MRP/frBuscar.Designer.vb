@@ -27,8 +27,11 @@ Partial Class frBuscar
         Me.pnlPanelOpciones = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.pnlPanelTitulo = New System.Windows.Forms.Panel()
+        Me.lbTitulo = New System.Windows.Forms.Label()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlPanelOpciones.SuspendLayout()
+        Me.pnlPanelTitulo.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvDatos
@@ -89,10 +92,31 @@ Partial Class frBuscar
         Me.btnCerrar.TabStop = False
         Me.btnCerrar.UseVisualStyleBackColor = False
         '
+        'pnlPanelTitulo
+        '
+        Me.pnlPanelTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlPanelTitulo.Controls.Add(Me.lbTitulo)
+        Me.pnlPanelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlPanelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlPanelTitulo.Name = "pnlPanelTitulo"
+        Me.pnlPanelTitulo.Size = New System.Drawing.Size(734, 50)
+        Me.pnlPanelTitulo.TabIndex = 103
+        '
+        'lbTitulo
+        '
+        Me.lbTitulo.AutoSize = True
+        Me.lbTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTitulo.Location = New System.Drawing.Point(12, 9)
+        Me.lbTitulo.Name = "lbTitulo"
+        Me.lbTitulo.Size = New System.Drawing.Size(137, 31)
+        Me.lbTitulo.TabIndex = 41
+        Me.lbTitulo.Text = "Buscador"
+        '
         'frBuscar
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.Controls.Add(Me.pnlPanelTitulo)
         Me.Controls.Add(Me.pnlPanelOpciones)
         Me.Controls.Add(Me.dgvDatos)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -107,6 +131,8 @@ Partial Class frBuscar
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlPanelOpciones.ResumeLayout(False)
         Me.pnlPanelOpciones.PerformLayout()
+        Me.pnlPanelTitulo.ResumeLayout(False)
+        Me.pnlPanelTitulo.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -114,4 +140,6 @@ Partial Class frBuscar
     Friend WithEvents pnlPanelOpciones As Panel
     Friend WithEvents Label5 As Label
     Private WithEvents btnCerrar As Button
+    Friend WithEvents pnlPanelTitulo As Panel
+    Friend WithEvents lbTitulo As Label
 End Class

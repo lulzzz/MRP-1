@@ -207,6 +207,12 @@
     <Compile Include="frNominaPeriodo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frOrdenProduccion.Designer.vb">
+      <DependentUpon>frOrdenProduccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frOrdenProduccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frPais.Designer.vb">
       <DependentUpon>frPais.vb</DependentUpon>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frNominaPeriodo.resx">
       <DependentUpon>frNominaPeriodo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frOrdenProduccion.resx">
+      <DependentUpon>frOrdenProduccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frPais.resx">
       <DependentUpon>frPais.vb</DependentUpon>

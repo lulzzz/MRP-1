@@ -99,9 +99,29 @@
         ValidacionFormulario("frBodega", frBodega)
     End Sub
 
-    Private Sub miClasificacionInventarios_Click(sender As Object, e As EventArgs) Handles miClasificacionInventarios.Click
-        Dim frInventarioClasificacion As New frInventarioClasificacion
-        ValidacionFormulario("frInventarioClasificacion", frInventarioClasificacion)
+    Private Sub miDepartamentos_Click(sender As Object, e As EventArgs) Handles miDepartamentos.Click
+        Dim frDepartamento As New frDepartamento
+        ValidacionFormulario("frDepartamento", frDepartamento)
+    End Sub
+
+    Private Sub miEmpleados_Click(sender As Object, e As EventArgs) Handles miEmpleados.Click
+        Dim frEmpleado As New frEmpleado
+        ValidacionFormulario("frEmpleado", frEmpleado)
+    End Sub
+
+    Private Sub miEmpleadosNomina_Click(sender As Object, e As EventArgs) Handles miEmpleadosNomina.Click
+        Dim frEmpleadoNomina As New frEmpleadoNomina
+        ValidacionFormulario("frEmpleadoNomina", frEmpleadoNomina)
+    End Sub
+
+    Private Sub miGastos_Click(sender As Object, e As EventArgs) Handles miGastos.Click
+        Dim frGasto As New frGasto
+        ValidacionFormulario("frGasto", frGasto)
+    End Sub
+
+    Private Sub miGastosPeriodo_Click(sender As Object, e As EventArgs) Handles miGastosPeriodo.Click
+        Dim frGastoPeriodo As New frGastoPeriodo
+        ValidacionFormulario("frGastoPeriodo", frGastoPeriodo)
     End Sub
 
     Private Sub miInventarios_Click(sender As Object, e As EventArgs) Handles miInventarios.Click
@@ -112,6 +132,16 @@
     Private Sub miMedidas_Click(sender As Object, e As EventArgs) Handles miMedidas.Click
         Dim frMedida As New frMedida
         ValidacionFormulario("frMedida", frMedida)
+    End Sub
+
+    Private Sub miNominas_Click(sender As Object, e As EventArgs) Handles miNominas.Click
+        Dim frNomina As New frNomina
+        ValidacionFormulario("frNomina", frNomina)
+    End Sub
+
+    Private Sub miPuestos_Click(sender As Object, e As EventArgs) Handles miPuestos.Click
+        Dim frPuesto As New frPuesto
+        ValidacionFormulario("frPuesto", frPuesto)
     End Sub
 
     Private Sub miRecetario_Click(sender As Object, e As EventArgs) Handles miRecetario.Click
@@ -129,6 +159,21 @@
         ValidacionFormulario("frTarea", frTarea)
     End Sub
 
+    Private Sub miPeriodosNominas_Click(sender As Object, e As EventArgs) Handles miPeriodosNominas.Click
+        Dim frNominaPeriodo As New frNominaPeriodo
+        ValidacionFormulario("frNominaPeriodo", frNominaPeriodo)
+    End Sub
+
+    Private Sub miTiposGastos_Click(sender As Object, e As EventArgs) Handles miTiposGastos.Click
+        Dim frGastoTipo As New frGastoTipo
+        ValidacionFormulario("frGastoTipo", frGastoTipo)
+    End Sub
+
+    Private Sub miTiposInventarios_Click(sender As Object, e As EventArgs) Handles miTiposInventarios.Click
+        'Dim frInventarioTipo As New frInventarioTipo
+        'ValidacionFormulario("frInventarioTipo", frInventarioTipo)
+    End Sub
+
     Private Sub miTiposMovimientos_Click(sender As Object, e As EventArgs) Handles miTiposMovimientos.Click
         Dim frMovimientoTipo As New frMovimientoTipo
         ValidacionFormulario("frMovimientoTipo", frMovimientoTipo)
@@ -138,64 +183,42 @@
         Dim frTareaTipo As New frTareaTipo
         ValidacionFormulario("frTareaTipo", frTareaTipo)
     End Sub
-
-    Private Sub miDepartamento_Click(sender As Object, e As EventArgs) Handles miDepartamento.Click
-        Dim frDepartamento As New frDepartamento
-        ValidacionFormulario("frDepartamento", frDepartamento)
-    End Sub
-
-    Private Sub miEmpleado_Click(sender As Object, e As EventArgs) Handles miEmpleado.Click
-        Dim frEmpleado As New frEmpleado
-        ValidacionFormulario("frEmpleado", frEmpleado)
-    End Sub
-
-    Private Sub miEmpleadoNomina_Click(sender As Object, e As EventArgs) Handles miEmpleadoNomina.Click
-        Dim frEmpleadoNomina As New frEmpleadoNomina
-        ValidacionFormulario("frEmpleadoNomina", frEmpleadoNomina)
-    End Sub
-
-    Private Sub miGastos_Click(sender As Object, e As EventArgs) Handles miGastos.Click
-        Dim frGasto As New frGasto
-        ValidacionFormulario("frGasto", frGasto)
-    End Sub
-
-    Private Sub miNomina_Click(sender As Object, e As EventArgs) Handles miNomina.Click
-        Dim frNomina As New frNomina
-        ValidacionFormulario("frNomina", frNomina)
-    End Sub
-
-    Private Sub miNominaPeriodo_Click(sender As Object, e As EventArgs) Handles miNominaPeriodo.Click
-        Dim frNominaPeriodo As New frNominaPeriodo
-        ValidacionFormulario("frNominaPeriodo", frNominaPeriodo)
-    End Sub
-
-    Private Sub miPuesto_Click(sender As Object, e As EventArgs) Handles miPuesto.Click
-        Dim frPuesto As New frPuesto
-        ValidacionFormulario("frPuesto", frPuesto)
-    End Sub
 #End Region
 
 #Region "Procesos"
     Private Sub miMovimientos_Click(sender As Object, e As EventArgs) Handles miMovimientos.Click
-
-    End Sub
-
-    Private Sub miOrdenesProduccion_Click(sender As Object, e As EventArgs) Handles miOrdenesProduccion.Click
-
+        'Dim frMovimiento As New frMovimiento
+        'ValidacionFormulario("frMovimiento", frMovimiento)
     End Sub
 
     Private Sub miSolicitudes_Click(sender As Object, e As EventArgs) Handles miSolicitudes.Click
-
+        'Dim frSolicitud As New frSolicitud
+        'ValidacionFormulario("frSolicitud", frSolicitud)
     End Sub
 
-    Private Sub miProcesoProduccion_Click(sender As Object, e As EventArgs) Handles miProcesoProduccion.Click
+    Private Sub miOrdenesProduccion_Click(sender As Object, e As EventArgs) Handles miOrdenesProduccion.Click
+        Dim frOrdenProduccion As New frOrdenProduccion
+        ValidacionFormulario("frOrdenProduccion", frOrdenProduccion)
+    End Sub
+
+    Private Sub miProcesosProduccion_Click(sender As Object, e As EventArgs) Handles miProcesosProduccion.Click
         Dim frProcesoProduccion As New frProcesoProduccion
         ValidacionFormulario("frProcesoProduccion", frProcesoProduccion)
     End Sub
 #End Region
 
 #Region "Reportes"
+    Private Sub miRExistenciasInventarios_Click(sender As Object, e As EventArgs) Handles miRExistenciasInventarios.Click
 
+    End Sub
+
+    Private Sub miROrdenesProduccion_Click(sender As Object, e As EventArgs) Handles miROrdenesProduccion.Click
+
+    End Sub
+
+    Private Sub miRProcesosProduccion_Click(sender As Object, e As EventArgs) Handles miRProcesosProduccion.Click
+
+    End Sub
 #End Region
 
 #Region "Opciones"

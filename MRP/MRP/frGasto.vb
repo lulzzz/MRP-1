@@ -1,7 +1,17 @@
 ﻿Public Class frGasto
+#Region "Documentación"
+    '----------------------------------------------------------------------------------------------------
+    'FECHA:         02/07/2016 
+    'DESARROLLADOR: Pablo Zapparoli
+    'DESCRIPCIÓN:   Catálogo de gastos
+    '----------------------------------------------------------------------------------------------------
+#End Region
+
     Dim ControlesMaestros As New ArrayList
+    Dim dtGastosTipo As New DataTable
 
     Private Sub frGasto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        csNegocio.CargarCombobox(cbGastoTipo, dtGastosTipo, "SELECT id_gasto_tipo Value, gtt_descripcion Display FROM tbl_mrp_gasto_tipo ORDER BY id_gasto_tipo ASC")
         ControlesMaestros.Add(tbCodigo)
         ControlesMaestros.Add(tbGastoTipo)
         ControlesMaestros.Add(tbNombre)
@@ -10,22 +20,15 @@
         ControlesMaestros.Add(tbEmpresa)
         ControlesMaestros.Add(tbEstado)
         UcNavegador1.ControlesMaestros = ControlesMaestros
-        UcNavegador1.NombreTabla = "tbl_mrp_gasto_tipo"
-        UcNavegador1.QueryBuscar = "SELECT id_gasto_tipo Código, ttp_descripcion 'Tipo de Tarea', tar_nombre Nombre, tar_descripcion Descripción, CASE a.id_estado WHEN 1 THEN 'Alta' ELSE 'Eliminado' END Estado FROM " + UcNavegador1.NombreTabla + " a JOIN tbl_mrp_tarea_tipo b ON a.id_tarea_tipo=b.id_tarea_tipo WHERE id_empresa=" + csDatos.IdEmpresa.ToString + " ORDER BY id_tarea ASC"
+        UcNavegador1.NombreTabla = "tbl_mrp_gasto"
+        UcNavegador1.QueryBuscar = "SELECT id_gasto Código, gtt_descripcion 'Tipo de Gasto', gst_nombre Nombre, gst_descripcion Descripción, gst_factor Factor, CASE a.id_estado WHEN 1 THEN 'Alta' ELSE 'Eliminado' END Estado FROM " + UcNavegador1.NombreTabla + " a JOIN tbl_mrp_gasto_tipo b ON a.id_gasto_tipo=b.id_gasto_tipo WHERE id_empresa=" + csDatos.IdEmpresa.ToString + " ORDER BY id_gasto ASC"
         UcNavegador1.IniciarNavegador()
     End Sub
 
 #Region "Navegador"
-    Private Sub Navegador1_preNuevo(sender As Object, e As EventArgs) Handles UcNavegador1.preNuevo
-        Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
     Private Sub Navegador1_posNuevo(sender As Object, e As EventArgs) Handles UcNavegador1.posNuevo
         Try
+            csNegocio.CargarCombobox(cbGastoTipo, dtGastosTipo, "SELECT id_gasto_tipo Value, gtt_descripcion Display FROM tbl_mrp_gasto_tipo ORDER BY id_gasto_tipo ASC")
             tbEmpresa.Text = csDatos.IdEmpresa.ToString
             ActiveControl = cbGastoTipo
             ActiveControl.Focus()
@@ -33,6 +36,7 @@
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
     Private Sub Navegador1_preGuardar(sender As Object, e As EventArgs) Handles UcNavegador1.preGuardar
         Try
             UcNavegador1.EjecutarEvento = csNegocio.ValidarControlesMaestros(ControlesMaestros)
@@ -41,25 +45,9 @@
         End Try
     End Sub
 
-    Private Sub Navegador1_posGuardar(sender As Object, e As EventArgs) Handles UcNavegador1.posGuardar
+    Private Sub Navegador1_preCerrar(sender As Object, e As EventArgs) Handles UcNavegador1.preCerrar
         Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Navegador1_preEliminar(sender As Object, e As EventArgs) Handles UcNavegador1.preEliminar
-        Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Navegador1_posEliminar(sender As Object, e As EventArgs) Handles UcNavegador1.posEliminar
-        Try
-
+            Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -88,7 +76,7 @@
         End If
     End Sub
 
-    Private Sub tbTareaTipo_TextChanged(sender As Object, e As EventArgs) Handles tbGastoTipo.TextChanged
+    Private Sub tbGastoTipo_TextChanged(sender As Object, e As EventArgs) Handles tbGastoTipo.TextChanged
         If tbGastoTipo.Text = String.Empty Then
             cbGastoTipo.SelectedIndex = -1
         Else

@@ -22,7 +22,6 @@ Partial Class frGasto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.tbEmpresa = New System.Windows.Forms.TextBox()
         Me.lbGastoTipo = New System.Windows.Forms.Label()
         Me.cbGastoTipo = New System.Windows.Forms.ComboBox()
@@ -38,18 +37,11 @@ Partial Class frGasto
         Me.tbCodigo = New System.Windows.Forms.TextBox()
         Me.lbFactor = New System.Windows.Forms.Label()
         Me.tbFactor = New System.Windows.Forms.TextBox()
+        Me.pnlPanelTitulo = New System.Windows.Forms.Panel()
+        Me.lbTitulo = New System.Windows.Forms.Label()
+        Me.UcNavegador1 = New MRP.ucNavegador()
+        Me.pnlPanelTitulo.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'UcNavegador1
-        '
-        Me.UcNavegador1.AutoSize = True
-        Me.UcNavegador1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 0)
-        Me.UcNavegador1.Name = "UcNavegador1"
-        Me.UcNavegador1.Size = New System.Drawing.Size(689, 41)
-        Me.UcNavegador1.TabIndex = 100
         '
         'tbEmpresa
         '
@@ -57,7 +49,7 @@ Partial Class frGasto
         Me.tbEmpresa.MaxLength = 100
         Me.tbEmpresa.Name = "tbEmpresa"
         Me.tbEmpresa.Size = New System.Drawing.Size(20, 20)
-        Me.tbEmpresa.TabIndex = 113
+        Me.tbEmpresa.TabIndex = 100
         Me.tbEmpresa.Visible = False
         '
         'lbGastoTipo
@@ -76,7 +68,7 @@ Partial Class frGasto
         Me.cbGastoTipo.Location = New System.Drawing.Point(125, 96)
         Me.cbGastoTipo.Name = "cbGastoTipo"
         Me.cbGastoTipo.Size = New System.Drawing.Size(550, 21)
-        Me.cbGastoTipo.TabIndex = 103
+        Me.cbGastoTipo.TabIndex = 2
         '
         'lbDescripcion
         '
@@ -93,7 +85,7 @@ Partial Class frGasto
         Me.tbDescripcion.MaxLength = 256
         Me.tbDescripcion.Name = "tbDescripcion"
         Me.tbDescripcion.Size = New System.Drawing.Size(550, 20)
-        Me.tbDescripcion.TabIndex = 105
+        Me.tbDescripcion.TabIndex = 4
         '
         'tbGastoTipo
         '
@@ -101,7 +93,7 @@ Partial Class frGasto
         Me.tbGastoTipo.MaxLength = 100
         Me.tbGastoTipo.Name = "tbGastoTipo"
         Me.tbGastoTipo.Size = New System.Drawing.Size(20, 20)
-        Me.tbGastoTipo.TabIndex = 110
+        Me.tbGastoTipo.TabIndex = 100
         Me.tbGastoTipo.Visible = False
         '
         'tbEstado1
@@ -110,7 +102,8 @@ Partial Class frGasto
         Me.tbEstado1.Name = "tbEstado1"
         Me.tbEstado1.ReadOnly = True
         Me.tbEstado1.Size = New System.Drawing.Size(150, 20)
-        Me.tbEstado1.TabIndex = 102
+        Me.tbEstado1.TabIndex = 1
+        Me.tbEstado1.TabStop = False
         '
         'lbEstado
         '
@@ -126,7 +119,7 @@ Partial Class frGasto
         Me.tbEstado.Location = New System.Drawing.Point(499, 70)
         Me.tbEstado.Name = "tbEstado"
         Me.tbEstado.Size = New System.Drawing.Size(20, 20)
-        Me.tbEstado.TabIndex = 106
+        Me.tbEstado.TabIndex = 100
         Me.tbEstado.Visible = False
         '
         'lbNombre
@@ -153,7 +146,7 @@ Partial Class frGasto
         Me.tbNombre.MaxLength = 100
         Me.tbNombre.Name = "tbNombre"
         Me.tbNombre.Size = New System.Drawing.Size(550, 20)
-        Me.tbNombre.TabIndex = 104
+        Me.tbNombre.TabIndex = 3
         '
         'tbCodigo
         '
@@ -161,7 +154,8 @@ Partial Class frGasto
         Me.tbCodigo.Name = "tbCodigo"
         Me.tbCodigo.ReadOnly = True
         Me.tbCodigo.Size = New System.Drawing.Size(150, 20)
-        Me.tbCodigo.TabIndex = 101
+        Me.tbCodigo.TabIndex = 0
+        Me.tbCodigo.TabStop = False
         '
         'lbFactor
         '
@@ -178,14 +172,49 @@ Partial Class frGasto
         Me.tbFactor.MaxLength = 256
         Me.tbFactor.Name = "tbFactor"
         Me.tbFactor.Size = New System.Drawing.Size(550, 20)
-        Me.tbFactor.TabIndex = 114
+        Me.tbFactor.TabIndex = 5
+        '
+        'pnlPanelTitulo
+        '
+        Me.pnlPanelTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlPanelTitulo.Controls.Add(Me.lbTitulo)
+        Me.pnlPanelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlPanelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlPanelTitulo.Name = "pnlPanelTitulo"
+        Me.pnlPanelTitulo.Size = New System.Drawing.Size(689, 50)
+        Me.pnlPanelTitulo.TabIndex = 100
+        '
+        'lbTitulo
+        '
+        Me.lbTitulo.AutoSize = True
+        Me.lbTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTitulo.Location = New System.Drawing.Point(12, 9)
+        Me.lbTitulo.Name = "lbTitulo"
+        Me.lbTitulo.Size = New System.Drawing.Size(107, 31)
+        Me.lbTitulo.TabIndex = 41
+        Me.lbTitulo.Text = "Gastos"
+        '
+        'UcNavegador1
+        '
+        Me.UcNavegador1.AutoSize = True
+        Me.UcNavegador1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 210)
+        Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
+        Me.UcNavegador1.Name = "UcNavegador1"
+        Me.UcNavegador1.Size = New System.Drawing.Size(689, 60)
+        Me.UcNavegador1.TabIndex = 100
         '
         'frGasto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(689, 211)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(689, 270)
+        Me.Controls.Add(Me.UcNavegador1)
+        Me.Controls.Add(Me.pnlPanelTitulo)
         Me.Controls.Add(Me.lbFactor)
         Me.Controls.Add(Me.tbFactor)
         Me.Controls.Add(Me.tbEmpresa)
@@ -201,18 +230,17 @@ Partial Class frGasto
         Me.Controls.Add(Me.lbCodigo)
         Me.Controls.Add(Me.tbNombre)
         Me.Controls.Add(Me.tbCodigo)
-        Me.Controls.Add(Me.UcNavegador1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MinimizeBox = False
         Me.Name = "frGasto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Gastos"
+        Me.pnlPanelTitulo.ResumeLayout(False)
+        Me.pnlPanelTitulo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents UcNavegador1 As ucNavegador
     Friend WithEvents tbEmpresa As TextBox
     Friend WithEvents lbGastoTipo As Label
     Friend WithEvents cbGastoTipo As ComboBox
@@ -228,4 +256,7 @@ Partial Class frGasto
     Friend WithEvents tbCodigo As TextBox
     Friend WithEvents lbFactor As Label
     Friend WithEvents tbFactor As TextBox
+    Friend WithEvents pnlPanelTitulo As Panel
+    Friend WithEvents lbTitulo As Label
+    Friend WithEvents UcNavegador1 As ucNavegador
 End Class

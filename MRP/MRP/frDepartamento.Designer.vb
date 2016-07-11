@@ -22,7 +22,6 @@ Partial Class frDepartamento
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.tbEstado1 = New System.Windows.Forms.TextBox()
         Me.lbEstado = New System.Windows.Forms.Label()
         Me.tbEstado = New System.Windows.Forms.TextBox()
@@ -33,18 +32,11 @@ Partial Class frDepartamento
         Me.tbDescripcion = New System.Windows.Forms.TextBox()
         Me.tbCodigo = New System.Windows.Forms.TextBox()
         Me.tbEmpresa = New System.Windows.Forms.TextBox()
+        Me.pnlPanelTitulo = New System.Windows.Forms.Panel()
+        Me.lbTitulo = New System.Windows.Forms.Label()
+        Me.UcNavegador1 = New MRP.ucNavegador()
+        Me.pnlPanelTitulo.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'UcNavegador1
-        '
-        Me.UcNavegador1.AutoSize = True
-        Me.UcNavegador1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 0)
-        Me.UcNavegador1.Name = "UcNavegador1"
-        Me.UcNavegador1.Size = New System.Drawing.Size(689, 41)
-        Me.UcNavegador1.TabIndex = 8
         '
         'tbEstado1
         '
@@ -53,6 +45,7 @@ Partial Class frDepartamento
         Me.tbEstado1.ReadOnly = True
         Me.tbEstado1.Size = New System.Drawing.Size(150, 20)
         Me.tbEstado1.TabIndex = 1
+        Me.tbEstado1.TabStop = False
         '
         'lbEstado
         '
@@ -68,7 +61,7 @@ Partial Class frDepartamento
         Me.tbEstado.Location = New System.Drawing.Point(499, 70)
         Me.tbEstado.Name = "tbEstado"
         Me.tbEstado.Size = New System.Drawing.Size(20, 20)
-        Me.tbEstado.TabIndex = 21
+        Me.tbEstado.TabIndex = 100
         Me.tbEstado.Visible = False
         '
         'lbNombre
@@ -121,21 +114,57 @@ Partial Class frDepartamento
         Me.tbCodigo.ReadOnly = True
         Me.tbCodigo.Size = New System.Drawing.Size(150, 20)
         Me.tbCodigo.TabIndex = 0
+        Me.tbCodigo.TabStop = False
         '
         'tbEmpresa
         '
         Me.tbEmpresa.Location = New System.Drawing.Point(281, 70)
         Me.tbEmpresa.Name = "tbEmpresa"
         Me.tbEmpresa.Size = New System.Drawing.Size(20, 20)
-        Me.tbEmpresa.TabIndex = 26
+        Me.tbEmpresa.TabIndex = 100
         Me.tbEmpresa.Visible = False
+        '
+        'pnlPanelTitulo
+        '
+        Me.pnlPanelTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlPanelTitulo.Controls.Add(Me.lbTitulo)
+        Me.pnlPanelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlPanelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.pnlPanelTitulo.Name = "pnlPanelTitulo"
+        Me.pnlPanelTitulo.Size = New System.Drawing.Size(689, 50)
+        Me.pnlPanelTitulo.TabIndex = 100
+        '
+        'lbTitulo
+        '
+        Me.lbTitulo.AutoSize = True
+        Me.lbTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbTitulo.Location = New System.Drawing.Point(12, 9)
+        Me.lbTitulo.Name = "lbTitulo"
+        Me.lbTitulo.Size = New System.Drawing.Size(213, 31)
+        Me.lbTitulo.TabIndex = 41
+        Me.lbTitulo.Text = "Departamentos"
+        '
+        'UcNavegador1
+        '
+        Me.UcNavegador1.AutoSize = True
+        Me.UcNavegador1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 160)
+        Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
+        Me.UcNavegador1.Name = "UcNavegador1"
+        Me.UcNavegador1.Size = New System.Drawing.Size(689, 60)
+        Me.UcNavegador1.TabIndex = 100
         '
         'frDepartamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(689, 156)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(689, 220)
+        Me.Controls.Add(Me.UcNavegador1)
+        Me.Controls.Add(Me.pnlPanelTitulo)
         Me.Controls.Add(Me.tbEmpresa)
         Me.Controls.Add(Me.tbEstado1)
         Me.Controls.Add(Me.lbEstado)
@@ -146,18 +175,17 @@ Partial Class frDepartamento
         Me.Controls.Add(Me.lbCodigo)
         Me.Controls.Add(Me.tbDescripcion)
         Me.Controls.Add(Me.tbCodigo)
-        Me.Controls.Add(Me.UcNavegador1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MinimizeBox = False
         Me.Name = "frDepartamento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Departamentos"
+        Me.pnlPanelTitulo.ResumeLayout(False)
+        Me.pnlPanelTitulo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents UcNavegador1 As ucNavegador
     Friend WithEvents tbEstado1 As TextBox
     Friend WithEvents lbEstado As Label
     Friend WithEvents tbEstado As TextBox
@@ -168,4 +196,7 @@ Partial Class frDepartamento
     Friend WithEvents tbDescripcion As TextBox
     Friend WithEvents tbCodigo As TextBox
     Friend WithEvents tbEmpresa As TextBox
+    Friend WithEvents pnlPanelTitulo As Panel
+    Friend WithEvents lbTitulo As Label
+    Friend WithEvents UcNavegador1 As ucNavegador
 End Class

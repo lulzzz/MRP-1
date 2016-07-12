@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frStatus
+Partial Class frInventarioTipo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -50,7 +50,7 @@ Partial Class frStatus
         Me.lbEstado.Location = New System.Drawing.Point(412, 73)
         Me.lbEstado.Name = "lbEstado"
         Me.lbEstado.Size = New System.Drawing.Size(43, 13)
-        Me.lbEstado.TabIndex = 109
+        Me.lbEstado.TabIndex = 39
         Me.lbEstado.Text = "Estado:"
         '
         'tbEstado
@@ -67,7 +67,7 @@ Partial Class frStatus
         Me.lbDescripcion.Location = New System.Drawing.Point(12, 99)
         Me.lbDescripcion.Name = "lbDescripcion"
         Me.lbDescripcion.Size = New System.Drawing.Size(66, 13)
-        Me.lbDescripcion.TabIndex = 108
+        Me.lbDescripcion.TabIndex = 38
         Me.lbDescripcion.Text = "Descripción:"
         '
         'lbCodigo
@@ -76,7 +76,7 @@ Partial Class frStatus
         Me.lbCodigo.Location = New System.Drawing.Point(12, 73)
         Me.lbCodigo.Name = "lbCodigo"
         Me.lbCodigo.Size = New System.Drawing.Size(43, 13)
-        Me.lbCodigo.TabIndex = 107
+        Me.lbCodigo.TabIndex = 37
         Me.lbCodigo.Text = "Código:"
         '
         'tbDescripcion
@@ -112,9 +112,9 @@ Partial Class frStatus
         Me.lbTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbTitulo.Location = New System.Drawing.Point(12, 9)
         Me.lbTitulo.Name = "lbTitulo"
-        Me.lbTitulo.Size = New System.Drawing.Size(98, 31)
+        Me.lbTitulo.Size = New System.Drawing.Size(279, 31)
         Me.lbTitulo.TabIndex = 41
-        Me.lbTitulo.Text = "Status"
+        Me.lbTitulo.Text = "Tipos de Inventarios"
         '
         'UcNavegador1
         '
@@ -123,13 +123,13 @@ Partial Class frStatus
         Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 132)
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 130)
         Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
         Me.UcNavegador1.Name = "UcNavegador1"
-        Me.UcNavegador1.Size = New System.Drawing.Size(689, 58)
+        Me.UcNavegador1.Size = New System.Drawing.Size(689, 60)
         Me.UcNavegador1.TabIndex = 100
         '
-        'frStatus
+        'frInventarioTipo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -146,9 +146,9 @@ Partial Class frStatus
         Me.Controls.Add(Me.tbCodigo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
-        Me.Name = "frStatus"
+        Me.Name = "frInventarioTipo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Status"
+        Me.Text = "InventarioClasificacion"
         Me.pnlPanelTitulo.ResumeLayout(False)
         Me.pnlPanelTitulo.PerformLayout()
         Me.ResumeLayout(False)

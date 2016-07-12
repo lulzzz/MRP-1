@@ -1,4 +1,12 @@
 ﻿Public Class frMovimientoTipo
+#Region "Documentación"
+    '----------------------------------------------------------------------------------------------------
+    'FECHA:         04/07/2016 
+    'DESARROLLADOR: Kevin Gutiérrez
+    'DESCRIPCIÓN:   Catálogo de tipos de movimientos
+    '----------------------------------------------------------------------------------------------------
+#End Region
+
     Dim ControlesMaestros As New ArrayList
 
     Private Sub frMovimientoTipo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -12,14 +20,6 @@
     End Sub
 
 #Region "Navegador"
-    Private Sub Navegador1_preNuevo(sender As Object, e As EventArgs) Handles UcNavegador1.preNuevo
-        Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
     Private Sub Navegador1_posNuevo(sender As Object, e As EventArgs) Handles UcNavegador1.posNuevo
         Try
             ActiveControl = tbDescripcion
@@ -28,6 +28,7 @@
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
     Private Sub Navegador1_preGuardar(sender As Object, e As EventArgs) Handles UcNavegador1.preGuardar
         Try
             UcNavegador1.EjecutarEvento = csNegocio.ValidarControlesMaestros(ControlesMaestros)
@@ -36,25 +37,9 @@
         End Try
     End Sub
 
-    Private Sub Navegador1_posGuardar(sender As Object, e As EventArgs) Handles UcNavegador1.posGuardar
+    Private Sub Navegador1_preCerrar(sender As Object, e As EventArgs) Handles UcNavegador1.preCerrar
         Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Navegador1_preEliminar(sender As Object, e As EventArgs) Handles UcNavegador1.preEliminar
-        Try
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Navegador1_posEliminar(sender As Object, e As EventArgs) Handles UcNavegador1.posEliminar
-        Try
-
+            Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

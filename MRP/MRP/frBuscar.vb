@@ -7,8 +7,8 @@
 
     Private Sub Buscar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            csDatos.ConsultarQuery(dtDatos, Me.QueryBuscar)
-            dgvDatos.DataSource = Me.dtDatos
+            csDatos.ConsultarQuery(dtDatos, QueryBuscar)
+            dgvDatos.DataSource = dtDatos
             dgvDatos.Refresh()
             dgvDatos.Refresh()
         Catch ex As Exception
@@ -19,11 +19,11 @@
     Private Sub dgvDatos_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDatos.CellDoubleClick
         Try
             If e.RowIndex >= 0 Then
-                For i As Integer = 0 To Me.dtDatos.Rows.Count - 1
-                    If CInt(Me.dtDatos.Rows(i)(0)) = CInt(Me.dgvDatos.Rows(e.RowIndex).Cells(0).Value.ToString()) Then
+                For i As Integer = 0 To dtDatos.Rows.Count - 1
+                    If CInt(dtDatos.Rows(i)(0)) = CInt(dgvDatos.Rows(e.RowIndex).Cells(0).Value.ToString()) Then
                         Contador = i
                         EjecutarBusqueda = True
-                        Me.Close()
+                        Close()
                     End If
                 Next
             End If

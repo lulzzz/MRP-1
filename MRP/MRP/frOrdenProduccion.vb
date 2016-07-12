@@ -1,7 +1,7 @@
 ﻿Public Class frOrdenProduccion
 #Region "Documentación"
     '----------------------------------------------------------------------------------------------------
-    'FECHA:         12/07/2016 
+    'FECHA:         12/07/2016
     'DESARROLLADOR: Anthony Molineros
     'DESCRIPCIÓN:   Proceso de Órdenes de Producción
     '----------------------------------------------------------------------------------------------------

@@ -44,6 +44,19 @@
         End Try
     End Function
 
+    Public Shared Function ObtenerUltimoIdporTabla(ByVal NombreTabla As String) As String
+        Try
+            Dim dt As New DataTable
+            If csDatos.ConsultarQuery(dt, "SELECT IDENT_CURRENT('" + NombreTabla + "') Id") Then
+                Return CStr(dt.Rows(0)("Id"))
+            End If
+            Return String.Empty
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return String.Empty
+        End Try
+    End Function
+
     Public Shared Function ValidarTablaEmpresa(ByVal NombreTabla As String) As Boolean
         Try
             Return csDatos.ValidarTablaEmpresa(NombreTabla)
@@ -118,7 +131,7 @@
                 If i > 0 Then
                     Query += ","
                 End If
-                Query += dg.Columns(i).Name + " " + dg.Columns(i).HeaderText
+                Query += dg.Columns(i).Name + " '" + dg.Columns(i).HeaderText + "'"
             Next
             Query += " FROM " + dg.Tag.ToString + " WHERE " + CStr(Campos.Rows(0)(0)) + "=" + Id
             If csDatos.ConsultarQuery(dt, Query) Then
@@ -151,9 +164,9 @@
                 For i As Integer = 0 To dg.Columns.Count - 1
                     Query += "," + dg.Columns(i).Name
                 Next
-                Query += ") VALUES (" + Id
+                Query += ") VALUES ('" + Id + "'"
                 For j As Integer = 0 To dg.Columns.Count - 1
-                    Query += "," + dg.Rows(x).Cells(j).Value.ToString
+                    Query += ",'" + dg.Rows(x).Cells(j).Value.ToString + "'"
                 Next
                 Query += ")"
             Next

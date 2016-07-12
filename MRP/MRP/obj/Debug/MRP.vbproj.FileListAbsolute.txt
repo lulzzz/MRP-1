@@ -243,3 +243,4 @@ C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.exe.config
 C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.exe
 C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.xml
 C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.pdb
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache

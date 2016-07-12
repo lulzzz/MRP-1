@@ -131,6 +131,7 @@
                 If csNegocio.GuardarRegistroMaestro(Nuevo, NombreTabla, ControlesMaestros, False) Then
                     Guardado = True
                     If Not IsNothing(ControlesDetalles) Then
+                        If CType(ControlesMaestros(0), TextBox).Text = String.Empty Then CType(ControlesMaestros(0), TextBox).Text = csNegocio.ObtenerUltimoIdporTabla(NombreTabla)
                         For j As Integer = 0 To ControlesDetalles.Count - 1
                             If Not csNegocio.GuardarRegistroDetalle(CType(ControlesDetalles(j), DataGridView), NombreTabla, CType(ControlesMaestros(0), TextBox).Text, False) Then
                                 Guardado = False

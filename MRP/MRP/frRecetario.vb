@@ -10,19 +10,33 @@
     Dim ControlesMaestros As New ArrayList
     Dim ControlesDetalles As New ArrayList
     Dim dtInventarios As New DataTable
+    Dim dtMateriasPrimas As New DataTable
+    Dim dtTareas As New DataTable
 
     Private Sub frRecetario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        csNegocio.CargarCombobox(cbInventario, dtInventarios, "SELECT id_inventario Value, inv_nombre Display FROM tbl_mrp_inventario a JOIN tbl_mrp_inventario_clasificacion b ON a.id_inventario_clasificacion=b.id_inventario_clasificacion WHERE b.icl_descripcion LIKE '%prod%%terminado%' OR b.icl_descripcion LIKE '%prod%%producido%' ORDER BY id_inventario ASC")
+        csNegocio.CargarCombobox(cbInventario, dtInventarios, "SELECT id_inventario Value, inv_nombre Display FROM tbl_mrp_inventario a JOIN tbl_mrp_inventario_tipo b ON a.id_inventario_tipo=b.id_inventario_tipo WHERE b.ivt_descripcion LIKE '%prod%terminado%' OR b.ivt_descripcion LIKE '%prod%producido%' ORDER BY id_inventario ASC")
         ControlesMaestros.Add(tbCodigo)
         ControlesMaestros.Add(tbInventario)
         ControlesMaestros.Add(tbDescripcion)
         ControlesMaestros.Add(tbFechaCreacion)
         ControlesMaestros.Add(tbEmpresa)
         ControlesMaestros.Add(tbEstado)
-        'ControlesDetalles.Add(dgRecetarioInventarios)
-        'ControlesDetalles.Add(dgRecetarioTareas)
+        ControlesDetalles.Add(dgRecetarioInventario)
+        ControlesDetalles.Add(dgRecetarioTarea)
         UcNavegador1.ControlesMaestros = ControlesMaestros
-        'UcNavegador1.ControlesDetalles = ControlesDetalles
+        UcNavegador1.ControlesDetalles = ControlesDetalles
+        csDatos.ConsultarQuery(dtMateriasPrimas, "SELECT id_inventario Value, inv_nombre Display FROM tbl_mrp_inventario a JOIN tbl_mrp_inventario_tipo b ON a.id_inventario_tipo=b.id_inventario_tipo WHERE b.ivt_descripcion LIKE '%mat%prima%' ORDER BY id_inventario ASC")
+        Dim cbEmpresa As New DataGridViewComboBoxColumn With {.HeaderText = "Inventario", .Name = "id_inventario", .Tag = "Combobox"}
+        cbEmpresa.DataSource = dtMateriasPrimas
+        cbEmpresa.ValueMember = "Value"
+        cbEmpresa.DisplayMember = "Display"
+        dgRecetarioInventario.Columns.Insert(0, cbEmpresa)
+        csDatos.ConsultarQuery(dtTareas, "SELECT id_tarea Value, tar_nombre Display FROM tbl_mrp_tarea ORDER BY id_tarea ASC")
+        Dim cbTarea As New DataGridViewComboBoxColumn With {.HeaderText = "Tarea", .Name = "id_tarea", .Tag = "Combobox"}
+        cbTarea.DataSource = dtTareas
+        cbTarea.ValueMember = "Value"
+        cbTarea.DisplayMember = "Display"
+        dgRecetarioTarea.Columns.Insert(0, cbTarea)
         UcNavegador1.NombreTabla = "tbl_mrp_recetario"
         UcNavegador1.QueryBuscar = "SELECT id_recetario Código, inv_nombre Inventario, rct_descripcion Descripción, rct_fecha_creacion 'Fecha de Creación', CASE a.id_estado WHEN 1 THEN 'Alta' ELSE 'Eliminado' END Estado FROM " + UcNavegador1.NombreTabla + " a JOIN tbl_mrp_inventario b ON a.id_inventario=b.id_inventario WHERE a.id_empresa=" + csDatos.IdEmpresa.ToString + " ORDER BY id_recetario ASC"
         UcNavegador1.IniciarNavegador()
@@ -31,7 +45,11 @@
 #Region "Navegador"
     Private Sub Navegador1_posNuevo(sender As Object, e As EventArgs) Handles UcNavegador1.posNuevo
         Try
-            csNegocio.CargarCombobox(cbInventario, dtInventarios, "SELECT id_inventario Value, inv_nombre Display FROM tbl_mrp_inventario a JOIN tbl_mrp_inventario_clasificacion b ON a.id_inventario_clasificacion=b.id_inventario_clasificacion WHERE b.icl_descripcion LIKE '%prod%%terminado%' OR b.icl_descripcion LIKE '%prod%%producido%' ORDER BY id_inventario ASC")
+            csNegocio.CargarCombobox(cbInventario, dtInventarios, "SELECT id_inventario Value, inv_nombre Display FROM tbl_mrp_inventario a JOIN tbl_mrp_inventario_tipo b ON a.id_inventario_tipo=b.id_inventario_tipo WHERE b.ivt_descripcion LIKE '%prod%terminado%' OR b.ivt_descripcion LIKE '%prod%producido%' ORDER BY id_inventario ASC")
+            csDatos.ConsultarQuery(dtMateriasPrimas, "SELECT id_inventario Value, inv_nombre Display FROM tbl_mrp_inventario a JOIN tbl_mrp_inventario_tipo b ON a.id_inventario_tipo=b.id_inventario_tipo WHERE b.ivt_descripcion LIKE '%mat%prima%' ORDER BY id_inventario ASC")
+            csDatos.ConsultarQuery(dtMateriasPrimas, "SELECT id_tarea Value, tar_nombre Display FROM tbl_mrp_tarea ORDER BY id_tarea ASC")
+            dgRecetarioInventario.Refresh()
+            dgRecetarioTarea.Refresh()
             tbEmpresa.Text = csDatos.IdEmpresa.ToString
             ActiveControl = cbInventario
             ActiveControl.Focus()
@@ -50,7 +68,7 @@
 
     Private Sub Navegador1_preCerrar(sender As Object, e As EventArgs) Handles UcNavegador1.preCerrar
         Try
-            Me.Close()
+            Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -98,6 +116,56 @@
         Else
             dpFechaCreacion.Value = CDate(tbFechaCreacion.Text)
         End If
+    End Sub
+
+    Private Sub btAgregarInventario_Click(sender As Object, e As EventArgs) Handles btAgregarInventario.Click
+        Try
+            dgRecetarioInventario.Rows.Add()
+            dgRecetarioInventario.CurrentCell = dgRecetarioInventario.Rows(dgRecetarioInventario.Rows.Count - 1).Cells(0)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub btEliminarInventario_Click(sender As Object, e As EventArgs) Handles btEliminarInventario.Click
+        Try
+            If dgRecetarioInventario.SelectedRows.Count > 0 Then
+                If MessageBox.Show("¿Desea eliminar las filas seleccionadas?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                    For Each Fila As DataGridViewRow In dgRecetarioInventario.SelectedRows
+                        If Fila.Selected Then
+                            dgRecetarioInventario.Rows.Remove(Fila)
+                        End If
+                    Next
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub btAgregarTarea_Click(sender As Object, e As EventArgs) Handles btAgregarTarea.Click
+        Try
+            dgRecetarioTarea.Rows.Add()
+            dgRecetarioTarea.CurrentCell = dgRecetarioTarea.Rows(dgRecetarioTarea.Rows.Count - 1).Cells(0)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub btEliminarTarea_Click(sender As Object, e As EventArgs) Handles btEliminarTarea.Click
+        Try
+            If dgRecetarioTarea.SelectedRows.Count > 0 Then
+                If MessageBox.Show("¿Desea eliminar las filas seleccionadas?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                    For Each Fila As DataGridViewRow In dgRecetarioTarea.SelectedRows
+                        If Fila.Selected Then
+                            dgRecetarioTarea.Rows.Remove(Fila)
+                        End If
+                    Next
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 #End Region
 End Class

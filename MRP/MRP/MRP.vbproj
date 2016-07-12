@@ -153,10 +153,10 @@
     <Compile Include="frInventario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frInventarioClasificacion.Designer.vb">
-      <DependentUpon>frInventarioClasificacion.vb</DependentUpon>
+    <Compile Include="frInventarioTipo.Designer.vb">
+      <DependentUpon>frInventarioTipo.vb</DependentUpon>
     </Compile>
-    <Compile Include="frInventarioClasificacion.vb">
+    <Compile Include="frInventarioTipo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frLogin.Designer.vb">
@@ -329,8 +329,8 @@
     <EmbeddedResource Include="frInventario.resx">
       <DependentUpon>frInventario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frInventarioClasificacion.resx">
-      <DependentUpon>frInventarioClasificacion.vb</DependentUpon>
+    <EmbeddedResource Include="frInventarioTipo.resx">
+      <DependentUpon>frInventarioTipo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frLogin.resx">
       <DependentUpon>frLogin.vb</DependentUpon>

@@ -170,8 +170,8 @@
     End Sub
 
     Private Sub miTiposInventarios_Click(sender As Object, e As EventArgs) Handles miTiposInventarios.Click
-        'Dim frInventarioTipo As New frInventarioTipo
-        'ValidacionFormulario("frInventarioTipo", frInventarioTipo)
+        Dim frInventarioTipo As New frInventarioTipo
+        ValidacionFormulario("frInventarioTipo", frInventarioTipo)
     End Sub
 
     Private Sub miTiposMovimientos_Click(sender As Object, e As EventArgs) Handles miTiposMovimientos.Click

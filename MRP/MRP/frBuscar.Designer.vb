@@ -29,16 +29,17 @@ Partial Class frBuscar
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.pnlPanelTitulo = New System.Windows.Forms.Panel()
         Me.lbTitulo = New System.Windows.Forms.Label()
+        Me.pnlPanelDatos = New System.Windows.Forms.Panel()
         CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlPanelOpciones.SuspendLayout()
         Me.pnlPanelTitulo.SuspendLayout()
+        Me.pnlPanelDatos.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvDatos
         '
         Me.dgvDatos.AllowUserToAddRows = False
         Me.dgvDatos.AllowUserToDeleteRows = False
-        Me.dgvDatos.AllowUserToResizeColumns = False
         Me.dgvDatos.AllowUserToResizeRows = False
         Me.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvDatos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
@@ -49,7 +50,7 @@ Partial Class frBuscar
         Me.dgvDatos.ReadOnly = True
         Me.dgvDatos.RowHeadersVisible = False
         Me.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDatos.Size = New System.Drawing.Size(734, 461)
+        Me.dgvDatos.Size = New System.Drawing.Size(734, 351)
         Me.dgvDatos.TabIndex = 0
         '
         'pnlPanelOpciones
@@ -112,13 +113,22 @@ Partial Class frBuscar
         Me.lbTitulo.TabIndex = 41
         Me.lbTitulo.Text = "Buscador"
         '
+        'pnlPanelDatos
+        '
+        Me.pnlPanelDatos.Controls.Add(Me.dgvDatos)
+        Me.pnlPanelDatos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlPanelDatos.Location = New System.Drawing.Point(0, 50)
+        Me.pnlPanelDatos.Name = "pnlPanelDatos"
+        Me.pnlPanelDatos.Size = New System.Drawing.Size(734, 351)
+        Me.pnlPanelDatos.TabIndex = 104
+        '
         'frBuscar
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(734, 461)
+        Me.Controls.Add(Me.pnlPanelDatos)
         Me.Controls.Add(Me.pnlPanelTitulo)
         Me.Controls.Add(Me.pnlPanelOpciones)
-        Me.Controls.Add(Me.dgvDatos)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -133,6 +143,7 @@ Partial Class frBuscar
         Me.pnlPanelOpciones.PerformLayout()
         Me.pnlPanelTitulo.ResumeLayout(False)
         Me.pnlPanelTitulo.PerformLayout()
+        Me.pnlPanelDatos.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -142,4 +153,5 @@ Partial Class frBuscar
     Private WithEvents btnCerrar As Button
     Friend WithEvents pnlPanelTitulo As Panel
     Friend WithEvents lbTitulo As Label
+    Friend WithEvents pnlPanelDatos As Panel
 End Class

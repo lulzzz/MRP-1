@@ -191,7 +191,6 @@ C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGasto.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGastoPeriodo.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGastoTipo.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventario.resources
-C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventarioClasificacion.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frMedida.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frMovimientoTipo.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frProcesoProduccion.resources
@@ -243,4 +242,4 @@ C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\bin\Debug\MRP.exe.config
 C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.exe
 C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.xml
 C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.pdb
-C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
+C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventarioTipo.resources

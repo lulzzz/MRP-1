@@ -156,13 +156,13 @@ Partial Class frUsuario
         Me.dgUsuarioEmpresa.RowHeadersVisible = False
         Me.dgUsuarioEmpresa.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgUsuarioEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgUsuarioEmpresa.Size = New System.Drawing.Size(360, 150)
+        Me.dgUsuarioEmpresa.Size = New System.Drawing.Size(550, 150)
         Me.dgUsuarioEmpresa.TabIndex = 5
         Me.dgUsuarioEmpresa.Tag = "tbl_mrp_usuario_empresa"
         '
         'btAgregarEmpresa
         '
-        Me.btAgregarEmpresa.Location = New System.Drawing.Point(491, 177)
+        Me.btAgregarEmpresa.Location = New System.Drawing.Point(125, 330)
         Me.btAgregarEmpresa.Name = "btAgregarEmpresa"
         Me.btAgregarEmpresa.Size = New System.Drawing.Size(125, 23)
         Me.btAgregarEmpresa.TabIndex = 19
@@ -171,7 +171,7 @@ Partial Class frUsuario
         '
         'btEliminarEmpresa
         '
-        Me.btEliminarEmpresa.Location = New System.Drawing.Point(491, 206)
+        Me.btEliminarEmpresa.Location = New System.Drawing.Point(256, 330)
         Me.btEliminarEmpresa.Name = "btEliminarEmpresa"
         Me.btEliminarEmpresa.Size = New System.Drawing.Size(125, 23)
         Me.btEliminarEmpresa.TabIndex = 20
@@ -214,7 +214,7 @@ Partial Class frUsuario
         Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 342)
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 367)
         Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
         Me.UcNavegador1.Name = "UcNavegador1"
         Me.UcNavegador1.Size = New System.Drawing.Size(689, 58)
@@ -225,7 +225,7 @@ Partial Class frUsuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(689, 400)
+        Me.ClientSize = New System.Drawing.Size(689, 425)
         Me.Controls.Add(Me.UcNavegador1)
         Me.Controls.Add(Me.pnlPanelTitulo)
         Me.Controls.Add(Me.lbEmpresasAsociadas)

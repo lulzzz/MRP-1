@@ -23,6 +23,7 @@ Partial Class frMenuPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frMenuPrincipal))
         Me.msMenuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.tsArchivo = New System.Windows.Forms.ToolStripMenuItem()
         Me.miCambiarEmpresa = New System.Windows.Forms.ToolStripMenuItem()
@@ -83,10 +84,9 @@ Partial Class frMenuPrincipal
         Me.msMenuPrincipal.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.msMenuPrincipal.GripMargin = New System.Windows.Forms.Padding(2)
         Me.msMenuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsArchivo, Me.tsCatalogos, Me.tsProcesos, Me.tsReportes, Me.tsOpciones, Me.tsAyuda})
-        Me.msMenuPrincipal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
         Me.msMenuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.msMenuPrincipal.Name = "msMenuPrincipal"
-        Me.msMenuPrincipal.Size = New System.Drawing.Size(784, 23)
+        Me.msMenuPrincipal.Size = New System.Drawing.Size(784, 24)
         Me.msMenuPrincipal.TabIndex = 5
         Me.msMenuPrincipal.Text = "MenuStrip"
         '
@@ -95,7 +95,7 @@ Partial Class frMenuPrincipal
         Me.tsArchivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miCambiarEmpresa, Me.tsSeparador1, Me.miCerrarSesion, Me.miSalir})
         Me.tsArchivo.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.tsArchivo.Name = "tsArchivo"
-        Me.tsArchivo.Size = New System.Drawing.Size(60, 19)
+        Me.tsArchivo.Size = New System.Drawing.Size(60, 20)
         Me.tsArchivo.Text = "&Archivo"
         '
         'miCambiarEmpresa
@@ -125,7 +125,7 @@ Partial Class frMenuPrincipal
         '
         Me.tsCatalogos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miBodegas, Me.miDepartamentos, Me.miEmpleados, Me.miEmpleadosNomina, Me.miGastos, Me.miGastosPeriodo, Me.miInventarios, Me.miMedidas, Me.miNominas, Me.miPuestos, Me.miRecetario, Me.miStatus, Me.miTareas, Me.tsSeparador2, Me.miPeriodosNominas, Me.miTiposGastos, Me.miTiposInventarios, Me.miTiposMovimientos, Me.miTiposTareas})
         Me.tsCatalogos.Name = "tsCatalogos"
-        Me.tsCatalogos.Size = New System.Drawing.Size(72, 19)
+        Me.tsCatalogos.Size = New System.Drawing.Size(72, 20)
         Me.tsCatalogos.Text = "&Catálogos"
         '
         'miBodegas
@@ -245,7 +245,7 @@ Partial Class frMenuPrincipal
         '
         Me.tsProcesos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miMovimientos, Me.miSolicitudes, Me.tsSeparador3, Me.miOrdenesProduccion, Me.miProcesosProduccion})
         Me.tsProcesos.Name = "tsProcesos"
-        Me.tsProcesos.Size = New System.Drawing.Size(66, 19)
+        Me.tsProcesos.Size = New System.Drawing.Size(66, 20)
         Me.tsProcesos.Text = "&Procesos"
         '
         'miMovimientos
@@ -281,7 +281,7 @@ Partial Class frMenuPrincipal
         '
         Me.tsReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miRExistenciasInventarios, Me.miROrdenesProduccion, Me.miRProcesosProduccion})
         Me.tsReportes.Name = "tsReportes"
-        Me.tsReportes.Size = New System.Drawing.Size(65, 19)
+        Me.tsReportes.Size = New System.Drawing.Size(65, 20)
         Me.tsReportes.Text = "&Reportes"
         '
         'miRExistenciasInventarios
@@ -306,7 +306,7 @@ Partial Class frMenuPrincipal
         '
         Me.tsOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpresas, Me.miMonedas, Me.miPaises, Me.tsSeparador4, Me.miUsuarios})
         Me.tsOpciones.Name = "tsOpciones"
-        Me.tsOpciones.Size = New System.Drawing.Size(69, 19)
+        Me.tsOpciones.Size = New System.Drawing.Size(69, 20)
         Me.tsOpciones.Text = "&Opciones"
         '
         'miEmpresas
@@ -342,7 +342,7 @@ Partial Class frMenuPrincipal
         '
         Me.tsAyuda.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miAcercaDeMRP})
         Me.tsAyuda.Name = "tsAyuda"
-        Me.tsAyuda.Size = New System.Drawing.Size(53, 19)
+        Me.tsAyuda.Size = New System.Drawing.Size(53, 20)
         Me.tsAyuda.Text = "Ay&uda"
         '
         'miAcercaDeMRP
@@ -415,6 +415,7 @@ Partial Class frMenuPrincipal
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.ssBarraEstado)
         Me.Controls.Add(Me.msMenuPrincipal)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.msMenuPrincipal
         Me.Name = "frMenuPrincipal"

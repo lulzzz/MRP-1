@@ -22,6 +22,9 @@ Partial Class frOrdenProduccion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlPanelTitulo = New System.Windows.Forms.Panel()
         Me.lbTitulo = New System.Windows.Forms.Label()
         Me.UcNavegador1 = New MRP.ucNavegador()
@@ -40,7 +43,15 @@ Partial Class frOrdenProduccion
         Me.cbStatus = New System.Windows.Forms.ComboBox()
         Me.lbStatus = New System.Windows.Forms.Label()
         Me.tbStatus = New System.Windows.Forms.TextBox()
+        Me.lbInventarios = New System.Windows.Forms.Label()
+        Me.dgOrdprodInventario = New System.Windows.Forms.DataGridView()
+        Me.opi_cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.opi_costo_unitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.opi_costo_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btAgregarInventario = New System.Windows.Forms.Button()
+        Me.btEliminarInventario = New System.Windows.Forms.Button()
         Me.pnlPanelTitulo.SuspendLayout()
+        CType(Me.dgOrdprodInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlPanelTitulo
@@ -70,7 +81,7 @@ Partial Class frOrdenProduccion
         Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 160)
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 340)
         Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
         Me.UcNavegador1.Name = "UcNavegador1"
         Me.UcNavegador1.Size = New System.Drawing.Size(689, 60)
@@ -210,11 +221,90 @@ Partial Class frOrdenProduccion
         Me.tbStatus.TabIndex = 127
         Me.tbStatus.Visible = False
         '
+        'lbInventarios
+        '
+        Me.lbInventarios.AutoSize = True
+        Me.lbInventarios.Location = New System.Drawing.Point(12, 153)
+        Me.lbInventarios.Name = "lbInventarios"
+        Me.lbInventarios.Size = New System.Drawing.Size(62, 13)
+        Me.lbInventarios.TabIndex = 131
+        Me.lbInventarios.Text = "Inventarios:"
+        '
+        'dgOrdprodInventario
+        '
+        Me.dgOrdprodInventario.AllowDrop = True
+        Me.dgOrdprodInventario.AllowUserToAddRows = False
+        Me.dgOrdprodInventario.AllowUserToDeleteRows = False
+        Me.dgOrdprodInventario.AllowUserToResizeColumns = False
+        Me.dgOrdprodInventario.AllowUserToResizeRows = False
+        Me.dgOrdprodInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgOrdprodInventario.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.dgOrdprodInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgOrdprodInventario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.opi_cantidad, Me.opi_costo_unitario, Me.opi_costo_total})
+        Me.dgOrdprodInventario.GridColor = System.Drawing.SystemColors.Window
+        Me.dgOrdprodInventario.Location = New System.Drawing.Point(125, 150)
+        Me.dgOrdprodInventario.Name = "dgOrdprodInventario"
+        Me.dgOrdprodInventario.RowHeadersVisible = False
+        Me.dgOrdprodInventario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgOrdprodInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgOrdprodInventario.Size = New System.Drawing.Size(550, 150)
+        Me.dgOrdprodInventario.TabIndex = 128
+        Me.dgOrdprodInventario.Tag = "tbl_mrp_ordprod_inventario"
+        '
+        'opi_cantidad
+        '
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle10.Format = "N6"
+        DataGridViewCellStyle10.NullValue = "0.0"
+        Me.opi_cantidad.DefaultCellStyle = DataGridViewCellStyle10
+        Me.opi_cantidad.HeaderText = "Cantidad"
+        Me.opi_cantidad.Name = "opi_cantidad"
+        '
+        'opi_costo_unitario
+        '
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle11.Format = "N2"
+        DataGridViewCellStyle11.NullValue = "0.0"
+        Me.opi_costo_unitario.DefaultCellStyle = DataGridViewCellStyle11
+        Me.opi_costo_unitario.HeaderText = "Costo Unitario"
+        Me.opi_costo_unitario.Name = "opi_costo_unitario"
+        '
+        'opi_costo_total
+        '
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle12.Format = "N2"
+        DataGridViewCellStyle12.NullValue = "0.0"
+        Me.opi_costo_total.DefaultCellStyle = DataGridViewCellStyle12
+        Me.opi_costo_total.HeaderText = "Total"
+        Me.opi_costo_total.Name = "opi_costo_total"
+        '
+        'btAgregarInventario
+        '
+        Me.btAgregarInventario.Location = New System.Drawing.Point(125, 306)
+        Me.btAgregarInventario.Name = "btAgregarInventario"
+        Me.btAgregarInventario.Size = New System.Drawing.Size(125, 23)
+        Me.btAgregarInventario.TabIndex = 129
+        Me.btAgregarInventario.Text = "Agregar Inventario"
+        Me.btAgregarInventario.UseVisualStyleBackColor = True
+        '
+        'btEliminarInventario
+        '
+        Me.btEliminarInventario.Location = New System.Drawing.Point(256, 306)
+        Me.btEliminarInventario.Name = "btEliminarInventario"
+        Me.btEliminarInventario.Size = New System.Drawing.Size(125, 23)
+        Me.btEliminarInventario.TabIndex = 130
+        Me.btEliminarInventario.Text = "Eliminar Inventario"
+        Me.btEliminarInventario.UseVisualStyleBackColor = True
+        '
         'frOrdenProduccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(689, 220)
+        Me.ClientSize = New System.Drawing.Size(689, 400)
+        Me.Controls.Add(Me.lbInventarios)
+        Me.Controls.Add(Me.btEliminarInventario)
+        Me.Controls.Add(Me.btAgregarInventario)
+        Me.Controls.Add(Me.dgOrdprodInventario)
         Me.Controls.Add(Me.cbStatus)
         Me.Controls.Add(Me.lbStatus)
         Me.Controls.Add(Me.tbStatus)
@@ -234,10 +324,10 @@ Partial Class frOrdenProduccion
         Me.Controls.Add(Me.pnlPanelTitulo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frOrdenProduccion"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Órdenes de Producción"
         Me.pnlPanelTitulo.ResumeLayout(False)
         Me.pnlPanelTitulo.PerformLayout()
+        CType(Me.dgOrdprodInventario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -261,4 +351,11 @@ Partial Class frOrdenProduccion
     Friend WithEvents cbStatus As ComboBox
     Friend WithEvents lbStatus As Label
     Friend WithEvents tbStatus As TextBox
+    Friend WithEvents lbInventarios As Label
+    Friend WithEvents dgOrdprodInventario As DataGridView
+    Friend WithEvents btAgregarInventario As Button
+    Friend WithEvents btEliminarInventario As Button
+    Friend WithEvents opi_cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents opi_costo_unitario As DataGridViewTextBoxColumn
+    Friend WithEvents opi_costo_total As DataGridViewTextBoxColumn
 End Class

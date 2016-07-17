@@ -22,10 +22,10 @@ Partial Class frRecetario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.tbEmpresa = New System.Windows.Forms.TextBox()
         Me.lbInventario = New System.Windows.Forms.Label()
         Me.cbInventario = New System.Windows.Forms.ComboBox()
@@ -46,18 +46,23 @@ Partial Class frRecetario
         Me.btEliminarInventario = New System.Windows.Forms.Button()
         Me.btAgregarInventario = New System.Windows.Forms.Button()
         Me.dgRecetarioInventario = New System.Windows.Forms.DataGridView()
+        Me.riv_cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.riv_precio_unitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.riv_precio_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btEliminarTarea = New System.Windows.Forms.Button()
         Me.btAgregarTarea = New System.Windows.Forms.Button()
         Me.lbTarea = New System.Windows.Forms.Label()
         Me.dgRecetarioTarea = New System.Windows.Forms.DataGridView()
-        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.rta_duracion_horas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.riv_cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.riv_precio_unitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.riv_precio_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lbGastos = New System.Windows.Forms.Label()
+        Me.dgRecetarioGasto = New System.Windows.Forms.DataGridView()
+        Me.btEliminarGasto = New System.Windows.Forms.Button()
+        Me.btAgregarGasto = New System.Windows.Forms.Button()
+        Me.UcNavegador1 = New MRP.ucNavegador()
         Me.pnlPanelTitulo.SuspendLayout()
         CType(Me.dgRecetarioInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgRecetarioTarea, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgRecetarioGasto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tbEmpresa
@@ -66,7 +71,7 @@ Partial Class frRecetario
         Me.tbEmpresa.MaxLength = 100
         Me.tbEmpresa.Name = "tbEmpresa"
         Me.tbEmpresa.Size = New System.Drawing.Size(20, 20)
-        Me.tbEmpresa.TabIndex = 51
+        Me.tbEmpresa.TabIndex = 100
         Me.tbEmpresa.Visible = False
         '
         'lbInventario
@@ -110,7 +115,7 @@ Partial Class frRecetario
         Me.tbInventario.MaxLength = 100
         Me.tbInventario.Name = "tbInventario"
         Me.tbInventario.Size = New System.Drawing.Size(20, 20)
-        Me.tbInventario.TabIndex = 48
+        Me.tbInventario.TabIndex = 100
         Me.tbInventario.Visible = False
         '
         'tbEstado1
@@ -136,7 +141,7 @@ Partial Class frRecetario
         Me.tbEstado.Location = New System.Drawing.Point(499, 70)
         Me.tbEstado.Name = "tbEstado"
         Me.tbEstado.Size = New System.Drawing.Size(20, 20)
-        Me.tbEstado.TabIndex = 44
+        Me.tbEstado.TabIndex = 100
         Me.tbEstado.Visible = False
         '
         'lbCodigo
@@ -181,7 +186,7 @@ Partial Class frRecetario
         Me.tbFechaCreacion.MaxLength = 100
         Me.tbFechaCreacion.Name = "tbFechaCreacion"
         Me.tbFechaCreacion.Size = New System.Drawing.Size(20, 20)
-        Me.tbFechaCreacion.TabIndex = 54
+        Me.tbFechaCreacion.TabIndex = 100
         Me.tbFechaCreacion.Visible = False
         '
         'pnlPanelTitulo
@@ -192,7 +197,7 @@ Partial Class frRecetario
         Me.pnlPanelTitulo.Location = New System.Drawing.Point(0, 0)
         Me.pnlPanelTitulo.Name = "pnlPanelTitulo"
         Me.pnlPanelTitulo.Size = New System.Drawing.Size(689, 50)
-        Me.pnlPanelTitulo.TabIndex = 102
+        Me.pnlPanelTitulo.TabIndex = 100
         '
         'lbTitulo
         '
@@ -215,20 +220,20 @@ Partial Class frRecetario
         '
         'btEliminarInventario
         '
-        Me.btEliminarInventario.Location = New System.Drawing.Point(256, 331)
+        Me.btEliminarInventario.Location = New System.Drawing.Point(15, 223)
         Me.btEliminarInventario.Name = "btEliminarInventario"
-        Me.btEliminarInventario.Size = New System.Drawing.Size(125, 23)
-        Me.btEliminarInventario.TabIndex = 106
-        Me.btEliminarInventario.Text = "Eliminar Inventario"
+        Me.btEliminarInventario.Size = New System.Drawing.Size(104, 23)
+        Me.btEliminarInventario.TabIndex = 7
+        Me.btEliminarInventario.Text = "Eliminar"
         Me.btEliminarInventario.UseVisualStyleBackColor = True
         '
         'btAgregarInventario
         '
-        Me.btAgregarInventario.Location = New System.Drawing.Point(125, 331)
+        Me.btAgregarInventario.Location = New System.Drawing.Point(15, 194)
         Me.btAgregarInventario.Name = "btAgregarInventario"
-        Me.btAgregarInventario.Size = New System.Drawing.Size(125, 23)
-        Me.btAgregarInventario.TabIndex = 105
-        Me.btAgregarInventario.Text = "Agregar Inventario"
+        Me.btAgregarInventario.Size = New System.Drawing.Size(104, 23)
+        Me.btAgregarInventario.TabIndex = 5
+        Me.btAgregarInventario.Text = "Agregar"
         Me.btAgregarInventario.UseVisualStyleBackColor = True
         '
         'dgRecetarioInventario
@@ -249,78 +254,8 @@ Partial Class frRecetario
         Me.dgRecetarioInventario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgRecetarioInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgRecetarioInventario.Size = New System.Drawing.Size(550, 150)
-        Me.dgRecetarioInventario.TabIndex = 104
+        Me.dgRecetarioInventario.TabIndex = 6
         Me.dgRecetarioInventario.Tag = "tbl_mrp_recetario_inventario"
-        '
-        'btEliminarTarea
-        '
-        Me.btEliminarTarea.Location = New System.Drawing.Point(256, 516)
-        Me.btEliminarTarea.Name = "btEliminarTarea"
-        Me.btEliminarTarea.Size = New System.Drawing.Size(125, 23)
-        Me.btEliminarTarea.TabIndex = 110
-        Me.btEliminarTarea.Text = "Eliminar Tarea"
-        Me.btEliminarTarea.UseVisualStyleBackColor = True
-        '
-        'btAgregarTarea
-        '
-        Me.btAgregarTarea.Location = New System.Drawing.Point(125, 516)
-        Me.btAgregarTarea.Name = "btAgregarTarea"
-        Me.btAgregarTarea.Size = New System.Drawing.Size(125, 23)
-        Me.btAgregarTarea.TabIndex = 109
-        Me.btAgregarTarea.Text = "Agregar Tarea"
-        Me.btAgregarTarea.UseVisualStyleBackColor = True
-        '
-        'lbTarea
-        '
-        Me.lbTarea.AutoSize = True
-        Me.lbTarea.Location = New System.Drawing.Point(12, 363)
-        Me.lbTarea.Name = "lbTarea"
-        Me.lbTarea.Size = New System.Drawing.Size(43, 13)
-        Me.lbTarea.TabIndex = 112
-        Me.lbTarea.Text = "Tareas:"
-        '
-        'dgRecetarioTarea
-        '
-        Me.dgRecetarioTarea.AllowDrop = True
-        Me.dgRecetarioTarea.AllowUserToAddRows = False
-        Me.dgRecetarioTarea.AllowUserToDeleteRows = False
-        Me.dgRecetarioTarea.AllowUserToResizeColumns = False
-        Me.dgRecetarioTarea.AllowUserToResizeRows = False
-        Me.dgRecetarioTarea.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgRecetarioTarea.BackgroundColor = System.Drawing.SystemColors.Window
-        Me.dgRecetarioTarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgRecetarioTarea.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.rta_duracion_horas})
-        Me.dgRecetarioTarea.GridColor = System.Drawing.SystemColors.Window
-        Me.dgRecetarioTarea.Location = New System.Drawing.Point(125, 360)
-        Me.dgRecetarioTarea.Name = "dgRecetarioTarea"
-        Me.dgRecetarioTarea.RowHeadersVisible = False
-        Me.dgRecetarioTarea.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.dgRecetarioTarea.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgRecetarioTarea.Size = New System.Drawing.Size(550, 150)
-        Me.dgRecetarioTarea.TabIndex = 111
-        Me.dgRecetarioTarea.Tag = "tbl_mrp_recetario_tarea"
-        '
-        'UcNavegador1
-        '
-        Me.UcNavegador1.AutoSize = True
-        Me.UcNavegador1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 552)
-        Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
-        Me.UcNavegador1.Name = "UcNavegador1"
-        Me.UcNavegador1.Size = New System.Drawing.Size(689, 58)
-        Me.UcNavegador1.TabIndex = 103
-        '
-        'rta_duracion_horas
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle4.Format = "N2"
-        DataGridViewCellStyle4.NullValue = "0.00"
-        Me.rta_duracion_horas.DefaultCellStyle = DataGridViewCellStyle4
-        Me.rta_duracion_horas.HeaderText = "Duración (Horas)"
-        Me.rta_duracion_horas.Name = "rta_duracion_horas"
         '
         'riv_cantidad
         '
@@ -349,12 +284,134 @@ Partial Class frRecetario
         Me.riv_precio_total.HeaderText = "Total"
         Me.riv_precio_total.Name = "riv_precio_total"
         '
+        'btEliminarTarea
+        '
+        Me.btEliminarTarea.Location = New System.Drawing.Point(15, 379)
+        Me.btEliminarTarea.Name = "btEliminarTarea"
+        Me.btEliminarTarea.Size = New System.Drawing.Size(104, 23)
+        Me.btEliminarTarea.TabIndex = 10
+        Me.btEliminarTarea.Text = "Eliminar"
+        Me.btEliminarTarea.UseVisualStyleBackColor = True
+        '
+        'btAgregarTarea
+        '
+        Me.btAgregarTarea.Location = New System.Drawing.Point(15, 350)
+        Me.btAgregarTarea.Name = "btAgregarTarea"
+        Me.btAgregarTarea.Size = New System.Drawing.Size(104, 23)
+        Me.btAgregarTarea.TabIndex = 8
+        Me.btAgregarTarea.Text = "Agregar"
+        Me.btAgregarTarea.UseVisualStyleBackColor = True
+        '
+        'lbTarea
+        '
+        Me.lbTarea.AutoSize = True
+        Me.lbTarea.Location = New System.Drawing.Point(12, 334)
+        Me.lbTarea.Name = "lbTarea"
+        Me.lbTarea.Size = New System.Drawing.Size(43, 13)
+        Me.lbTarea.TabIndex = 112
+        Me.lbTarea.Text = "Tareas:"
+        '
+        'dgRecetarioTarea
+        '
+        Me.dgRecetarioTarea.AllowDrop = True
+        Me.dgRecetarioTarea.AllowUserToAddRows = False
+        Me.dgRecetarioTarea.AllowUserToDeleteRows = False
+        Me.dgRecetarioTarea.AllowUserToResizeColumns = False
+        Me.dgRecetarioTarea.AllowUserToResizeRows = False
+        Me.dgRecetarioTarea.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgRecetarioTarea.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.dgRecetarioTarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgRecetarioTarea.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.rta_duracion_horas})
+        Me.dgRecetarioTarea.GridColor = System.Drawing.SystemColors.Window
+        Me.dgRecetarioTarea.Location = New System.Drawing.Point(125, 331)
+        Me.dgRecetarioTarea.Name = "dgRecetarioTarea"
+        Me.dgRecetarioTarea.RowHeadersVisible = False
+        Me.dgRecetarioTarea.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgRecetarioTarea.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgRecetarioTarea.Size = New System.Drawing.Size(550, 125)
+        Me.dgRecetarioTarea.TabIndex = 9
+        Me.dgRecetarioTarea.Tag = "tbl_mrp_recetario_tarea"
+        '
+        'rta_duracion_horas
+        '
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle4.Format = "N2"
+        DataGridViewCellStyle4.NullValue = "0.00"
+        Me.rta_duracion_horas.DefaultCellStyle = DataGridViewCellStyle4
+        Me.rta_duracion_horas.HeaderText = "Duración (Horas)"
+        Me.rta_duracion_horas.Name = "rta_duracion_horas"
+        '
+        'lbGastos
+        '
+        Me.lbGastos.AutoSize = True
+        Me.lbGastos.Location = New System.Drawing.Point(12, 465)
+        Me.lbGastos.Name = "lbGastos"
+        Me.lbGastos.Size = New System.Drawing.Size(43, 13)
+        Me.lbGastos.TabIndex = 116
+        Me.lbGastos.Text = "Gastos:"
+        '
+        'dgRecetarioGasto
+        '
+        Me.dgRecetarioGasto.AllowDrop = True
+        Me.dgRecetarioGasto.AllowUserToAddRows = False
+        Me.dgRecetarioGasto.AllowUserToDeleteRows = False
+        Me.dgRecetarioGasto.AllowUserToResizeColumns = False
+        Me.dgRecetarioGasto.AllowUserToResizeRows = False
+        Me.dgRecetarioGasto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgRecetarioGasto.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.dgRecetarioGasto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgRecetarioGasto.GridColor = System.Drawing.SystemColors.Window
+        Me.dgRecetarioGasto.Location = New System.Drawing.Point(125, 462)
+        Me.dgRecetarioGasto.Name = "dgRecetarioGasto"
+        Me.dgRecetarioGasto.RowHeadersVisible = False
+        Me.dgRecetarioGasto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgRecetarioGasto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgRecetarioGasto.Size = New System.Drawing.Size(550, 125)
+        Me.dgRecetarioGasto.TabIndex = 12
+        Me.dgRecetarioGasto.Tag = "tbl_mrp_recetario_gasto"
+        '
+        'btEliminarGasto
+        '
+        Me.btEliminarGasto.Location = New System.Drawing.Point(15, 510)
+        Me.btEliminarGasto.Name = "btEliminarGasto"
+        Me.btEliminarGasto.Size = New System.Drawing.Size(104, 23)
+        Me.btEliminarGasto.TabIndex = 13
+        Me.btEliminarGasto.Text = "Eliminar"
+        Me.btEliminarGasto.UseVisualStyleBackColor = True
+        '
+        'btAgregarGasto
+        '
+        Me.btAgregarGasto.Location = New System.Drawing.Point(15, 481)
+        Me.btAgregarGasto.Name = "btAgregarGasto"
+        Me.btAgregarGasto.Size = New System.Drawing.Size(104, 23)
+        Me.btAgregarGasto.TabIndex = 11
+        Me.btAgregarGasto.Text = "Agregar"
+        Me.btAgregarGasto.UseVisualStyleBackColor = True
+        '
+        'UcNavegador1
+        '
+        Me.UcNavegador1.AutoSize = True
+        Me.UcNavegador1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 602)
+        Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
+        Me.UcNavegador1.Name = "UcNavegador1"
+        Me.UcNavegador1.Size = New System.Drawing.Size(689, 58)
+        Me.UcNavegador1.TabIndex = 100
+        '
         'frRecetario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(689, 610)
+        Me.ClientSize = New System.Drawing.Size(689, 660)
+        Me.Controls.Add(Me.UcNavegador1)
+        Me.Controls.Add(Me.lbGastos)
+        Me.Controls.Add(Me.dgRecetarioGasto)
+        Me.Controls.Add(Me.btEliminarGasto)
+        Me.Controls.Add(Me.btAgregarGasto)
         Me.Controls.Add(Me.lbTarea)
         Me.Controls.Add(Me.dgRecetarioTarea)
         Me.Controls.Add(Me.btEliminarTarea)
@@ -363,7 +420,6 @@ Partial Class frRecetario
         Me.Controls.Add(Me.btEliminarInventario)
         Me.Controls.Add(Me.btAgregarInventario)
         Me.Controls.Add(Me.dgRecetarioInventario)
-        Me.Controls.Add(Me.UcNavegador1)
         Me.Controls.Add(Me.pnlPanelTitulo)
         Me.Controls.Add(Me.tbFechaCreacion)
         Me.Controls.Add(Me.Label1)
@@ -380,14 +436,13 @@ Partial Class frRecetario
         Me.Controls.Add(Me.lbCodigo)
         Me.Controls.Add(Me.tbCodigo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MinimizeBox = False
         Me.Name = "frRecetario"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Recetario"
         Me.pnlPanelTitulo.ResumeLayout(False)
         Me.pnlPanelTitulo.PerformLayout()
         CType(Me.dgRecetarioInventario, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgRecetarioTarea, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgRecetarioGasto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -421,4 +476,8 @@ Partial Class frRecetario
     Friend WithEvents riv_precio_unitario As DataGridViewTextBoxColumn
     Friend WithEvents riv_precio_total As DataGridViewTextBoxColumn
     Friend WithEvents rta_duracion_horas As DataGridViewTextBoxColumn
+    Friend WithEvents lbGastos As Label
+    Friend WithEvents dgRecetarioGasto As DataGridView
+    Friend WithEvents btEliminarGasto As Button
+    Friend WithEvents btAgregarGasto As Button
 End Class

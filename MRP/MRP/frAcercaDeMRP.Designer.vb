@@ -167,6 +167,7 @@ Partial Class frAcercaDeMRP
         Me.ClientSize = New System.Drawing.Size(414, 276)
         Me.Controls.Add(Me.lpPanelGeneral)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frAcercaDeMRP"

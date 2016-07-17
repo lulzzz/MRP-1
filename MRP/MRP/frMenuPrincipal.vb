@@ -39,15 +39,18 @@
 
     Private Sub ValidacionFormulario(ByVal NombreFormulario As String, ByRef frm As Form)
         Try
-            Dim frmValidacion As New Form
-            frmValidacion = Application.OpenForms.OfType(Of Form)().Where(Function(pre) pre.Name = NombreFormulario).SingleOrDefault()
-            If IsNothing(frmValidacion) Then
-                frm.MdiParent = Me
-                frm.Show()
-            Else
-                frm.Dispose()
-                frmValidacion.Activate()
-            End If
+            For Each form As Form In MdiChildren
+                If form.Name <> "frFondo" Then
+                    form.Visible = False
+                    form.Dispose()
+                End If
+            Next
+            frm.MdiParent = Me
+            frm.MinimizeBox = False
+            frm.MaximizeBox = False
+            frm.ControlBox = False
+            frm.Show()
+            frm.WindowState = FormWindowState.Maximized
         Catch ex As Exception
             Throw ex
         End Try

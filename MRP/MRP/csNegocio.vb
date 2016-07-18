@@ -192,4 +192,30 @@
         End Try
     End Function
 #End Region
+
+#Region "Órdenes de Producción"
+    Public Shared Function ValidarOrdenProduccion(ByVal IdProcesoProduccion As String) As Boolean
+        Try
+            Dim dt As New DataTable
+            If csDatos.ConsultarQuery(dt, "SELECT COUNT(id_proceso_produccion) Conteo FROM tbl_mrp_orden_produccion WHERE id_estado=1 AND id_proceso_produccion=" + IdProcesoProduccion + " AND id_empresa=" + csDatos.IdEmpresa.ToString) Then
+                If CInt(dt.Rows(0)("Conteo")) > 0 Then
+                    Return False
+                End If
+            End If
+            Return True
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return False
+    End Function
+
+    Public Shared Function GenerarOrdenProduccion(ByVal IdProcesoProduccion As String) As Boolean
+        Try
+            Return csDatos.EjecutarQuery("EXEC proc_generar_orden_produccion " + IdProcesoProduccion + "," + csDatos.IdEmpresa.ToString)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return False
+    End Function
+#End Region
 End Class

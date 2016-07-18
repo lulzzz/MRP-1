@@ -215,7 +215,6 @@ C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGasto.resource
 C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGastoPeriodo.resources
 C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frGastoTipo.resources
 C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventario.resources
-C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventarioClasificacion.resources
 C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frLogin.resources
 C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frLoginEmpresa.resources
 C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frMedida.resources
@@ -243,3 +242,5 @@ C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.exe
 C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.xml
 C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.pdb
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventarioTipo.resources
+C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
+C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventarioTipo.resources

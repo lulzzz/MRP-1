@@ -22,9 +22,9 @@ Partial Class frOrdenProduccion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlPanelTitulo = New System.Windows.Forms.Panel()
         Me.lbTitulo = New System.Windows.Forms.Label()
         Me.UcNavegador1 = New MRP.ucNavegador()
@@ -45,11 +45,11 @@ Partial Class frOrdenProduccion
         Me.tbStatus = New System.Windows.Forms.TextBox()
         Me.lbInventarios = New System.Windows.Forms.Label()
         Me.dgOrdprodInventario = New System.Windows.Forms.DataGridView()
+        Me.btAgregarInventario = New System.Windows.Forms.Button()
+        Me.btEliminarInventario = New System.Windows.Forms.Button()
         Me.opi_cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.opi_costo_unitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.opi_costo_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btAgregarInventario = New System.Windows.Forms.Button()
-        Me.btEliminarInventario = New System.Windows.Forms.Button()
         Me.pnlPanelTitulo.SuspendLayout()
         CType(Me.dgOrdprodInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -251,33 +251,6 @@ Partial Class frOrdenProduccion
         Me.dgOrdprodInventario.TabIndex = 128
         Me.dgOrdprodInventario.Tag = "tbl_mrp_ordprod_inventario"
         '
-        'opi_cantidad
-        '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle10.Format = "N6"
-        DataGridViewCellStyle10.NullValue = "0.0"
-        Me.opi_cantidad.DefaultCellStyle = DataGridViewCellStyle10
-        Me.opi_cantidad.HeaderText = "Cantidad"
-        Me.opi_cantidad.Name = "opi_cantidad"
-        '
-        'opi_costo_unitario
-        '
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle11.Format = "N2"
-        DataGridViewCellStyle11.NullValue = "0.0"
-        Me.opi_costo_unitario.DefaultCellStyle = DataGridViewCellStyle11
-        Me.opi_costo_unitario.HeaderText = "Costo Unitario"
-        Me.opi_costo_unitario.Name = "opi_costo_unitario"
-        '
-        'opi_costo_total
-        '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        DataGridViewCellStyle12.Format = "N2"
-        DataGridViewCellStyle12.NullValue = "0.0"
-        Me.opi_costo_total.DefaultCellStyle = DataGridViewCellStyle12
-        Me.opi_costo_total.HeaderText = "Total"
-        Me.opi_costo_total.Name = "opi_costo_total"
-        '
         'btAgregarInventario
         '
         Me.btAgregarInventario.Location = New System.Drawing.Point(125, 306)
@@ -295,6 +268,30 @@ Partial Class frOrdenProduccion
         Me.btEliminarInventario.TabIndex = 130
         Me.btEliminarInventario.Text = "Eliminar Inventario"
         Me.btEliminarInventario.UseVisualStyleBackColor = True
+        '
+        'opi_cantidad
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N6"
+        Me.opi_cantidad.DefaultCellStyle = DataGridViewCellStyle1
+        Me.opi_cantidad.HeaderText = "Cantidad"
+        Me.opi_cantidad.Name = "opi_cantidad"
+        '
+        'opi_costo_unitario
+        '
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle2.Format = "N2"
+        Me.opi_costo_unitario.DefaultCellStyle = DataGridViewCellStyle2
+        Me.opi_costo_unitario.HeaderText = "Costo Unitario"
+        Me.opi_costo_unitario.Name = "opi_costo_unitario"
+        '
+        'opi_costo_total
+        '
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle3.Format = "N2"
+        Me.opi_costo_total.DefaultCellStyle = DataGridViewCellStyle3
+        Me.opi_costo_total.HeaderText = "Total"
+        Me.opi_costo_total.Name = "opi_costo_total"
         '
         'frOrdenProduccion
         '

@@ -22,7 +22,7 @@ Partial Class frProcesoProduccion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.UcNavegador1 = New MRP.ucNavegador()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlPanelTitulo = New System.Windows.Forms.Panel()
         Me.lbTitulo = New System.Windows.Forms.Label()
         Me.tbFechaSolicitud = New System.Windows.Forms.TextBox()
@@ -51,21 +51,15 @@ Partial Class frProcesoProduccion
         Me.tbTotal = New System.Windows.Forms.TextBox()
         Me.lbDestinatario = New System.Windows.Forms.Label()
         Me.tbDestinatario = New System.Windows.Forms.TextBox()
+        Me.UcNavegador1 = New MRP.ucNavegador()
+        Me.lbInventarios = New System.Windows.Forms.Label()
+        Me.btEliminarInventario = New System.Windows.Forms.Button()
+        Me.btAgregarInventario = New System.Windows.Forms.Button()
+        Me.dgProprodInventario = New System.Windows.Forms.DataGridView()
+        Me.ppi_cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlPanelTitulo.SuspendLayout()
+        CType(Me.dgProprodInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'UcNavegador1
-        '
-        Me.UcNavegador1.AutoSize = True
-        Me.UcNavegador1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UcNavegador1.Location = New System.Drawing.Point(0, 260)
-        Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
-        Me.UcNavegador1.Name = "UcNavegador1"
-        Me.UcNavegador1.Size = New System.Drawing.Size(689, 60)
-        Me.UcNavegador1.TabIndex = 100
         '
         'pnlPanelTitulo
         '
@@ -83,9 +77,9 @@ Partial Class frProcesoProduccion
         Me.lbTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbTitulo.Location = New System.Drawing.Point(12, 9)
         Me.lbTitulo.Name = "lbTitulo"
-        Me.lbTitulo.Size = New System.Drawing.Size(315, 31)
+        Me.lbTitulo.Size = New System.Drawing.Size(330, 31)
         Me.lbTitulo.TabIndex = 41
-        Me.lbTitulo.Text = "Proceso de Producción" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.lbTitulo.Text = "Procesos de Producción" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'tbFechaSolicitud
         '
@@ -316,12 +310,85 @@ Partial Class frProcesoProduccion
         Me.tbDestinatario.Size = New System.Drawing.Size(550, 20)
         Me.tbDestinatario.TabIndex = 4
         '
+        'UcNavegador1
+        '
+        Me.UcNavegador1.AutoSize = True
+        Me.UcNavegador1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UcNavegador1.BackColor = System.Drawing.Color.FromArgb(CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.UcNavegador1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.UcNavegador1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UcNavegador1.Location = New System.Drawing.Point(0, 440)
+        Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
+        Me.UcNavegador1.Name = "UcNavegador1"
+        Me.UcNavegador1.Size = New System.Drawing.Size(689, 60)
+        Me.UcNavegador1.TabIndex = 100
+        '
+        'lbInventarios
+        '
+        Me.lbInventarios.AutoSize = True
+        Me.lbInventarios.Location = New System.Drawing.Point(12, 255)
+        Me.lbInventarios.Name = "lbInventarios"
+        Me.lbInventarios.Size = New System.Drawing.Size(62, 13)
+        Me.lbInventarios.TabIndex = 142
+        Me.lbInventarios.Text = "Inventarios:"
+        '
+        'btEliminarInventario
+        '
+        Me.btEliminarInventario.Location = New System.Drawing.Point(256, 408)
+        Me.btEliminarInventario.Name = "btEliminarInventario"
+        Me.btEliminarInventario.Size = New System.Drawing.Size(125, 23)
+        Me.btEliminarInventario.TabIndex = 12
+        Me.btEliminarInventario.Text = "Eliminar Inventario"
+        Me.btEliminarInventario.UseVisualStyleBackColor = True
+        '
+        'btAgregarInventario
+        '
+        Me.btAgregarInventario.Location = New System.Drawing.Point(125, 408)
+        Me.btAgregarInventario.Name = "btAgregarInventario"
+        Me.btAgregarInventario.Size = New System.Drawing.Size(125, 23)
+        Me.btAgregarInventario.TabIndex = 11
+        Me.btAgregarInventario.Text = "Agregar Inventario"
+        Me.btAgregarInventario.UseVisualStyleBackColor = True
+        '
+        'dgProprodInventario
+        '
+        Me.dgProprodInventario.AllowDrop = True
+        Me.dgProprodInventario.AllowUserToAddRows = False
+        Me.dgProprodInventario.AllowUserToDeleteRows = False
+        Me.dgProprodInventario.AllowUserToResizeColumns = False
+        Me.dgProprodInventario.AllowUserToResizeRows = False
+        Me.dgProprodInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgProprodInventario.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.dgProprodInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgProprodInventario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ppi_cantidad})
+        Me.dgProprodInventario.GridColor = System.Drawing.SystemColors.Window
+        Me.dgProprodInventario.Location = New System.Drawing.Point(125, 252)
+        Me.dgProprodInventario.Name = "dgProprodInventario"
+        Me.dgProprodInventario.RowHeadersVisible = False
+        Me.dgProprodInventario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgProprodInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgProprodInventario.Size = New System.Drawing.Size(550, 150)
+        Me.dgProprodInventario.TabIndex = 10
+        Me.dgProprodInventario.Tag = "tbl_mrp_proprod_inventario"
+        '
+        'ppi_cantidad
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        DataGridViewCellStyle1.Format = "N6"
+        Me.ppi_cantidad.DefaultCellStyle = DataGridViewCellStyle1
+        Me.ppi_cantidad.HeaderText = "Cantidad"
+        Me.ppi_cantidad.Name = "ppi_cantidad"
+        '
         'frProcesoProduccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(689, 320)
+        Me.ClientSize = New System.Drawing.Size(689, 500)
+        Me.Controls.Add(Me.lbInventarios)
+        Me.Controls.Add(Me.btEliminarInventario)
+        Me.Controls.Add(Me.btAgregarInventario)
+        Me.Controls.Add(Me.dgProprodInventario)
         Me.Controls.Add(Me.lbDestinatario)
         Me.Controls.Add(Me.tbDestinatario)
         Me.Controls.Add(Me.lbTotal)
@@ -357,6 +424,7 @@ Partial Class frProcesoProduccion
         Me.Text = "Proceso de Producción"
         Me.pnlPanelTitulo.ResumeLayout(False)
         Me.pnlPanelTitulo.PerformLayout()
+        CType(Me.dgProprodInventario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -391,4 +459,9 @@ Partial Class frProcesoProduccion
     Friend WithEvents tbTotal As TextBox
     Friend WithEvents lbDestinatario As Label
     Friend WithEvents tbDestinatario As TextBox
+    Friend WithEvents lbInventarios As Label
+    Friend WithEvents btEliminarInventario As Button
+    Friend WithEvents btAgregarInventario As Button
+    Friend WithEvents dgProprodInventario As DataGridView
+    Friend WithEvents ppi_cantidad As DataGridViewTextBoxColumn
 End Class

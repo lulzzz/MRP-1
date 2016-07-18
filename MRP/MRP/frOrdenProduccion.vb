@@ -34,7 +34,7 @@
         dgOrdprodInventario.Columns.Insert(0, cbInventario)
         csDatos.ConsultarQuery(dtRecetarios, "SELECT id_recetario Value, rct_descripcion Display FROM tbl_mrp_recetario ORDER BY id_recetario ASC")
         Dim cbRecetario As New DataGridViewComboBoxColumn With {.HeaderText = "Recetario", .Name = "id_recetario", .Tag = "Combobox"}
-        cbRecetario.DataSource = dtInventarios
+        cbRecetario.DataSource = dtRecetarios
         cbRecetario.ValueMember = "Value"
         cbRecetario.DisplayMember = "Display"
         dgOrdprodInventario.Columns.Insert(1, cbRecetario)

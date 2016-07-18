@@ -1,6 +1,9 @@
+--USAR LA BASE DE DATOS--
 USE DB6
 GO
 
+
+--CREACIÓN DE LAS TABLAS--
 CREATE TABLE tbl_mrp_proceso_produccion (
                 id_proceso_produccion INT IDENTITY NOT NULL,
                 ppd_nombre VARCHAR(100) NOT NULL,
@@ -10,7 +13,7 @@ CREATE TABLE tbl_mrp_proceso_produccion (
                 ppd_fecha_inicio DATETIME NOT NULL,
                 ppd_fecha_final DATETIME NOT NULL,
                 ppd_fecha_entrega DATETIME NOT NULL,
-                ppd_total DECIMAL(18,6) NOT NULL,
+                ppd_total DECIMAL(18,2) NOT NULL,
                 id_empresa INT NOT NULL,
                 id_estado INT NOT NULL,
                 CONSTRAINT pk_ppd PRIMARY KEY (id_proceso_produccion)
@@ -39,7 +42,7 @@ CREATE TABLE tbl_mrp_gasto_periodo (
                 id_gasto INT NOT NULL,
                 gtp_anio INT NOT NULL,
                 gtp_mes INT NOT NULL,
-                gtp_valor DECIMAL(18,6) NOT NULL,
+                gtp_valor DECIMAL(18,2) NOT NULL,
                 id_empresa INT NOT NULL,
                 id_estado INT NOT NULL,
                 CONSTRAINT pk_gsp PRIMARY KEY (id_gasto_periodo)
@@ -135,7 +138,7 @@ CREATE TABLE tbl_mrp_inventario (
                 inv_descripcion VARCHAR(256) NOT NULL,
                 inv_fecha_creacion DATETIME NOT NULL,
                 id_medida INT NOT NULL,
-                inv_precio DECIMAL(18,6) NOT NULL,
+                inv_precio DECIMAL(18,2) NOT NULL,
                 id_empresa INT NOT NULL,
                 id_estado INT NOT NULL,
                 CONSTRAINT pk_inv PRIMARY KEY (id_inventario)
@@ -224,8 +227,8 @@ CREATE TABLE tbl_mrp_ordprod_inventario (
                 id_inventario INT NOT NULL,
                 id_recetario INT NOT NULL,
                 opi_cantidad DECIMAL(18,6) NOT NULL,
-                opi_costo_unitario DECIMAL(18,6) NOT NULL,
-                opi_costo_total DECIMAL(18) NOT NULL,
+                opi_costo_unitario DECIMAL(18,2) NOT NULL,
+                opi_costo_total DECIMAL(18,2) NOT NULL,
                 CONSTRAINT pk_opi PRIMARY KEY (id_orden_produccion_inventario)
 )
 
@@ -233,7 +236,7 @@ CREATE TABLE tbl_mrp_ordprod_gf (
                 id_ordprod_gf INT IDENTITY NOT NULL,
                 id_orden_produccion_inventario INT NOT NULL,
                 id_gasto INT NOT NULL,
-                ogf_valor_total DECIMAL(18,6) NOT NULL,
+                ogf_valor_total DECIMAL(18,2) NOT NULL,
                 CONSTRAINT pk_ogf PRIMARY KEY (id_ordprod_gf)
 )
 
@@ -242,9 +245,9 @@ CREATE TABLE tbl_mrp_ordprod_mp (
                 id_orden_produccion_inventario INT NOT NULL,
                 id_inventario INT NOT NULL,
                 omp_cantidad_necesaria DECIMAL(18,6) NOT NULL,
-                omp_costo_unitario DECIMAL(18,6) NOT NULL,
+                omp_costo_unitario DECIMAL(18,2) NOT NULL,
                 omp_cantidad DECIMAL(18,6) NOT NULL,
-                omp_costo_total DECIMAL(18,6) NOT NULL,
+                omp_costo_total DECIMAL(18,2) NOT NULL,
                 CONSTRAINT pk_omp PRIMARY KEY (id_ordprod_mp)
 )
 
@@ -260,9 +263,9 @@ CREATE TABLE tbl_mrp_recetario_inventario (
                 id_recetario_inventario INT IDENTITY NOT NULL,
                 id_recetario INT NOT NULL,
                 id_inventario INT NOT NULL,
-                riv_cantidad DECIMAL(18) NOT NULL,
-                riv_precio_unitario DECIMAL(18,6) NOT NULL,
-                riv_precio_total DECIMAL(18,6) NOT NULL,
+                riv_cantidad DECIMAL(18,6) NOT NULL,
+                riv_precio_unitario DECIMAL(18,2) NOT NULL,
+                riv_precio_total DECIMAL(18,2) NOT NULL,
                 CONSTRAINT pk_riv PRIMARY KEY (id_recetario_inventario)
 )
 
@@ -318,9 +321,9 @@ CREATE TABLE tbl_mrp_ordprod_mo (
                 id_tarea INT NOT NULL,
                 id_empleado_nomina INT NOT NULL,
                 omo_horas_requeridas DECIMAL(18,6) NOT NULL,
-                omo_costo_hora DECIMAL(18,6) NOT NULL,
+                omo_costo_hora DECIMAL(18,2) NOT NULL,
                 omo_cantidad DECIMAL(18,6) NOT NULL,
-                omo_costo_total DECIMAL(18,6) NOT NULL,
+                omo_costo_total DECIMAL(18,2) NOT NULL,
                 CONSTRAINT pk_omo PRIMARY KEY (id_ordprod_mo)
 )
 
@@ -362,209 +365,158 @@ CREATE TABLE tbl_mrp_usuario_empresa (
                 CONSTRAINT pk_usuario_empresa PRIMARY KEY (id_usuario_empresa)
 )
 
+CREATE TABLE tbl_mrp_recetario_gasto (
+                id_recetario_gasto INT IDENTITY NOT NULL,
+                id_recetario INT NOT NULL,
+                id_gasto INT NOT NULL,
+                CONSTRAINT pk_rgt PRIMARY KEY (id_recetario_gasto)
+)
+
+
+--CREACIÓN DE RELACIONES EN LAS TABLAS--
+ALTER TABLE tbl_mrp_recetario_gasto ADD CONSTRAINT tbl_mrp_gasto_tbl_mrp_recetario_gasto_fk
+FOREIGN KEY (id_gasto)
+REFERENCES tbl_mrp_gasto (id_gasto)
+
+ALTER TABLE tbl_mrp_recetario_gasto ADD CONSTRAINT tbl_mrp_recetario_tbl_mrp_recetario_gasto_fk
+FOREIGN KEY (id_recetario)
+REFERENCES tbl_mrp_recetario (id_recetario)
+
 ALTER TABLE tbl_mrp_orden_produccion ADD CONSTRAINT tbl_mrp_proceso_produccion_tbl_mrp_orden_produccion_fk
 FOREIGN KEY (id_proceso_produccion)
 REFERENCES tbl_mrp_proceso_produccion (id_proceso_produccion)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_proprod_inventario ADD CONSTRAINT tbl_mrp_proceso_produccion_tbl_mrp_proprod_inventario_fk
 FOREIGN KEY (id_proceso_produccion)
 REFERENCES tbl_mrp_proceso_produccion (id_proceso_produccion)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_gasto ADD CONSTRAINT tbl_mrp_gasto_tipo_tbl_mrp_gasto_fk
 FOREIGN KEY (id_gasto_tipo)
 REFERENCES tbl_mrp_gasto_tipo (id_gasto_tipo)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_gasto_periodo ADD CONSTRAINT tbl_mrp_gasto_tbl_mrp_gasto_periodo_fk
 FOREIGN KEY (id_gasto)
 REFERENCES tbl_mrp_gasto (id_gasto)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_gf ADD CONSTRAINT tbl_mrp_gasto_tbl_mrp_ordprod_gf_fk
 FOREIGN KEY (id_gasto)
 REFERENCES tbl_mrp_gasto (id_gasto)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_nomina ADD CONSTRAINT tbl_mrp_nomina_periodo_tbl_mrp_nomina_fk
 FOREIGN KEY (id_nomina_periodo)
 REFERENCES tbl_mrp_nomina_periodo (id_nomina_periodo)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_empleado_nomina ADD CONSTRAINT tbl_mrp_nomina_tbl_mrp_empleado_nomina_fk
 FOREIGN KEY (id_nomina)
 REFERENCES tbl_mrp_nomina (id_nomina)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_empleado_nomina ADD CONSTRAINT tbl_mrp_departamento_tbl_mrp_empleado_nomina_fk
 FOREIGN KEY (id_departamento)
 REFERENCES tbl_mrp_departamento (id_departamento)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_empleado_nomina ADD CONSTRAINT tbl_mrp_puesto_tbl_mrp_empleado_nomina_fk
 FOREIGN KEY (id_puesto)
 REFERENCES tbl_mrp_puesto (id_puesto)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_solicitud ADD CONSTRAINT tbl_mrp_status_tbl_mrp_solicitud_fk
 FOREIGN KEY (id_status)
 REFERENCES tbl_mrp_status (id_status)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_orden_produccion ADD CONSTRAINT tbl_mrp_status_tbl_mrp_orden_produccion_fk
 FOREIGN KEY (id_status)
 REFERENCES tbl_mrp_status (id_status)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_solicitud_inventario ADD CONSTRAINT tbl_mrp_solicitud_tbl_mrp_solicitud_inventario_fk
 FOREIGN KEY (id_solicitud)
 REFERENCES tbl_mrp_solicitud (id_solicitud)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_tarea ADD CONSTRAINT tbl_mrp_tarea_tipo_tbl_mrp_tarea_fk
 FOREIGN KEY (id_tarea_tipo)
 REFERENCES tbl_mrp_tarea_tipo (id_tarea_tipo)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_inventario ADD CONSTRAINT tbl_mrp_medida_tbl_mrp_inventario_fk
 FOREIGN KEY (id_medida)
 REFERENCES tbl_mrp_medida (id_medida)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_movimiento ADD CONSTRAINT tbl_mrp_movimiento_tipo_tbl_mrp_movimiento_fk
 FOREIGN KEY (id_movimiento_tipo)
 REFERENCES tbl_mrp_movimiento_tipo (id_movimiento_tipo)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_inventario ADD CONSTRAINT tbl_mrp_clasificacion_inventario_tbl_mrp_inventario_fk
 FOREIGN KEY (id_inventario_tipo)
 REFERENCES tbl_mrp_inventario_tipo (id_inventario_tipo)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_recetario_inventario ADD CONSTRAINT tbl_mrp_inventario_tbl_mrp_recetario_matprima_fk
 FOREIGN KEY (id_inventario)
 REFERENCES tbl_mrp_inventario (id_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_movimiento_inventario ADD CONSTRAINT tbl_mrp_inventario_tbl_mrp_movimiento_inventario_fk
 FOREIGN KEY (id_inventario)
 REFERENCES tbl_mrp_inventario (id_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_recetario ADD CONSTRAINT tbl_mrp_inventario_tbl_mrp_recetario_fk
 FOREIGN KEY (id_inventario)
 REFERENCES tbl_mrp_inventario (id_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_solicitud_inventario ADD CONSTRAINT tbl_mrp_inventario_tbl_mrp_solicitud_inventario_fk
 FOREIGN KEY (id_inventario)
 REFERENCES tbl_mrp_inventario (id_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_proprod_inventario ADD CONSTRAINT tbl_mrp_inventario_tbl_mrp_proprod_inventario_fk
 FOREIGN KEY (id_inventario)
 REFERENCES tbl_mrp_inventario (id_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_inventario ADD CONSTRAINT tbl_mrp_inventario_tbl_mrp_ordprod_inventario_fk
 FOREIGN KEY (id_inventario)
 REFERENCES tbl_mrp_inventario (id_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_mp ADD CONSTRAINT tbl_mrp_inventario_tbl_mrp_ordprod_mp_fk
 FOREIGN KEY (id_inventario)
 REFERENCES tbl_mrp_inventario (id_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_movimiento ADD CONSTRAINT tbl_mrp_bodega_tbl_mrp_movimiento_fk
 FOREIGN KEY (id_bodega)
 REFERENCES tbl_mrp_bodega (id_bodega)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_movimiento_inventario ADD CONSTRAINT tbl_mrp_movimiento_tbl_mrp_movimiento_inventario_fk
 FOREIGN KEY (id_movimiento)
 REFERENCES tbl_mrp_movimiento (id_movimiento)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_inventario ADD CONSTRAINT tbl_mrp_orden_produccion_tbl_mrp_ordprod_inventario_fk
 FOREIGN KEY (id_orden_produccion)
 REFERENCES tbl_mrp_orden_produccion (id_orden_produccion)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_recetario_tarea ADD CONSTRAINT tbl_mrp_tarea_tbl_mrp_recetario_tarea_fk
 FOREIGN KEY (id_tarea)
 REFERENCES tbl_mrp_tarea (id_tarea)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_mo ADD CONSTRAINT tbl_mrp_tarea_tbl_mrp_ordprod_mo_fk
 FOREIGN KEY (id_tarea)
 REFERENCES tbl_mrp_tarea (id_tarea)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_recetario_inventario ADD CONSTRAINT tbl_mrp_recetario_mrp_recetario_matprima_fk
 FOREIGN KEY (id_recetario)
 REFERENCES tbl_mrp_recetario (id_recetario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_recetario_tarea ADD CONSTRAINT tbl_mrp_recetario_tbl_mrp_recetario_tarea_fk
 FOREIGN KEY (id_recetario)
 REFERENCES tbl_mrp_recetario (id_recetario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_inventario ADD CONSTRAINT tbl_mrp_recetario_tbl_mrp_ordprod_inventario_fk
 FOREIGN KEY (id_recetario)
 REFERENCES tbl_mrp_recetario (id_recetario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_mp ADD CONSTRAINT tbl_mrp_ordprod_inventario_tbl_mrp_ordprod_mp_fk
 FOREIGN KEY (id_orden_produccion_inventario)
 REFERENCES tbl_mrp_ordprod_inventario (id_orden_produccion_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_mo ADD CONSTRAINT tbl_mrp_ordprod_inventario_tbl_mrp_ordprod_mo_fk
 FOREIGN KEY (id_orden_produccion_inventario)
 REFERENCES tbl_mrp_ordprod_inventario (id_orden_produccion_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_gf ADD CONSTRAINT tbl_mrp_ordprod_inventario_tbl_mrp_ordprod_gf_fk
 FOREIGN KEY (id_orden_produccion_inventario)
 REFERENCES tbl_mrp_ordprod_inventario (id_orden_produccion_inventario)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_empresa ADD CONSTRAINT FK_emp_pais
 FOREIGN KEY (id_pais)
@@ -573,20 +525,14 @@ REFERENCES tbl_mrp_pais (id_pais)
 ALTER TABLE tbl_mrp_empleado ADD CONSTRAINT tbl_mrp_pais_tbl_mrp_empleado_fk
 FOREIGN KEY (id_pais)
 REFERENCES tbl_mrp_pais (id_pais)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_empleado_nomina ADD CONSTRAINT tbl_mrp_empleado_tbl_mrp_empleado_detalle_fk
 FOREIGN KEY (id_empleado)
 REFERENCES tbl_mrp_empleado (id_empleado)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_ordprod_mo ADD CONSTRAINT tbl_mrp_empleado_nomina_tbl_mrp_ordprod_mo_fk
 FOREIGN KEY (id_empleado_nomina)
 REFERENCES tbl_mrp_empleado_nomina (id_empleado_nomina)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
 
 ALTER TABLE tbl_mrp_usuario_empresa ADD CONSTRAINT FK_uem_usuario
 FOREIGN KEY (id_usuario)
@@ -601,4 +547,43 @@ FOREIGN KEY (id_empresa)
 REFERENCES tbl_mrp_empresa (id_empresa)
 
 
+--CREACIÓN DEL STORED PROCEDURED PARA GENERAR LAS ÓRDENES DE PRODUCCIÓN--
+CREATE PROCEDURE proc_generar_orden_produccion
+	@IdProcesoProduccion INT,
+	@IdEmpresa INT
+AS
+BEGIN
+	DECLARE @Fecha DATE, @IdOrdenProduccion INT, @IdRecetario INT, @cu_IdInventario INT, @cu_Cantidad DECIMAL(18,6)
+	SET @Fecha = (SELECT CONVERT(DATE, GETDATE()))
+	
+	INSERT INTO tbl_mrp_orden_produccion (orp_fecha,id_proceso_produccion,id_status,id_empresa,id_estado)
+	VALUES (@Fecha,@IdProcesoProduccion,1,@IdEmpresa,1)
+
+	SET @IdOrdenProduccion=(SELECT IDENT_CURRENT('tbl_mrp_orden_produccion')) 
+
+	DECLARE cursor_inventario CURSOR FOR
+		SELECT id_inventario,ppi_cantidad
+		FROM tbl_mrp_proprod_inventario
+		WHERE id_proceso_produccion=@IdProcesoProduccion
+	OPEN cursor_inventario
+	FETCH NEXT FROM cursor_inventario INTO @cu_IdInventario, @cu_Cantidad
+	WHILE @@FETCH_STATUS=0
+	BEGIN
+		SET @IdREcetario = (SELECT TOP 1 id_recetario FROM tbl_mrp_recetario WHERE id_inventario=@cu_IdInventario AND id_empresa=@IdEmpresa AND id_estado=1)
+
+		INSERT INTO tbl_mrp_ordprod_inventario (id_orden_produccion, id_inventario, id_recetario, opi_cantidad,opi_costo_unitario, opi_costo_total)
+		VALUES (@IdOrdenProduccion,@cu_IdInventario,@IdRecetario,@cu_Cantidad,0,0)
+		FETCH NEXT FROM cursor_inventario
+		INTO @cu_IdInventario, @cu_Cantidad
+	END
+	CLOSE cursor_inventario;
+	DEALLOCATE cursor_inventario;
+END
+
+
+--ESTABLECER PERMISOS A LOS STORED PROCEDURED--
+GRANT EXEC ON DB6.dbo.proc_generar_orden_produccion TO db6admin
+
+
+--REINICIO DEL IDENTITY--
 --DBCC CHECKIDENT ('tbl_mrp_pais', RESEED, 0)

@@ -190,13 +190,13 @@
 
 #Region "Procesos"
     Private Sub miMovimientos_Click(sender As Object, e As EventArgs) Handles miMovimientos.Click
-        'Dim frMovimiento As New frMovimiento
-        'ValidacionFormulario("frMovimiento", frMovimiento)
+        Dim frMovimiento As New frMovimiento
+        ValidacionFormulario("frMovimiento", frMovimiento)
     End Sub
 
     Private Sub miSolicitudes_Click(sender As Object, e As EventArgs) Handles miSolicitudes.Click
-        'Dim frSolicitud As New frSolicitud
-        'ValidacionFormulario("frSolicitud", frSolicitud)
+        Dim frSolicitud As New frSolicitud
+        ValidacionFormulario("frSolicitud", frSolicitud)
     End Sub
 
     Private Sub miOrdenesProduccion_Click(sender As Object, e As EventArgs) Handles miOrdenesProduccion.Click
@@ -212,15 +212,21 @@
 
 #Region "Reportes"
     Private Sub miRExistenciasInventarios_Click(sender As Object, e As EventArgs) Handles miRExistenciasInventarios.Click
-
+        Dim frReporteador As New frReporteador
+        frReporteador.ConfigurarReporteador(1)
+        frReporteador.ShowDialog()
     End Sub
 
     Private Sub miROrdenesProduccion_Click(sender As Object, e As EventArgs) Handles miROrdenesProduccion.Click
-
+        Dim frReporteador As New frReporteador
+        frReporteador.ConfigurarReporteador(2)
+        frReporteador.ShowDialog()
     End Sub
 
     Private Sub miRProcesosProduccion_Click(sender As Object, e As EventArgs) Handles miRProcesosProduccion.Click
-
+        Dim frReporteador As New frReporteador
+        frReporteador.ConfigurarReporteador(3)
+        frReporteador.ShowDialog()
     End Sub
 #End Region
 

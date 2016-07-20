@@ -1057,7 +1057,7 @@
   <table id="TAB308" populated="true" UUID="7a2e1f2c-d974-4a4a-8dd4-54c7b06ba181" name="tbl_mrp_solicitud_inventario" objectType="TABLE" physicalName="tbl_mrp_solicitud_inventario" >
    <remarks></remarks>
    <folder id="FOLTAB3081" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL309" populated="true" UUID="06d3858c-3c9e-4797-babb-1161de9f9fce" autoIncrement="false" autoIncrementSequenceName="tbl_mrp_solicitud_inventario_id_solicitud_inventario_seq" defaultValue="" name="id_solicitud_inventario" nullable="0" physicalName="id_solicitud_inventario" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL309" populated="true" UUID="06d3858c-3c9e-4797-babb-1161de9f9fce" autoIncrement="true" autoIncrementSequenceName="tbl_mrp_solicitud_inventario_id_solicitud_inventario_seq" defaultValue="" name="id_solicitud_inventario" nullable="0" physicalName="id_solicitud_inventario" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL310" populated="true" UUID="932e0e30-4731-4060-bb06-9e603b44d5b2" autoIncrement="false" autoIncrementSequenceName="tbl_mrp_solicitud_id_solicitud_seq_1" defaultValue="" name="id_solicitud" nullable="0" physicalName="id_solicitud" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
@@ -1552,10 +1552,10 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.SQLServer2005DDLGenerator" allow-connection="false"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.SQLServer2005DDLGenerator" allow-connection="true"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="1.1892071150027173" viewportX="1073" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="1.1892071150027173" viewportX="0" viewportY="437" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB80" x="26" y="836" bgColor="0xc8dccc" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB93" x="358" y="964" bgColor="0xc8dccc" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB100" x="34" y="586" bgColor="0xc8dccc" fgColor="0x000000" rounded="false" dashed="false"/>

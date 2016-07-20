@@ -244,7 +244,6 @@ C:\Users\Kevin\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.pdb
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventarioTipo.resources
 C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
 C:\Users\pablo.zapparoli\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frInventarioTipo.resources
-C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.vbprojResolveAssemblyReference.cache
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frMovimiento.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frReporteador.resources
 C:\Users\Anthony\Source\Repos\MRP\MRP\MRP\obj\Debug\MRP.frSolicitud.resources

@@ -153,7 +153,7 @@ CREATE TABLE tbl_mrp_proprod_inventario (
 )
 
 CREATE TABLE tbl_mrp_solicitud_inventario (
-                id_solicitud_inventario INT NOT NULL,
+                id_solicitud_inventario INT IDENTITY NOT NULL,
                 id_solicitud INT NOT NULL,
                 siv_cantidad_solicitada DECIMAL(18,6) NOT NULL,
                 siv_cantidad_entregada DECIMAL(18,6) NOT NULL,

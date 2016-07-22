@@ -65,6 +65,15 @@
             Return False
         End Try
     End Function
+
+    Public Shared Function ObtenerVentanas(ByRef dt As DataTable) As Boolean
+        Try
+            Return csDatos.ConsultarQuery(dt, "SELECT vtn_nombre Ventana, pfv_habilitado Acceso FROM tbl_mrp_usuario_empresa a JOIN tbl_mrp_perfil b On a.id_perfil=b.id_perfil JOIN tbl_mrp_perfil_ventana c On b.id_perfil=c.id_perfil JOIN tbl_mrp_ventana d On c.id_ventana=d.id_ventana WHERE id_usuario=" + csDatos.IdUsuario.ToString + " And id_empresa=" + csDatos.IdEmpresa.ToString)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
 #End Region
 
 #Region "Navegador"
@@ -76,7 +85,7 @@
                 Query = "INSERT INTO " + NombreTabla + " ("
                 For i As Integer = 1 To Campos.Rows.Count - 1
                     If i > 1 Then
-                        Query += ","
+                        Query += ", "
                     End If
                     Query += CStr(Campos.Rows(i)(0))
                 Next

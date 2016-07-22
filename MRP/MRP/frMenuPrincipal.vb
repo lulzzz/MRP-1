@@ -1,5 +1,8 @@
 ﻿Public Class frMenuPrincipal
     Dim frFondo As frFondo
+    Dim dtVentanas As New DataTable
+    Dim tsMenu As ToolStripMenuItem
+    Dim tsItem As ToolStripMenuItem
 
     Private Sub frMenuPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -11,11 +14,7 @@
             tsEmpresa.Text = csDatos.Empresa
             tsUsuario.Text = csDatos.NombreUsuario
             tsInicioSesion.Text = Date.Now.ToString("dd/MM/yyyy h:mm tt")
-            If csDatos.NombreUsuario.ToUpper = "ADMINISTRADOR" Then
-                tsOpciones.Visible = True
-            Else
-                tsOpciones.Visible = False
-            End If
+            RestriccionPerfiles()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -52,7 +51,45 @@
             frm.Show()
             frm.WindowState = FormWindowState.Maximized
         Catch ex As Exception
-            Throw ex
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub RestriccionPerfiles()
+        Try
+            csNegocio.ObtenerVentanas(dtVentanas)
+            For i As Integer = 0 To msMenuPrincipal.Items.Count - 1
+                tsMenu = CType(msMenuPrincipal.Items(i), ToolStripMenuItem)
+                For j As Integer = 0 To tsMenu.DropDownItems.Count - 1
+                    tsItem = CType(tsMenu.DropDownItems(j), ToolStripMenuItem)
+                    If tsItem.GetType = GetType(ToolStripMenuItem) Then
+                        tsItem.Enabled = False
+                    Else
+                        tsItem.Enabled = True
+                    End If
+                Next
+            Next
+            For i As Integer = 0 To msMenuPrincipal.Items.Count - 1
+                tsMenu = CType(msMenuPrincipal.Items(i), ToolStripMenuItem)
+                For j As Integer = 0 To tsMenu.DropDownItems.Count - 1
+                    tsItem = CType(tsMenu.DropDownItems(j), ToolStripMenuItem)
+                    If tsItem.GetType = GetType(ToolStripMenuItem) Then
+                        If tsItem.Tag.ToString <> "NO" Then
+                            For k As Integer = 0 To dtVentanas.Rows.Count - 1
+                                If tsItem.Tag.ToString = CStr(dtVentanas.Rows(k)("Ventana")) AndAlso CInt(dtVentanas.Rows(k)("Acceso")) = 1 Then
+                                    tsItem.Enabled = True
+                                    Exit For
+                                End If
+                            Next
+                        Else
+                            tsItem.Enabled = True
+                        End If
+
+                    End If
+                Next
+            Next
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 #End Region
@@ -244,6 +281,11 @@
     Private Sub miPaises_Click(sender As Object, e As EventArgs) Handles miPaises.Click
         Dim frPais As New frPais
         ValidacionFormulario("frPais", frPais)
+    End Sub
+
+    Private Sub miPerfiles_Click(sender As Object, e As EventArgs) Handles miPerfiles.Click
+        Dim frPerfil As New frPerfil
+        ValidacionFormulario("frPerfil", frPerfil)
     End Sub
 
     Private Sub miUsuarios_Click(sender As Object, e As EventArgs) Handles miUsuarios.Click

@@ -21,11 +21,17 @@
         UcNavegador1.ControlesMaestros = ControlesMaestros
         UcNavegador1.ControlesDetalles = ControlesDetalles
         Dim cbEmpresa As New DataGridViewComboBoxColumn With {.HeaderText = "Empresa", .Name = "id_empresa", .Tag = "Combobox"}
-        csDatos.ConsultarQuery(dtEmpresas, "SELECT id_empresa IdEmpresa, emp_nombre Nombre FROM tbl_mrp_empresa ORDER BY emp_nombre ASC")
+        csDatos.ConsultarQuery(dtEmpresas, "SELECT id_empresa Value, emp_nombre Display FROM tbl_mrp_empresa ORDER BY id_empresa ASC")
         cbEmpresa.DataSource = dtEmpresas
-        cbEmpresa.ValueMember = "IdEmpresa"
-        cbEmpresa.DisplayMember = "Nombre"
+        cbEmpresa.ValueMember = "Value"
+        cbEmpresa.DisplayMember = "Display"
         dgUsuarioEmpresa.Columns.Insert(0, cbEmpresa)
+        Dim cbPerfil As New DataGridViewComboBoxColumn With {.HeaderText = "Perfil", .Name = "id_perfil", .Tag = "Combobox"}
+        csDatos.ConsultarQuery(dtEmpresas, "SELECT id_perfil Value, pfl_nombre Display FROM tbl_mrp_perfil ORDER BY id_perfil ASC")
+        cbPerfil.DataSource = dtEmpresas
+        cbPerfil.ValueMember = "Value"
+        cbPerfil.DisplayMember = "Display"
+        dgUsuarioEmpresa.Columns.Insert(1, cbPerfil)
         UcNavegador1.NombreTabla = "tbl_mrp_usuario"
         UcNavegador1.QueryBuscar = "SELECT id_usuario Código, usr_nombre Nombre, usr_usuario Usuario, CASE id_estado WHEN 1 THEN 'Alta' ELSE 'Eliminado' END Estado FROM " + UcNavegador1.NombreTabla + " ORDER BY id_usuario ASC"
         UcNavegador1.IniciarNavegador()
@@ -34,6 +40,9 @@
 #Region "Navegador"
     Private Sub Navegador1_posNuevo(sender As Object, e As EventArgs) Handles UcNavegador1.posNuevo
         Try
+            csDatos.ConsultarQuery(dtEmpresas, "SELECT id_empresa Value, emp_nombre Display FROM tbl_mrp_empresa ORDER BY id_empresa ASC")
+            csDatos.ConsultarQuery(dtEmpresas, "SELECT id_perfil Value, pfl_nombre Display FROM tbl_mrp_perfil ORDER BY id_perfil ASC")
+            dgUsuarioEmpresa.Refresh()
             ActiveControl = tbNombre
             ActiveControl.Focus()
         Catch ex As Exception
@@ -52,7 +61,7 @@
 
     Private Sub Navegador1_preCerrar(sender As Object, e As EventArgs) Handles UcNavegador1.preCerrar
         Try
-            Me.Close()
+            Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try

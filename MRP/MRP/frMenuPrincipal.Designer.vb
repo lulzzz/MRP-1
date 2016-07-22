@@ -27,7 +27,6 @@ Partial Class frMenuPrincipal
         Me.msMenuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.tsArchivo = New System.Windows.Forms.ToolStripMenuItem()
         Me.miCambiarEmpresa = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsSeparador1 = New System.Windows.Forms.ToolStripSeparator()
         Me.miCerrarSesion = New System.Windows.Forms.ToolStripMenuItem()
         Me.miSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsCatalogos = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,7 +43,6 @@ Partial Class frMenuPrincipal
         Me.miRecetario = New System.Windows.Forms.ToolStripMenuItem()
         Me.miStatus = New System.Windows.Forms.ToolStripMenuItem()
         Me.miTareas = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsSeparador2 = New System.Windows.Forms.ToolStripSeparator()
         Me.miPeriodosNominas = New System.Windows.Forms.ToolStripMenuItem()
         Me.miTiposGastos = New System.Windows.Forms.ToolStripMenuItem()
         Me.miTiposInventarios = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,7 +51,6 @@ Partial Class frMenuPrincipal
         Me.tsProcesos = New System.Windows.Forms.ToolStripMenuItem()
         Me.miMovimientos = New System.Windows.Forms.ToolStripMenuItem()
         Me.miSolicitudes = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsSeparador3 = New System.Windows.Forms.ToolStripSeparator()
         Me.miOrdenesProduccion = New System.Windows.Forms.ToolStripMenuItem()
         Me.miProcesosProduccion = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsReportes = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,7 +61,7 @@ Partial Class frMenuPrincipal
         Me.miEmpresas = New System.Windows.Forms.ToolStripMenuItem()
         Me.miMonedas = New System.Windows.Forms.ToolStripMenuItem()
         Me.miPaises = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tsSeparador4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.miPerfiles = New System.Windows.Forms.ToolStripMenuItem()
         Me.miUsuarios = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsAyuda = New System.Windows.Forms.ToolStripMenuItem()
         Me.miAcercaDeMRP = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,189 +89,202 @@ Partial Class frMenuPrincipal
         '
         'tsArchivo
         '
-        Me.tsArchivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miCambiarEmpresa, Me.tsSeparador1, Me.miCerrarSesion, Me.miSalir})
+        Me.tsArchivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miCambiarEmpresa, Me.miCerrarSesion, Me.miSalir})
         Me.tsArchivo.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.tsArchivo.Name = "tsArchivo"
         Me.tsArchivo.Size = New System.Drawing.Size(60, 20)
+        Me.tsArchivo.Tag = "NO"
         Me.tsArchivo.Text = "&Archivo"
         '
         'miCambiarEmpresa
         '
         Me.miCambiarEmpresa.Name = "miCambiarEmpresa"
         Me.miCambiarEmpresa.Size = New System.Drawing.Size(167, 22)
+        Me.miCambiarEmpresa.Tag = "NO"
         Me.miCambiarEmpresa.Text = "Cambiar &Empresa"
-        '
-        'tsSeparador1
-        '
-        Me.tsSeparador1.Name = "tsSeparador1"
-        Me.tsSeparador1.Size = New System.Drawing.Size(164, 6)
         '
         'miCerrarSesion
         '
         Me.miCerrarSesion.Name = "miCerrarSesion"
         Me.miCerrarSesion.Size = New System.Drawing.Size(167, 22)
+        Me.miCerrarSesion.Tag = "NO"
         Me.miCerrarSesion.Text = "&Cerrar Sesión"
         '
         'miSalir
         '
         Me.miSalir.Name = "miSalir"
         Me.miSalir.Size = New System.Drawing.Size(167, 22)
+        Me.miSalir.Tag = "NO"
         Me.miSalir.Text = "&Salir"
         '
         'tsCatalogos
         '
-        Me.tsCatalogos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miBodegas, Me.miDepartamentos, Me.miEmpleados, Me.miEmpleadosNomina, Me.miGastos, Me.miGastosPeriodo, Me.miInventarios, Me.miMedidas, Me.miNominas, Me.miPuestos, Me.miRecetario, Me.miStatus, Me.miTareas, Me.tsSeparador2, Me.miPeriodosNominas, Me.miTiposGastos, Me.miTiposInventarios, Me.miTiposMovimientos, Me.miTiposTareas})
+        Me.tsCatalogos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miBodegas, Me.miDepartamentos, Me.miEmpleados, Me.miEmpleadosNomina, Me.miGastos, Me.miGastosPeriodo, Me.miInventarios, Me.miMedidas, Me.miNominas, Me.miPuestos, Me.miRecetario, Me.miStatus, Me.miTareas, Me.miPeriodosNominas, Me.miTiposGastos, Me.miTiposInventarios, Me.miTiposMovimientos, Me.miTiposTareas})
         Me.tsCatalogos.Name = "tsCatalogos"
         Me.tsCatalogos.Size = New System.Drawing.Size(72, 20)
+        Me.tsCatalogos.Tag = "NO"
         Me.tsCatalogos.Text = "&Catálogos"
         '
         'miBodegas
         '
         Me.miBodegas.Name = "miBodegas"
         Me.miBodegas.Size = New System.Drawing.Size(192, 22)
+        Me.miBodegas.Tag = "Bodegas"
         Me.miBodegas.Text = "&Bodegas"
         '
         'miDepartamentos
         '
         Me.miDepartamentos.Name = "miDepartamentos"
         Me.miDepartamentos.Size = New System.Drawing.Size(192, 22)
+        Me.miDepartamentos.Tag = "Departamentos"
         Me.miDepartamentos.Text = "&Departamentos"
         '
         'miEmpleados
         '
         Me.miEmpleados.Name = "miEmpleados"
         Me.miEmpleados.Size = New System.Drawing.Size(192, 22)
+        Me.miEmpleados.Tag = "Empleados"
         Me.miEmpleados.Text = "&Empleados"
         '
         'miEmpleadosNomina
         '
         Me.miEmpleadosNomina.Name = "miEmpleadosNomina"
         Me.miEmpleadosNomina.Size = New System.Drawing.Size(192, 22)
+        Me.miEmpleadosNomina.Tag = "Empleados Nómina"
         Me.miEmpleadosNomina.Text = "Empleados Nómina"
         '
         'miGastos
         '
         Me.miGastos.Name = "miGastos"
         Me.miGastos.Size = New System.Drawing.Size(192, 22)
+        Me.miGastos.Tag = "Gastos"
         Me.miGastos.Text = "&Gastos"
         '
         'miGastosPeriodo
         '
         Me.miGastosPeriodo.Name = "miGastosPeriodo"
         Me.miGastosPeriodo.Size = New System.Drawing.Size(192, 22)
+        Me.miGastosPeriodo.Tag = "Gastos por Periodo"
         Me.miGastosPeriodo.Text = "G&astos por Periodo"
         '
         'miInventarios
         '
         Me.miInventarios.Name = "miInventarios"
         Me.miInventarios.Size = New System.Drawing.Size(192, 22)
+        Me.miInventarios.Tag = "Inventarios"
         Me.miInventarios.Text = "&Inventarios"
         '
         'miMedidas
         '
         Me.miMedidas.Name = "miMedidas"
         Me.miMedidas.Size = New System.Drawing.Size(192, 22)
+        Me.miMedidas.Tag = "Medidas"
         Me.miMedidas.Text = "&Medidas"
         '
         'miNominas
         '
         Me.miNominas.Name = "miNominas"
         Me.miNominas.Size = New System.Drawing.Size(192, 22)
-        Me.miNominas.Text = "&Nómina"
+        Me.miNominas.Tag = "Nóminas"
+        Me.miNominas.Text = "&Nóminas"
         '
         'miPuestos
         '
         Me.miPuestos.Name = "miPuestos"
         Me.miPuestos.Size = New System.Drawing.Size(192, 22)
+        Me.miPuestos.Tag = "Puestos"
         Me.miPuestos.Text = "&Puestos"
         '
         'miRecetario
         '
         Me.miRecetario.Name = "miRecetario"
         Me.miRecetario.Size = New System.Drawing.Size(192, 22)
+        Me.miRecetario.Tag = "Recetario"
         Me.miRecetario.Text = "&Recetario"
         '
         'miStatus
         '
         Me.miStatus.Name = "miStatus"
         Me.miStatus.Size = New System.Drawing.Size(192, 22)
+        Me.miStatus.Tag = "Status"
         Me.miStatus.Text = "&Status"
         '
         'miTareas
         '
         Me.miTareas.Name = "miTareas"
         Me.miTareas.Size = New System.Drawing.Size(192, 22)
+        Me.miTareas.Tag = "Tareas"
         Me.miTareas.Text = "&Tareas"
-        '
-        'tsSeparador2
-        '
-        Me.tsSeparador2.Name = "tsSeparador2"
-        Me.tsSeparador2.Size = New System.Drawing.Size(189, 6)
         '
         'miPeriodosNominas
         '
         Me.miPeriodosNominas.Name = "miPeriodosNominas"
         Me.miPeriodosNominas.Size = New System.Drawing.Size(192, 22)
+        Me.miPeriodosNominas.Tag = "Periodos de Nóminas"
         Me.miPeriodosNominas.Text = "Periodos de Nóminas"
         '
         'miTiposGastos
         '
         Me.miTiposGastos.Name = "miTiposGastos"
         Me.miTiposGastos.Size = New System.Drawing.Size(192, 22)
+        Me.miTiposGastos.Tag = "Tipos de Gastos"
         Me.miTiposGastos.Text = "Tipos de Gastos"
         '
         'miTiposInventarios
         '
         Me.miTiposInventarios.Name = "miTiposInventarios"
         Me.miTiposInventarios.Size = New System.Drawing.Size(192, 22)
+        Me.miTiposInventarios.Tag = "Tipos de Inventarios"
         Me.miTiposInventarios.Text = "Tipos de Inventarios"
         '
         'miTiposMovimientos
         '
         Me.miTiposMovimientos.Name = "miTiposMovimientos"
         Me.miTiposMovimientos.Size = New System.Drawing.Size(192, 22)
+        Me.miTiposMovimientos.Tag = "Tipos de Movimientos"
         Me.miTiposMovimientos.Text = "Tipos de Movimientos"
         '
         'miTiposTareas
         '
         Me.miTiposTareas.Name = "miTiposTareas"
         Me.miTiposTareas.Size = New System.Drawing.Size(192, 22)
+        Me.miTiposTareas.Tag = "Tipos de Tareas"
         Me.miTiposTareas.Text = "Tipos de Tareas"
         '
         'tsProcesos
         '
-        Me.tsProcesos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miMovimientos, Me.miSolicitudes, Me.tsSeparador3, Me.miOrdenesProduccion, Me.miProcesosProduccion})
+        Me.tsProcesos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miMovimientos, Me.miSolicitudes, Me.miOrdenesProduccion, Me.miProcesosProduccion})
         Me.tsProcesos.Name = "tsProcesos"
         Me.tsProcesos.Size = New System.Drawing.Size(66, 20)
+        Me.tsProcesos.Tag = "NO"
         Me.tsProcesos.Text = "&Procesos"
         '
         'miMovimientos
         '
         Me.miMovimientos.Name = "miMovimientos"
         Me.miMovimientos.Size = New System.Drawing.Size(201, 22)
+        Me.miMovimientos.Tag = "Movimientos"
         Me.miMovimientos.Text = "&Movimientos"
         '
         'miSolicitudes
         '
         Me.miSolicitudes.Name = "miSolicitudes"
         Me.miSolicitudes.Size = New System.Drawing.Size(201, 22)
+        Me.miSolicitudes.Tag = "Solicitudes"
         Me.miSolicitudes.Text = "&Solicitudes"
-        '
-        'tsSeparador3
-        '
-        Me.tsSeparador3.Name = "tsSeparador3"
-        Me.tsSeparador3.Size = New System.Drawing.Size(198, 6)
         '
         'miOrdenesProduccion
         '
         Me.miOrdenesProduccion.Name = "miOrdenesProduccion"
         Me.miOrdenesProduccion.Size = New System.Drawing.Size(201, 22)
+        Me.miOrdenesProduccion.Tag = "Órdenes de Producción"
         Me.miOrdenesProduccion.Text = "&Órdenes de Producción"
         '
         'miProcesosProduccion
         '
         Me.miProcesosProduccion.Name = "miProcesosProduccion"
         Me.miProcesosProduccion.Size = New System.Drawing.Size(201, 22)
+        Me.miProcesosProduccion.Tag = "Procesos de Producción"
         Me.miProcesosProduccion.Text = "&Procesos de Producción"
         '
         'tsReportes
@@ -282,60 +292,71 @@ Partial Class frMenuPrincipal
         Me.tsReportes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miRExistenciasInventarios, Me.miROrdenesProduccion, Me.miRProcesosProduccion})
         Me.tsReportes.Name = "tsReportes"
         Me.tsReportes.Size = New System.Drawing.Size(65, 20)
+        Me.tsReportes.Tag = "NO"
         Me.tsReportes.Text = "&Reportes"
         '
         'miRExistenciasInventarios
         '
         Me.miRExistenciasInventarios.Name = "miRExistenciasInventarios"
         Me.miRExistenciasInventarios.Size = New System.Drawing.Size(207, 22)
+        Me.miRExistenciasInventarios.Tag = "Existencias de Inventarios"
         Me.miRExistenciasInventarios.Text = "Existencias de Inventarios"
         '
         'miROrdenesProduccion
         '
         Me.miROrdenesProduccion.Name = "miROrdenesProduccion"
         Me.miROrdenesProduccion.Size = New System.Drawing.Size(207, 22)
+        Me.miROrdenesProduccion.Tag = "Órdenes de Producción"
         Me.miROrdenesProduccion.Text = "Órdenes de Producción"
         '
         'miRProcesosProduccion
         '
         Me.miRProcesosProduccion.Name = "miRProcesosProduccion"
         Me.miRProcesosProduccion.Size = New System.Drawing.Size(207, 22)
+        Me.miRProcesosProduccion.Tag = "Procesos de Producción"
         Me.miRProcesosProduccion.Text = "Procesos de Producción"
         '
         'tsOpciones
         '
-        Me.tsOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpresas, Me.miMonedas, Me.miPaises, Me.tsSeparador4, Me.miUsuarios})
+        Me.tsOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpresas, Me.miMonedas, Me.miPaises, Me.miPerfiles, Me.miUsuarios})
         Me.tsOpciones.Name = "tsOpciones"
         Me.tsOpciones.Size = New System.Drawing.Size(69, 20)
+        Me.tsOpciones.Tag = "NO"
         Me.tsOpciones.Text = "&Opciones"
         '
         'miEmpresas
         '
         Me.miEmpresas.Name = "miEmpresas"
-        Me.miEmpresas.Size = New System.Drawing.Size(124, 22)
+        Me.miEmpresas.Size = New System.Drawing.Size(152, 22)
+        Me.miEmpresas.Tag = "Empresas"
         Me.miEmpresas.Text = "&Empresas"
         '
         'miMonedas
         '
         Me.miMonedas.Name = "miMonedas"
-        Me.miMonedas.Size = New System.Drawing.Size(124, 22)
+        Me.miMonedas.Size = New System.Drawing.Size(152, 22)
+        Me.miMonedas.Tag = "Monedas"
         Me.miMonedas.Text = "&Monedas"
         '
         'miPaises
         '
         Me.miPaises.Name = "miPaises"
-        Me.miPaises.Size = New System.Drawing.Size(124, 22)
-        Me.miPaises.Text = "&Países"
+        Me.miPaises.Size = New System.Drawing.Size(152, 22)
+        Me.miPaises.Tag = "Países"
+        Me.miPaises.Text = "P&aíses"
         '
-        'tsSeparador4
+        'miPerfiles
         '
-        Me.tsSeparador4.Name = "tsSeparador4"
-        Me.tsSeparador4.Size = New System.Drawing.Size(121, 6)
+        Me.miPerfiles.Name = "miPerfiles"
+        Me.miPerfiles.Size = New System.Drawing.Size(152, 22)
+        Me.miPerfiles.Tag = "Perfiles"
+        Me.miPerfiles.Text = "&Perfiles"
         '
         'miUsuarios
         '
         Me.miUsuarios.Name = "miUsuarios"
-        Me.miUsuarios.Size = New System.Drawing.Size(124, 22)
+        Me.miUsuarios.Size = New System.Drawing.Size(152, 22)
+        Me.miUsuarios.Tag = "Usuarios"
         Me.miUsuarios.Text = "&Usuarios"
         '
         'tsAyuda
@@ -343,12 +364,14 @@ Partial Class frMenuPrincipal
         Me.tsAyuda.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miAcercaDeMRP})
         Me.tsAyuda.Name = "tsAyuda"
         Me.tsAyuda.Size = New System.Drawing.Size(53, 20)
+        Me.tsAyuda.Tag = "NO"
         Me.tsAyuda.Text = "Ay&uda"
         '
         'miAcercaDeMRP
         '
         Me.miAcercaDeMRP.Name = "miAcercaDeMRP"
         Me.miAcercaDeMRP.Size = New System.Drawing.Size(154, 22)
+        Me.miAcercaDeMRP.Tag = "NO"
         Me.miAcercaDeMRP.Text = "&Acerca de MRP"
         '
         'ssBarraEstado
@@ -438,7 +461,6 @@ Partial Class frMenuPrincipal
     Friend WithEvents tsCatalogos As ToolStripMenuItem
     Friend WithEvents tsProcesos As ToolStripMenuItem
     Friend WithEvents tsReportes As ToolStripMenuItem
-    Friend WithEvents tsSeparador1 As ToolStripSeparator
     Friend WithEvents miCerrarSesion As ToolStripMenuItem
     Friend WithEvents miCambiarEmpresa As ToolStripMenuItem
     Friend WithEvents ssBarraEstado As StatusStrip
@@ -452,7 +474,6 @@ Partial Class frMenuPrincipal
     Friend WithEvents miEmpresas As ToolStripMenuItem
     Friend WithEvents miMonedas As ToolStripMenuItem
     Friend WithEvents miPaises As ToolStripMenuItem
-    Friend WithEvents tsSeparador4 As ToolStripSeparator
     Friend WithEvents miUsuarios As ToolStripMenuItem
     Friend WithEvents miTiposMovimientos As ToolStripMenuItem
     Friend WithEvents miBodegas As ToolStripMenuItem
@@ -465,9 +486,7 @@ Partial Class frMenuPrincipal
     Friend WithEvents miTiposTareas As ToolStripMenuItem
     Friend WithEvents miSolicitudes As ToolStripMenuItem
     Friend WithEvents miOrdenesProduccion As ToolStripMenuItem
-    Friend WithEvents tsSeparador2 As ToolStripSeparator
     Friend WithEvents miMovimientos As ToolStripMenuItem
-    Friend WithEvents tsSeparador3 As ToolStripSeparator
     Friend WithEvents miDepartamentos As ToolStripMenuItem
     Friend WithEvents miEmpleados As ToolStripMenuItem
     Friend WithEvents miEmpleadosNomina As ToolStripMenuItem
@@ -481,4 +500,5 @@ Partial Class frMenuPrincipal
     Friend WithEvents miRProcesosProduccion As ToolStripMenuItem
     Friend WithEvents miTiposGastos As ToolStripMenuItem
     Friend WithEvents miGastosPeriodo As ToolStripMenuItem
+    Friend WithEvents miPerfiles As ToolStripMenuItem
 End Class

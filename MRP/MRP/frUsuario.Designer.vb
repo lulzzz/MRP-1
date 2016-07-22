@@ -67,7 +67,7 @@ Partial Class frUsuario
         Me.tbEstado.Location = New System.Drawing.Point(499, 70)
         Me.tbEstado.Name = "tbEstado"
         Me.tbEstado.Size = New System.Drawing.Size(20, 20)
-        Me.tbEstado.TabIndex = 10
+        Me.tbEstado.TabIndex = 100
         Me.tbEstado.Visible = False
         '
         'lbUsuario
@@ -165,7 +165,7 @@ Partial Class frUsuario
         Me.btAgregarEmpresa.Location = New System.Drawing.Point(125, 330)
         Me.btAgregarEmpresa.Name = "btAgregarEmpresa"
         Me.btAgregarEmpresa.Size = New System.Drawing.Size(125, 23)
-        Me.btAgregarEmpresa.TabIndex = 19
+        Me.btAgregarEmpresa.TabIndex = 6
         Me.btAgregarEmpresa.Text = "Agregar Empresa"
         Me.btAgregarEmpresa.UseVisualStyleBackColor = True
         '
@@ -174,7 +174,7 @@ Partial Class frUsuario
         Me.btEliminarEmpresa.Location = New System.Drawing.Point(256, 330)
         Me.btEliminarEmpresa.Name = "btEliminarEmpresa"
         Me.btEliminarEmpresa.Size = New System.Drawing.Size(125, 23)
-        Me.btEliminarEmpresa.TabIndex = 20
+        Me.btEliminarEmpresa.TabIndex = 7
         Me.btEliminarEmpresa.Text = "Eliminar Empresa"
         Me.btEliminarEmpresa.UseVisualStyleBackColor = True
         '
@@ -195,7 +195,7 @@ Partial Class frUsuario
         Me.pnlPanelTitulo.Location = New System.Drawing.Point(0, 0)
         Me.pnlPanelTitulo.Name = "pnlPanelTitulo"
         Me.pnlPanelTitulo.Size = New System.Drawing.Size(689, 50)
-        Me.pnlPanelTitulo.TabIndex = 102
+        Me.pnlPanelTitulo.TabIndex = 100
         '
         'lbTitulo
         '
@@ -218,7 +218,7 @@ Partial Class frUsuario
         Me.UcNavegador1.MinimumSize = New System.Drawing.Size(0, 56)
         Me.UcNavegador1.Name = "UcNavegador1"
         Me.UcNavegador1.Size = New System.Drawing.Size(689, 58)
-        Me.UcNavegador1.TabIndex = 104
+        Me.UcNavegador1.TabIndex = 100
         '
         'frUsuario
         '

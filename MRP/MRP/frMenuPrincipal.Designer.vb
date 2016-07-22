@@ -72,6 +72,13 @@ Partial Class frMenuPrincipal
         Me.tsUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.slInicioSesion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.tsInicioSesion = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tsSeparador2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsSeparador3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsSeparador4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.miManualDeUsuario = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miManualTécnico = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsSeparador5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsSeparador1 = New System.Windows.Forms.ToolStripSeparator()
         Me.msMenuPrincipal.SuspendLayout()
         Me.ssBarraEstado.SuspendLayout()
         Me.SuspendLayout()
@@ -89,7 +96,7 @@ Partial Class frMenuPrincipal
         '
         'tsArchivo
         '
-        Me.tsArchivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miCambiarEmpresa, Me.miCerrarSesion, Me.miSalir})
+        Me.tsArchivo.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miCambiarEmpresa, Me.tsSeparador1, Me.miCerrarSesion, Me.miSalir})
         Me.tsArchivo.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.tsArchivo.Name = "tsArchivo"
         Me.tsArchivo.Size = New System.Drawing.Size(60, 20)
@@ -119,7 +126,7 @@ Partial Class frMenuPrincipal
         '
         'tsCatalogos
         '
-        Me.tsCatalogos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miBodegas, Me.miDepartamentos, Me.miEmpleados, Me.miEmpleadosNomina, Me.miGastos, Me.miGastosPeriodo, Me.miInventarios, Me.miMedidas, Me.miNominas, Me.miPuestos, Me.miRecetario, Me.miStatus, Me.miTareas, Me.miPeriodosNominas, Me.miTiposGastos, Me.miTiposInventarios, Me.miTiposMovimientos, Me.miTiposTareas})
+        Me.tsCatalogos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miBodegas, Me.miDepartamentos, Me.miEmpleados, Me.miEmpleadosNomina, Me.miGastos, Me.miGastosPeriodo, Me.miInventarios, Me.miMedidas, Me.miNominas, Me.miPuestos, Me.miRecetario, Me.miStatus, Me.miTareas, Me.tsSeparador2, Me.miPeriodosNominas, Me.miTiposGastos, Me.miTiposInventarios, Me.miTiposMovimientos, Me.miTiposTareas})
         Me.tsCatalogos.Name = "tsCatalogos"
         Me.tsCatalogos.Size = New System.Drawing.Size(72, 20)
         Me.tsCatalogos.Tag = "NO"
@@ -253,7 +260,7 @@ Partial Class frMenuPrincipal
         '
         'tsProcesos
         '
-        Me.tsProcesos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miMovimientos, Me.miSolicitudes, Me.miOrdenesProduccion, Me.miProcesosProduccion})
+        Me.tsProcesos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miMovimientos, Me.miSolicitudes, Me.tsSeparador3, Me.miOrdenesProduccion, Me.miProcesosProduccion})
         Me.tsProcesos.Name = "tsProcesos"
         Me.tsProcesos.Size = New System.Drawing.Size(66, 20)
         Me.tsProcesos.Tag = "NO"
@@ -318,7 +325,7 @@ Partial Class frMenuPrincipal
         '
         'tsOpciones
         '
-        Me.tsOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpresas, Me.miMonedas, Me.miPaises, Me.miPerfiles, Me.miUsuarios})
+        Me.tsOpciones.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpresas, Me.miMonedas, Me.miPaises, Me.tsSeparador4, Me.miPerfiles, Me.miUsuarios})
         Me.tsOpciones.Name = "tsOpciones"
         Me.tsOpciones.Size = New System.Drawing.Size(69, 20)
         Me.tsOpciones.Tag = "NO"
@@ -361,7 +368,7 @@ Partial Class frMenuPrincipal
         '
         'tsAyuda
         '
-        Me.tsAyuda.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miAcercaDeMRP})
+        Me.tsAyuda.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miManualTécnico, Me.miManualDeUsuario, Me.tsSeparador5, Me.miAcercaDeMRP})
         Me.tsAyuda.Name = "tsAyuda"
         Me.tsAyuda.Size = New System.Drawing.Size(53, 20)
         Me.tsAyuda.Tag = "NO"
@@ -370,7 +377,7 @@ Partial Class frMenuPrincipal
         'miAcercaDeMRP
         '
         Me.miAcercaDeMRP.Name = "miAcercaDeMRP"
-        Me.miAcercaDeMRP.Size = New System.Drawing.Size(154, 22)
+        Me.miAcercaDeMRP.Size = New System.Drawing.Size(173, 22)
         Me.miAcercaDeMRP.Tag = "NO"
         Me.miAcercaDeMRP.Text = "&Acerca de MRP"
         '
@@ -429,6 +436,45 @@ Partial Class frMenuPrincipal
         Me.tsInicioSesion.Spring = True
         Me.tsInicioSesion.Text = "InicioSesion"
         Me.tsInicioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'tsSeparador2
+        '
+        Me.tsSeparador2.Name = "tsSeparador2"
+        Me.tsSeparador2.Size = New System.Drawing.Size(189, 6)
+        '
+        'tsSeparador3
+        '
+        Me.tsSeparador3.Name = "tsSeparador3"
+        Me.tsSeparador3.Size = New System.Drawing.Size(198, 6)
+        '
+        'tsSeparador4
+        '
+        Me.tsSeparador4.Name = "tsSeparador4"
+        Me.tsSeparador4.Size = New System.Drawing.Size(149, 6)
+        '
+        'miManualDeUsuario
+        '
+        Me.miManualDeUsuario.Name = "miManualDeUsuario"
+        Me.miManualDeUsuario.Size = New System.Drawing.Size(173, 22)
+        Me.miManualDeUsuario.Tag = "NO"
+        Me.miManualDeUsuario.Text = "Manual de &Usuario"
+        '
+        'miManualTécnico
+        '
+        Me.miManualTécnico.Name = "miManualTécnico"
+        Me.miManualTécnico.Size = New System.Drawing.Size(173, 22)
+        Me.miManualTécnico.Tag = "NO"
+        Me.miManualTécnico.Text = "Manual &Técnico"
+        '
+        'tsSeparador5
+        '
+        Me.tsSeparador5.Name = "tsSeparador5"
+        Me.tsSeparador5.Size = New System.Drawing.Size(170, 6)
+        '
+        'tsSeparador1
+        '
+        Me.tsSeparador1.Name = "tsSeparador1"
+        Me.tsSeparador1.Size = New System.Drawing.Size(164, 6)
         '
         'frMenuPrincipal
         '
@@ -501,4 +547,11 @@ Partial Class frMenuPrincipal
     Friend WithEvents miTiposGastos As ToolStripMenuItem
     Friend WithEvents miGastosPeriodo As ToolStripMenuItem
     Friend WithEvents miPerfiles As ToolStripMenuItem
+    Friend WithEvents tsSeparador1 As ToolStripSeparator
+    Friend WithEvents tsSeparador2 As ToolStripSeparator
+    Friend WithEvents tsSeparador3 As ToolStripSeparator
+    Friend WithEvents tsSeparador4 As ToolStripSeparator
+    Friend WithEvents miManualTécnico As ToolStripMenuItem
+    Friend WithEvents miManualDeUsuario As ToolStripMenuItem
+    Friend WithEvents tsSeparador5 As ToolStripSeparator
 End Class

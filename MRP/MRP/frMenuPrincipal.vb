@@ -3,6 +3,7 @@
     Dim dtVentanas As New DataTable
     Dim tsMenu As ToolStripMenuItem
     Dim tsItem As ToolStripMenuItem
+    Dim obObjeto As Object
 
     Private Sub frMenuPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -61,19 +62,18 @@
             For i As Integer = 0 To msMenuPrincipal.Items.Count - 1
                 tsMenu = CType(msMenuPrincipal.Items(i), ToolStripMenuItem)
                 For j As Integer = 0 To tsMenu.DropDownItems.Count - 1
-                    tsItem = CType(tsMenu.DropDownItems(j), ToolStripMenuItem)
-                    If tsItem.GetType = GetType(ToolStripMenuItem) Then
-                        tsItem.Enabled = False
-                    Else
-                        tsItem.Enabled = True
+                    obObjeto = tsMenu.DropDownItems(j)
+                    If obObjeto.GetType = GetType(ToolStripMenuItem) Then
+                        CType(obObjeto, ToolStripMenuItem).Enabled = False
                     End If
                 Next
             Next
             For i As Integer = 0 To msMenuPrincipal.Items.Count - 1
                 tsMenu = CType(msMenuPrincipal.Items(i), ToolStripMenuItem)
                 For j As Integer = 0 To tsMenu.DropDownItems.Count - 1
-                    tsItem = CType(tsMenu.DropDownItems(j), ToolStripMenuItem)
-                    If tsItem.GetType = GetType(ToolStripMenuItem) Then
+                    obObjeto = tsMenu.DropDownItems(j)
+                    If obObjeto.GetType = GetType(ToolStripMenuItem) Then
+                        tsItem = CType(obObjeto, ToolStripMenuItem)
                         If tsItem.Tag.ToString <> "NO" Then
                             For k As Integer = 0 To dtVentanas.Rows.Count - 1
                                 If tsItem.Tag.ToString = CStr(dtVentanas.Rows(k)("Ventana")) AndAlso CInt(dtVentanas.Rows(k)("Acceso")) = 1 Then
@@ -84,7 +84,6 @@
                         Else
                             tsItem.Enabled = True
                         End If
-
                     End If
                 Next
             Next
@@ -295,6 +294,22 @@
 #End Region
 
 #Region "Ayuda"
+    Private Sub miManualTécnico_Click(sender As Object, e As EventArgs) Handles miManualTécnico.Click
+        Try
+            Process.Start(My.Computer.FileSystem.CurrentDirectory + "\Manual_Tecnico.pdf")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub miManualDeUsuario_Click(sender As Object, e As EventArgs) Handles miManualDeUsuario.Click
+        Try
+            Process.Start(My.Computer.FileSystem.CurrentDirectory + "\Manual_Usuario.pdf")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
     Private Sub miAcercaDeMRP_Click(sender As Object, e As EventArgs) Handles miAcercaDeMRP.Click
         Try
             Dim frAcercaDeMRP As New frAcercaDeMRP

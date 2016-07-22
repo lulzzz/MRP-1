@@ -112,6 +112,7 @@ Partial Class frLoginEmpresa
         Me.Controls.Add(Me.lbEmpresa)
         Me.Controls.Add(Me.pbLogo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frLoginEmpresa"
